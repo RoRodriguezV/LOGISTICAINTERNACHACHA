@@ -73,7 +73,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(174, 74);
             this.button4.TabIndex = 0;
-            this.button4.Text = "CONTROL DE RESMAS";
+            this.button4.Text = "CONTROL DE MERMAS";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 

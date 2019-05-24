@@ -54,6 +54,8 @@
             this.bt_normal = new System.Windows.Forms.Button();
             this.bt_relieve = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.bt_eliminar = new System.Windows.Forms.Button();
             this.bt_actualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackZoom)).BeginInit();
             this.SuspendLayout();
@@ -296,21 +298,44 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(122, 442);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(192, 69);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "BUSCAR SUCURSAL";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // bt_eliminar
+            // 
+            this.bt_eliminar.Location = new System.Drawing.Point(122, 639);
+            this.bt_eliminar.Name = "bt_eliminar";
+            this.bt_eliminar.Size = new System.Drawing.Size(192, 74);
+            this.bt_eliminar.TabIndex = 21;
+            this.bt_eliminar.Text = "ELIMINAR";
+            this.bt_eliminar.UseVisualStyleBackColor = true;
+            this.bt_eliminar.Click += new System.EventHandler(this.bt_eliminar_Click);
+            // 
             // bt_actualizar
             // 
-            this.bt_actualizar.Location = new System.Drawing.Point(122, 456);
+            this.bt_actualizar.Location = new System.Drawing.Point(122, 538);
             this.bt_actualizar.Name = "bt_actualizar";
-            this.bt_actualizar.Size = new System.Drawing.Size(192, 72);
-            this.bt_actualizar.TabIndex = 3;
+            this.bt_actualizar.Size = new System.Drawing.Size(192, 77);
+            this.bt_actualizar.TabIndex = 22;
             this.bt_actualizar.Text = "ACTUALIZAR";
             this.bt_actualizar.UseVisualStyleBackColor = true;
-            this.bt_actualizar.Click += new System.EventHandler(this.bt_guardar_Click);
+            this.bt_actualizar.Click += new System.EventHandler(this.bt_actualizar_Click);
             // 
             // ADMINISTRAR_SUCURSAL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1838, 783);
+            this.Controls.Add(this.bt_actualizar);
+            this.Controls.Add(this.bt_eliminar);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.bt_relieve);
             this.Controls.Add(this.bt_normal);
             this.Controls.Add(this.bt_satelital);
@@ -320,7 +345,6 @@
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.gMapControl1);
             this.Controls.Add(this.bt_volver);
-            this.Controls.Add(this.bt_actualizar);
             this.Controls.Add(this.bt_guardar);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtLongitud);
@@ -371,6 +395,8 @@
         private System.Windows.Forms.Button bt_normal;
         private System.Windows.Forms.Button bt_relieve;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bt_eliminar;
         private System.Windows.Forms.Button bt_actualizar;
     }
 }

@@ -39,7 +39,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(203, 77);
             this.button1.TabIndex = 0;
-            this.button1.Text = "E";
+            this.button1.Text = "REGISTRAR - ACTUALIZAR A PERSONAL";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2

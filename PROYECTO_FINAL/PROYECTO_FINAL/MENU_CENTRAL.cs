@@ -28,6 +28,7 @@ namespace PROYECTO_FINAL
         {
             MENU_SUCURSAL sucu = new MENU_SUCURSAL();
             sucu.Show();
+            this.Hide();
            
         }
 

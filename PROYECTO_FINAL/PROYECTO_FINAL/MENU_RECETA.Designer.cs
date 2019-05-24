@@ -60,6 +60,7 @@
             this.bt_buscar.TabIndex = 0;
             this.bt_buscar.Text = "BUSCAR RECETA";
             this.bt_buscar.UseVisualStyleBackColor = true;
+            this.bt_buscar.Click += new System.EventHandler(this.bt_buscar_Click);
             // 
             // MENU_RECETA
             // 

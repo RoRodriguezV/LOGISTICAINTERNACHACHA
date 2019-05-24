@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_FINAL
 {
-    class sucursal
+    public class sucursal
     {
         public string CodSucursal { get; set; }
         public string NombreSucursal { get; set; }

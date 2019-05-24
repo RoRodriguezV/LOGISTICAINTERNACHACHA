@@ -23,5 +23,10 @@ namespace PROYECTO_FINAL
             mcentral.Show();
             this.Hide();
         }
+
+        private void bt_buscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

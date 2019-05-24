@@ -30,9 +30,11 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtcodigo = new System.Windows.Forms.TextBox();
             this.bt_msucurales = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.bt_volver = new System.Windows.Forms.Button();
+            this.bt_seleccionar = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +44,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 148);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(760, 367);
+            this.dataGridView1.Size = new System.Drawing.Size(760, 320);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -53,13 +55,6 @@
             this.label1.Size = new System.Drawing.Size(141, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "CODIGO SUCURSAL";
-            // 
-            // txtcodigo
-            // 
-            this.txtcodigo.Location = new System.Drawing.Point(175, 47);
-            this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(131, 22);
-            this.txtcodigo.TabIndex = 3;
             // 
             // bt_msucurales
             // 
@@ -81,12 +76,42 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // bt_volver
+            // 
+            this.bt_volver.Location = new System.Drawing.Point(653, 522);
+            this.bt_volver.Name = "bt_volver";
+            this.bt_volver.Size = new System.Drawing.Size(114, 23);
+            this.bt_volver.TabIndex = 4;
+            this.bt_volver.Text = "VOLVER";
+            this.bt_volver.UseVisualStyleBackColor = true;
+            this.bt_volver.Click += new System.EventHandler(this.bt_volver_Click);
+            // 
+            // bt_seleccionar
+            // 
+            this.bt_seleccionar.Location = new System.Drawing.Point(263, 486);
+            this.bt_seleccionar.Name = "bt_seleccionar";
+            this.bt_seleccionar.Size = new System.Drawing.Size(195, 23);
+            this.bt_seleccionar.TabIndex = 5;
+            this.bt_seleccionar.Text = "SELECCIONAR";
+            this.bt_seleccionar.UseVisualStyleBackColor = true;
+            this.bt_seleccionar.Click += new System.EventHandler(this.bt_seleccionar_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(175, 47);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(131, 24);
+            this.comboBox1.TabIndex = 6;
+            // 
             // MENU_BORRARSUCURSAL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 555);
-            this.Controls.Add(this.txtcodigo);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.bt_seleccionar);
+            this.Controls.Add(this.bt_volver);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.bt_msucurales);
             this.Controls.Add(this.label1);
@@ -103,8 +128,10 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.Button bt_msucurales;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button bt_volver;
+        private System.Windows.Forms.Button bt_seleccionar;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

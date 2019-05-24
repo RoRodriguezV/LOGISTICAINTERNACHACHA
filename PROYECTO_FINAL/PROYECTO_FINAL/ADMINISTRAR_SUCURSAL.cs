@@ -144,11 +144,11 @@ namespace PROYECTO_FINAL
                 {
                     MessageBox.Show("Sucursal Guardada Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Limpiar();
-                   // Deshabilitar();
+                    // Deshabilitar();
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo guardar la compra", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("No se pudo guardar la sucursal", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
             }
@@ -194,5 +194,98 @@ namespace PROYECTO_FINAL
         {
             trackZoom.Value = Convert.ToInt32(gMapControl1.Zoom);
         }
+
+        public sucursal sucursalactual { get; set; }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MENU_BORRARSUCURSAL buscar = new MENU_BORRARSUCURSAL();
+            buscar.ShowDialog();
+
+            if (buscar.SucursalSeleccionada != null)
+
+            {
+                sucursalactual = buscar.SucursalSeleccionada;
+                txtCodigo.Text = buscar.SucursalSeleccionada.CodSucursal;
+                txtDireccion.Text = buscar.SucursalSeleccionada.DireccionSucural;
+                txtLatitud.Text = Convert.ToString(buscar.SucursalSeleccionada.Latitud);
+                txtLongitud.Text = Convert.ToString(buscar.SucursalSeleccionada.Longitud);
+                txtNombre.Text = buscar.SucursalSeleccionada.NombreSucursal;
+                txtTelefono.Text = Convert.ToString(buscar.SucursalSeleccionada.TelefonoSucursal);
+
+                bt_actualizar.Enabled = true;
+                bt_eliminar.Enabled = true;
+                Habilitar();
+                bt_guardar.Enabled = false;
+            }
+        }
+        void Habilitar()
+        {
+            txtCodigo.Enabled = true;
+            txtDireccion.Enabled = true;
+            txtLatitud.Enabled = true;
+            txtLongitud.Enabled = true;
+            txtNombre.Enabled = true;
+            txtTelefono.Enabled = true;
+            bt_guardar.Enabled = true;
+
+        }
+
+        private void bt_actualizar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtCodigo.Text) || string.IsNullOrWhiteSpace(txtDireccion.Text) || string.IsNullOrWhiteSpace(txtLatitud.Text) || string.IsNullOrWhiteSpace(txtLongitud.Text) || string.IsNullOrWhiteSpace(txtNombre.Text) ||
+           string.IsNullOrWhiteSpace(txtTelefono.Text))
+
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            else
+            {
+                sucursal psucursal = new sucursal();
+                psucursal.CodSucursal = txtCodigo.Text.Trim();
+                psucursal.NombreSucursal = txtNombre.Text.Trim();
+                psucursal.TelefonoSucursal = Convert.ToInt32(txtTelefono.Text.Trim());
+                psucursal.Latitud = Convert.ToDouble(txtLatitud.Text);
+                psucursal.Longitud = Convert.ToDouble(txtLongitud.Text);
+                psucursal.DireccionSucural = txtDireccion.Text.Trim();
+
+                int resultado = BDconsultas.ActualizarSucursal(psucursal);
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Sucursal Actualizada Con Exito!!", "Actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Limpiar();
+                    // Deshabilitar();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo actualizar la sucursal", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+        }
+
+
+        private void bt_eliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Esta Seguro que desea eliminar la sucursal Actual", "Estas Seguro??", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+            {
+                if (BDconsultas.EliminarSucursal(sucursalactual.CodSucursal) > 0)
+
+                {
+                    MessageBox.Show("Sucursal Eliminada Correctamente!", "Sucursal Eliminada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Limpiar();
+                }
+
+                else
+
+                {
+                    MessageBox.Show("No se pudo eliminar la sucursal", "Sucursal No Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+
+            else
+
+                MessageBox.Show("Se cancelo la eliminacion", "Eliminacion Cancelada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+        }
     }
+
 }
