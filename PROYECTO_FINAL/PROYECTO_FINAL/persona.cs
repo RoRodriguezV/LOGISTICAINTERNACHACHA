@@ -12,19 +12,16 @@ namespace PROYECTO_FINAL
         public string NombrePersona { get; set; }
         public string ApellidoPersona { get; set; }
         public string TelefonoPersona { get; set; }
-        public string CargoPersona { get; set; }
+        public string PassPersona { get; set; }
 
         public persona()
         {
 
         }
-        public persona (string CodigoPersona, string NombrePersona, string ApellidoPersona, string TelefonoPersona, string CargoPersona)
+        public persona (string CodigoPersona, string passpersona)
         {
             this.CodigoPersona = CodigoPersona;
-            this.NombrePersona = NombrePersona;
-            this.ApellidoPersona = ApellidoPersona;
-            this.TelefonoPersona = TelefonoPersona;
-            this.CargoPersona = CargoPersona;
+            this.PassPersona = passpersona;
         }
     }
 }

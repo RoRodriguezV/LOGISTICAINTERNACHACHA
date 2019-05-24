@@ -22,6 +22,19 @@ namespace PROYECTO_FINAL
             return retorno;
 
         }
+        public static string ObtenerCodigo(string codpersona)
+        {
+            string codigorol;
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(String.Format("SELECT CodRol FROM asig_rol where CodPersona = {0} ", codpersona), conexion);
+            codigorol = Convert.ToString(comando);
+            conexion.Close();
+
+            
+            return codigorol;
+
+        }
         public static int ActualizarSucursal(sucursal pactusuc)
         {
 
@@ -103,6 +116,25 @@ namespace PROYECTO_FINAL
 
             conexion.Close();
             return _lista;
+        }
+        public static bool LogInAdmi(string nombreusuario, string claveadmi) // Consultamos la clave del administrador para hacer el login
+        {
+            bool verificar = false; // creación de la variable para identificar si la clave es correcta
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT PassPersona FROM persona where  CodigoPersona = '{0}'", nombreusuario), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                if (_reader.GetString(0) == claveadmi)
+                {
+                    verificar = true;
+                }
+            }
+
+            conexion.Close();
+            return verificar; // envia el estado de la variable "verificar" => true or false
         }
         public static sucursal ObtenerSucursal(string pCodigoSucursal)
         {

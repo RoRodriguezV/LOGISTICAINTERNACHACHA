@@ -9,6 +9,19 @@ namespace PROYECTO_FINAL
     class merma
     {
         public int CantidadMerma;
-        public string FechaHora;
+        public DateTime FechaInicio;
+        public DateTime FechaFin;
+
+        public merma()
+        {
+
+        }
+
+        public merma (int cantidad, DateTime fechaini, DateTime fechafin)
+        {
+            this.CantidadMerma = cantidad;
+            this.FechaInicio = fechaini;
+            this.FechaFin = fechafin;
+        }
     }
 }

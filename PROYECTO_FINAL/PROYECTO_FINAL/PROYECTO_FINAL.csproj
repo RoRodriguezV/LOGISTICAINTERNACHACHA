@@ -127,6 +127,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="receta.cs" />
     <Compile Include="responsable.cs" />
+    <Compile Include="roles.cs" />
     <Compile Include="sucursal.cs" />
     <EmbeddedResource Include="ADMINISTRAR_SUCURSAL.resx">
       <DependentUpon>ADMINISTRAR_SUCURSAL.cs</DependentUpon>
