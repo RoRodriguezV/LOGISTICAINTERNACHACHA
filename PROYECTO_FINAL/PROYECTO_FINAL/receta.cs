@@ -14,5 +14,9 @@ namespace PROYECTO_FINAL
         {
 
         }
+        public receta (int CantidadReceta)
+        {
+            this.CantidadReceta = CantidadReceta;
+        }
     }
 }

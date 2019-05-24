@@ -11,11 +11,18 @@ namespace PROYECTO_FINAL
         public string CodProducto { get; set; }
         public string NombreProducto { get; set; }
         public string TipoProducto { get; set; }
-        public string Cantidad { get; set; }
+        public int Cantidad { get; set; }
 
         public producto()
         {
 
+        }
+        public producto (string CodProducto, string NombreProducto, string TipoProducto, int Cantidad)
+        {
+            this.CodProducto = CodProducto;
+            this.NombreProducto = NombreProducto;
+            this.TipoProducto = TipoProducto;
+            this.Cantidad = Cantidad;
         }
 
     }

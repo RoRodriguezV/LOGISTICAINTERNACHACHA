@@ -19,5 +19,15 @@ namespace PROYECTO_FINAL
         {
 
         }
+        public sucursal(string CodSucursal, string NombreSucursal, string DireccionSucursal, double Latitud, double Longitud, int TelefonoSucursal)
+        {
+            this.CodSucursal = CodSucursal;
+            this.NombreSucursal = NombreSucursal;
+            this.DireccionSucural = DireccionSucural;
+            this.Latitud = Latitud;
+            this.Longitud = Longitud;
+            this.TelefonoSucursal = TelefonoSucursal;
+
+        }
     }
 }

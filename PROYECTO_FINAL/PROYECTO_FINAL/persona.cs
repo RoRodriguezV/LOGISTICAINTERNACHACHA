@@ -18,5 +18,13 @@ namespace PROYECTO_FINAL
         {
 
         }
+        public persona (string CodigoPersona, string NombrePersona, string ApellidoPersona, string TelefonoPersona, string CargoPersona)
+        {
+            this.CodigoPersona = CodigoPersona;
+            this.NombrePersona = NombrePersona;
+            this.ApellidoPersona = ApellidoPersona;
+            this.TelefonoPersona = TelefonoPersona;
+            this.CargoPersona = CargoPersona;
+        }
     }
 }
