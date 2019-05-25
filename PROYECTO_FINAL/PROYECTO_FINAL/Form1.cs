@@ -18,6 +18,7 @@ namespace PROYECTO_FINAL
             InitializeComponent();
         }
 
+        public roles RolSelecionado { get; set; }
         private void bt_verificar_Click(object sender, EventArgs e)
         {
             try
@@ -27,21 +28,28 @@ namespace PROYECTO_FINAL
                 verificar = BDconsultas.LogInAdmi(pers.CodigoPersona, pers.PassPersona);
                 if (verificar == true)
                 {
-                   // string codi = BDconsultas.ObtenerCodigo(tb_usuario.Text);
+                    RolSelecionado = BDconsultas.ObtenerCodigo(tb_usuario.Text);
+                    
                    
 
-                     if(tb_usuario.Text == "01")
-                      { 
-                          MessageBox.Show("BIENVENIDO DE NUEVO ", "ADMINISTRADOR DE CENTRAL", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                          MENU_CENTRAL menu_central = new MENU_CENTRAL();
-                          menu_central.Show();
-                          this.Hide();
-                      }
-                      else
+                     if(RolSelecionado != null)
                       {
-                          MessageBox.Show("BIENVENIDO DE NUEVO ", "ADMINISTRADOR DE SUCURSAL", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string rolselec = RolSelecionado.CodRoles;
+                        if(rolselec == "01")
+                        {
+                            MessageBox.Show("BIENVENIDO DE NUEVO ", "ADMINISTRADOR DE CENTRAL", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MENU_CENTRAL menu_central = new MENU_CENTRAL();
+                            menu_central.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("BIENVENIDO DE NUEVO ", "ADMINISTRADOR DE SUCURSAL", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                      }
+                        }
+
+                    }
+                      
 
                 }
                 else
@@ -52,7 +60,7 @@ namespace PROYECTO_FINAL
             }
             catch
             {
-                MessageBox.Show("VUELVA A INTENTARLO", "ERROR AL INICIAR", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("VUELVA A INTENTARLO", "ERROR CON LA BASE DE DATOS", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

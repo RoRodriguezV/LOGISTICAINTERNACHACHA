@@ -22,17 +22,21 @@ namespace PROYECTO_FINAL
             return retorno;
 
         }
-        public static string ObtenerCodigo(string codpersona)
+        public static roles ObtenerCodigo(string codpersona)
         {
-            string codigorol;
+            roles proles = new roles();
             MySqlConnection conexion = BDcomun.ObtenerConexion();
 
-            MySqlCommand comando = new MySqlCommand(String.Format("SELECT CodRol FROM asig_rol where CodPersona = {0} ", codpersona), conexion);
-            codigorol = Convert.ToString(comando);
-            conexion.Close();
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT CodRol FROM asig_rol where CodPersona = {0} ", codpersona), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                proles.CodRoles = _reader.GetString(0);
+              
+            }
 
-            
-            return codigorol;
+            conexion.Close();
+            return proles;
 
         }
         public static int ActualizarSucursal(sucursal pactusuc)
