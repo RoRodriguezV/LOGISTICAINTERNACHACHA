@@ -61,6 +61,13 @@
     <Compile Include="ADMINISTRAR_SUCURSAL.Designer.cs">
       <DependentUpon>ADMINISTRAR_SUCURSAL.cs</DependentUpon>
     </Compile>
+    <Compile Include="asig_rol.cs" />
+    <Compile Include="ASIGNACION_ROLES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ASIGNACION_ROLES.Designer.cs">
+      <DependentUpon>ASIGNACION_ROLES.cs</DependentUpon>
+    </Compile>
     <Compile Include="BDcomun.cs" />
     <Compile Include="BDconsultas.cs" />
     <Compile Include="detallestock.cs" />
@@ -131,6 +138,9 @@
     <Compile Include="sucursal.cs" />
     <EmbeddedResource Include="ADMINISTRAR_SUCURSAL.resx">
       <DependentUpon>ADMINISTRAR_SUCURSAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ASIGNACION_ROLES.resx">
+      <DependentUpon>ASIGNACION_ROLES.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

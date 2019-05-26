@@ -22,6 +22,19 @@ namespace PROYECTO_FINAL
             return retorno;
 
         }
+        public static int AgregarAsignacion(asig_rol pasig)
+        {
+
+            int retorno = 0;
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format("Insert into asig_rol (CodPersona, CodRol) values ('{0}','{1}')",
+              pasig.CodPersona, pasig.CodRol), BDcomun.ObtenerConexion());
+            retorno = comando.ExecuteNonQuery();
+            conexion.Close();
+            return retorno;
+
+        }
         public static roles ObtenerCodigo(string codpersona)
         {
             roles proles = new roles();
@@ -54,6 +67,21 @@ namespace PROYECTO_FINAL
             return retorno;
 
         }
+        public static int ActualizarAignaciones(asig_rol pasig)
+        {
+
+            int retorno = 0;
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format("Update asig_rol set  CodPersona='{0}', CodRol='{1}' where CodPersona={2}",
+                pasig.CodPersona, pasig.CodRol, pasig.CodPersona), conexion);
+
+            retorno = comando.ExecuteNonQuery();
+            conexion.Close();
+
+            return retorno;
+
+        }
         public static int EliminarSucursal(string pcodigosucur)
 
         {
@@ -63,6 +91,23 @@ namespace PROYECTO_FINAL
             MySqlConnection conexion = BDcomun.ObtenerConexion();
 
             MySqlCommand comando = new MySqlCommand(string.Format(" DELETE  FROM sucursal where CodSucursal = {0} ", pcodigosucur), conexion);
+
+            retorno = comando.ExecuteNonQuery();
+
+            conexion.Close();
+
+            return retorno;
+
+        }
+        public static int EliminarAsignacion(string pasig)
+
+        {
+
+            int retorno = 0;
+
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format(" DELETE  FROM asig_rol where CodRol = {0} ", pasig), conexion);
 
             retorno = comando.ExecuteNonQuery();
 
@@ -121,6 +166,28 @@ namespace PROYECTO_FINAL
             conexion.Close();
             return _lista;
         }
+        public static List<asig_rol> BuscarAsignaciones()
+        {
+            List<asig_rol> _lista = new List<asig_rol>();
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT * FROM asig_rol "), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                asig_rol pasig = new asig_rol();
+                pasig.CodPersona = _reader.GetString(0);
+                pasig.CodRol = _reader.GetString(1);
+               
+
+
+                _lista.Add(pasig);
+            }
+
+            conexion.Close();
+            return _lista;
+        }
         public static bool LogInAdmi(string nombreusuario, string claveadmi) // Consultamos la clave del administrador para hacer el login
         {
             bool verificar = false; // creación de la variable para identificar si la clave es correcta
@@ -160,6 +227,25 @@ namespace PROYECTO_FINAL
 
             conexion.Close();
             return psucursal;
+
+        }
+        public static asig_rol ObtenerAsignacion(string pcodasig)
+        {
+            asig_rol pasig = new asig_rol();
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT * FROM asig_rol where CodRol = {0} ", pcodasig), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+
+                pasig.CodPersona = _reader.GetString(0);
+                pasig.CodRol = _reader.GetString(1);
+                
+            }
+
+            conexion.Close();
+            return pasig;
 
         }
 

@@ -61,5 +61,10 @@ namespace PROYECTO_FINAL
             else
                 MessageBox.Show("Debe de seleccionar una fila");
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

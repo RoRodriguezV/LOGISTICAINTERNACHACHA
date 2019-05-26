@@ -23,5 +23,12 @@ namespace PROYECTO_FINAL
             central.Show();
             this.Hide();
         }
+
+        private void bt_asig_Click(object sender, EventArgs e)
+        {
+            ASIG_ROL rol = new ASIG_ROL();
+            rol.Show();
+            this.Hide();
+        }
     }
 }

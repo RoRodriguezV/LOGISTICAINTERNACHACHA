@@ -252,7 +252,7 @@ namespace PROYECTO_FINAL
                 {
                     MessageBox.Show("Sucursal Actualizada Con Exito!!", "Actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Limpiar();
-                    // Deshabilitar();
+                   
                 }
                 else
                 {
