@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_FINAL
 {
-    class insumo
+    public class insumo
     {
-        public string CodInsumo;
-        public string NombreInsumo;
-        public string TipoInsumo;
-        public int CantidadInsumo;
+        public string CodInsumo { get; set; }
+        public string NombreInsumo { get; set; }
+        public string TipoInsumo { get; set; }
+        public string CantidadInsumo { get; set; }
 
 
         public insumo()
@@ -19,7 +19,7 @@ namespace PROYECTO_FINAL
 
         }
 
-        public insumo(string CodInsumo, string NombreInsumo, string TipoInsumo, int cantiinsumo)
+        public insumo(string CodInsumo, string NombreInsumo, string TipoInsumo, string cantiinsumo)
         {
             this.CodInsumo = CodInsumo;
             this.NombreInsumo = NombreInsumo;

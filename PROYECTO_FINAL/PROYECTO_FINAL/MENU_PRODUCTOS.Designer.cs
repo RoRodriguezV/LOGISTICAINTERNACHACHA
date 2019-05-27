@@ -37,14 +37,15 @@
             // 
             this.bt_registrar.Location = new System.Drawing.Point(146, 45);
             this.bt_registrar.Name = "bt_registrar";
-            this.bt_registrar.Size = new System.Drawing.Size(231, 94);
+            this.bt_registrar.Size = new System.Drawing.Size(231, 64);
             this.bt_registrar.TabIndex = 0;
-            this.bt_registrar.Text = "REGISTRAR - ACTUALIZAR PRODUCTO / INSUMO";
+            this.bt_registrar.Text = "PRODUCTOS";
             this.bt_registrar.UseVisualStyleBackColor = true;
+            this.bt_registrar.Click += new System.EventHandler(this.bt_registrar_Click);
             // 
             // bt_volver
             // 
-            this.bt_volver.Location = new System.Drawing.Point(391, 333);
+            this.bt_volver.Location = new System.Drawing.Point(348, 266);
             this.bt_volver.Name = "bt_volver";
             this.bt_volver.Size = new System.Drawing.Size(131, 23);
             this.bt_volver.TabIndex = 0;
@@ -54,18 +55,19 @@
             // 
             // bt_buscar
             // 
-            this.bt_buscar.Location = new System.Drawing.Point(146, 176);
+            this.bt_buscar.Location = new System.Drawing.Point(146, 148);
             this.bt_buscar.Name = "bt_buscar";
-            this.bt_buscar.Size = new System.Drawing.Size(231, 94);
+            this.bt_buscar.Size = new System.Drawing.Size(231, 62);
             this.bt_buscar.TabIndex = 0;
-            this.bt_buscar.Text = "BUSCAR PRODUCTO / INSUMO";
+            this.bt_buscar.Text = "INSUMOS";
             this.bt_buscar.UseVisualStyleBackColor = true;
+            this.bt_buscar.Click += new System.EventHandler(this.bt_buscar_Click);
             // 
             // MENU_PRODUCTOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 368);
+            this.ClientSize = new System.Drawing.Size(534, 312);
             this.Controls.Add(this.bt_volver);
             this.Controls.Add(this.bt_buscar);
             this.Controls.Add(this.bt_registrar);
