@@ -71,7 +71,13 @@
     <Compile Include="BDcomun.cs" />
     <Compile Include="BDconsultas.cs" />
     <Compile Include="detallestock.cs" />
-    <Compile Include="envio.cs" />
+    <Compile Include="Asignaciones.cs" />
+    <Compile Include="FAsignaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAsignaciones.Designer.cs">
+      <DependentUpon>FAsignaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ASIGNACION_ROLES.resx">
       <DependentUpon>ASIGNACION_ROLES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAsignaciones.resx">
+      <DependentUpon>FAsignaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
