@@ -30,5 +30,12 @@ namespace PROYECTO_FINAL
             rol.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            REGISTRO_PERSONAL perso = new REGISTRO_PERSONAL();
+            perso.Show();
+            this.Hide();
+        }
     }
 }

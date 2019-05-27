@@ -151,7 +151,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(44, 398);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 23);
+            this.button1.Size = new System.Drawing.Size(145, 23);
             this.button1.TabIndex = 9;
             this.button1.Text = "REFRESCAR";
             this.button1.UseVisualStyleBackColor = true;

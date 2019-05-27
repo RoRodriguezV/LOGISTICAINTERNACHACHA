@@ -29,28 +29,19 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.bt_volver = new System.Windows.Forms.Button();
             this.bt_asig = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(186, 29);
+            this.button1.Location = new System.Drawing.Point(186, 69);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(203, 77);
             this.button1.TabIndex = 0;
             this.button1.Text = "REGISTRAR - ACTUALIZAR A PERSONAL";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(186, 142);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(203, 77);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "BUSCAR PERSONAL";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // bt_volver
             // 
@@ -64,7 +55,7 @@
             // 
             // bt_asig
             // 
-            this.bt_asig.Location = new System.Drawing.Point(186, 250);
+            this.bt_asig.Location = new System.Drawing.Point(186, 191);
             this.bt_asig.Name = "bt_asig";
             this.bt_asig.Size = new System.Drawing.Size(203, 86);
             this.bt_asig.TabIndex = 1;
@@ -79,7 +70,6 @@
             this.ClientSize = new System.Drawing.Size(549, 348);
             this.Controls.Add(this.bt_asig);
             this.Controls.Add(this.bt_volver);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "MENU_PERSONAL";
             this.Text = "MENU_PERSONAL";
@@ -90,7 +80,6 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button bt_volver;
         private System.Windows.Forms.Button bt_asig;
     }

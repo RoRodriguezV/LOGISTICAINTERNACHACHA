@@ -35,6 +35,19 @@ namespace PROYECTO_FINAL
             return retorno;
 
         }
+        public static int AgregarPersona(persona ppersona)
+        {
+
+            int retorno = 0;
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format("Insert into persona (CodigoPersona, NombrePersona, ApellidoPersona, TelefonoPersona, PassPersona) values ('{0}','{1}','{2}','{3}','{4}')",
+              ppersona.CodigoPersona, ppersona.NombrePersona, ppersona.ApellidoPersona, ppersona.TelefonoPersona, ppersona.PassPersona), BDcomun.ObtenerConexion());
+            retorno = comando.ExecuteNonQuery();
+            conexion.Close();
+            return retorno;
+
+        }
         public static roles ObtenerCodigo(string codpersona)
         {
             roles proles = new roles();
@@ -82,6 +95,21 @@ namespace PROYECTO_FINAL
             return retorno;
 
         }
+        public static int ActualizarPersona(persona ppersona)
+        {
+
+            int retorno = 0;
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format("Update persona set  NombrePersona='{0}', ApellidoPersona='{1}', TelefonoPersona='{2}', PassPersona='{3}' where CodigoPersona={4}",
+             ppersona.NombrePersona, ppersona.ApellidoPersona, ppersona.TelefonoPersona, ppersona.PassPersona, ppersona.CodigoPersona), conexion);
+
+            retorno = comando.ExecuteNonQuery();
+            conexion.Close();
+
+            return retorno;
+
+        }
         public static int EliminarSucursal(string pcodigosucur)
 
         {
@@ -108,6 +136,23 @@ namespace PROYECTO_FINAL
             MySqlConnection conexion = BDcomun.ObtenerConexion();
 
             MySqlCommand comando = new MySqlCommand(string.Format(" DELETE  FROM asig_rol where CodRol = {0} ", pasig), conexion);
+
+            retorno = comando.ExecuteNonQuery();
+
+            conexion.Close();
+
+            return retorno;
+
+        }
+        public static int EliminarPersona(string ppersona)
+
+        {
+
+            int retorno = 0;
+
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format(" DELETE  FROM persona where CodigoPersona = {0} ", ppersona), conexion);
 
             retorno = comando.ExecuteNonQuery();
 
@@ -188,6 +233,32 @@ namespace PROYECTO_FINAL
             conexion.Close();
             return _lista;
         }
+        public static List<persona> BuscarPersonas()
+        {
+            List<persona> _lista = new List<persona>();
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT * FROM persona "), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                persona ppersona = new persona();
+                ppersona.CodigoPersona = _reader.GetString(0);
+                ppersona.NombrePersona = _reader.GetString(1);
+                ppersona.ApellidoPersona = _reader.GetString(2);
+                ppersona.TelefonoPersona = _reader.GetString(3);
+                ppersona.PassPersona = _reader.GetString(4);
+
+
+
+
+                _lista.Add(ppersona);
+            }
+
+            conexion.Close();
+            return _lista;
+        }
         public static bool LogInAdmi(string nombreusuario, string claveadmi) // Consultamos la clave del administrador para hacer el login
         {
             bool verificar = false; // creación de la variable para identificar si la clave es correcta
@@ -246,6 +317,28 @@ namespace PROYECTO_FINAL
 
             conexion.Close();
             return pasig;
+
+        }
+        public static persona ObtenerPersona(string ppersona)
+        {
+            persona pperson = new persona();
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT * FROM persona where CodigoPersona = {0} ", ppersona), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+
+                pperson.CodigoPersona = _reader.GetString(0);
+                pperson.NombrePersona = _reader.GetString(1);
+                pperson.ApellidoPersona = _reader.GetString(2);
+                pperson.TelefonoPersona = _reader.GetString(3);
+                pperson.PassPersona = _reader.GetString(4);
+
+            }
+
+            conexion.Close();
+            return pperson;
 
         }
 

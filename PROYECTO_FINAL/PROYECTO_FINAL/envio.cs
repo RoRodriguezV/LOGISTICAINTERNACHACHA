@@ -11,16 +11,15 @@ namespace PROYECTO_FINAL
         
         public int CantidadEnvio { get; set; }
         public string FechaHora { get; set; }
+        public  string CodOrigen { get; set; }
+        public string CodDestino { get; set; }
+        public string CodProducto { get; set; }
 
         public envio()
         {
 
         }
 
-        public envio(int cantidadenvio, string fecha)
-        {
-            this.CantidadEnvio = cantidadenvio;
-            this.FechaHora = fecha;
-        }
+        
     }
 }

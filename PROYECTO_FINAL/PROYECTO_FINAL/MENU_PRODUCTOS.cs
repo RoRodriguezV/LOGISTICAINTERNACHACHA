@@ -23,5 +23,10 @@ namespace PROYECTO_FINAL
             mcentral.Show();
             this.Hide();
         }
+
+        private void MENU_PRODUCTOS_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

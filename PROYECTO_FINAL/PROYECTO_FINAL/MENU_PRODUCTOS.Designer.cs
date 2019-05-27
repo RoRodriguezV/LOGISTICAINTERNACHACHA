@@ -39,7 +39,7 @@
             this.bt_registrar.Name = "bt_registrar";
             this.bt_registrar.Size = new System.Drawing.Size(231, 94);
             this.bt_registrar.TabIndex = 0;
-            this.bt_registrar.Text = "REGISTRAR - ACTUALIZAR PRODUCTO / INSUMO";
+            this.bt_registrar.Text = "PRODUCTOS";
             this.bt_registrar.UseVisualStyleBackColor = true;
             // 
             // bt_volver
@@ -58,7 +58,7 @@
             this.bt_buscar.Name = "bt_buscar";
             this.bt_buscar.Size = new System.Drawing.Size(231, 94);
             this.bt_buscar.TabIndex = 0;
-            this.bt_buscar.Text = "BUSCAR PRODUCTO / INSUMO";
+            this.bt_buscar.Text = "INSUMOS";
             this.bt_buscar.UseVisualStyleBackColor = true;
             // 
             // MENU_PRODUCTOS
@@ -71,6 +71,7 @@
             this.Controls.Add(this.bt_registrar);
             this.Name = "MENU_PRODUCTOS";
             this.Text = "MENU_PRODUCTOS";
+            this.Load += new System.EventHandler(this.MENU_PRODUCTOS_Load);
             this.ResumeLayout(false);
 
         }
