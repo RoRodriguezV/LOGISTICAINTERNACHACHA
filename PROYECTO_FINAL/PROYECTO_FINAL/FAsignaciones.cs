@@ -16,9 +16,9 @@ namespace PROYECTO_FINAL
         public FAsignaciones()
         {
             InitializeComponent();
-            dgvAsignaciones.Columns.Add("CodOrigen", "ORIGEN");
-            dgvAsignaciones.Columns.Add("CodDestino", "DESTINO");
-            dgvAsignaciones.Columns.Add("CodProducto", "PRODUCTO");
+            dgvAsignaciones.Columns.Add("Origen", "ORIGEN");
+            dgvAsignaciones.Columns.Add("Destino", "DESTINO");
+            dgvAsignaciones.Columns.Add("Producto", "PRODUCTO");
             dgvAsignaciones.Columns.Add("CantidadEnvio", "CANTIDAD");
             dgvAsignaciones.Columns.Add("FechaHora", "FECHA");
         }
@@ -101,7 +101,7 @@ namespace PROYECTO_FINAL
         {
             if (dgvAsignaciones.SelectedRows.Count == 1)
             {
-                int fila = Convert.ToInt32(dgvAsignaciones.CurrentRow.Cells[0].Value);
+                string fila = dgvAsignaciones.CurrentRow.Cells[0].Value.ToString();
             }
             else
                 MessageBox.Show("debe de seleccionar una fila");
@@ -150,28 +150,38 @@ namespace PROYECTO_FINAL
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Asigaciones pAsignaciones = new Asigaciones();
-            MySqlCommand comando = new MySqlCommand(string.Format("Insert into envio (CodOrigen, CodDestino, CodProducto, CantidadEnvio, FechaHora) values ('{0}', '{1}', '{2}', '{3}', '{4}' )",
-            pAsignaciones.Codigo_Origen, pAsignaciones.Codigo_Destino, pAsignaciones.Producto, pAsignaciones.Cantidad, pAsignaciones.Fecha), BDcomun.ObtenerConexion());
+
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            //Asigaciones pAsignaciones = new Asigaciones();
+            MySqlCommand comando = new MySqlCommand(string.Format("Insert into envio (CodOrigen, CodDestino, CodProducto, CantidadEnvio, FechaHora) values (CodOrigen, CodDestino, CodProducto, CantidadEnvio, FechaHora )", BDcomun.ObtenerConexion()));
+            // pAsignaciones.Codigo_Origen, pAsignaciones.Codigo_Destino, pAsignaciones.Producto, pAsignaciones.Cantidad,pAsignaciones.Fecha), conexionBD.ObtenerConexion());
 
             try
             {
                 foreach (DataGridViewRow row in dgvAsignaciones.Rows)
                 {
-                    comando.Parameters.Clear();
-                    comando.Parameters.AddWithValue("@CodOrigen", Convert.ToString(row.Cells["ORIGEN"].Value));
-                    comando.Parameters.AddWithValue("@CodDestino", Convert.ToString(row.Cells["DESTINO"].Value));
-                    comando.Parameters.AddWithValue("@CodProducto", Convert.ToString(row.Cells["PRODUCTO"].Value));
-                    comando.Parameters.AddWithValue("@CantidadEnvio", Convert.ToString(row.Cells["CANTIDAD"].Value));
-                    comando.Parameters.AddWithValue("@FechaHora", Convert.ToString(row.Cells["FECHA"].Value));
+                    /* pAsignaciones.Codigo_Origen =  Convert.ToString(row.Cells["ORIGEN"].Value);
+                     pAsignaciones.Codigo_Destino = Convert.ToString(row.Cells["DESTINO"].Value);
+                     pAsignaciones.Producto = Convert.ToString(row.Cells["PRODUCTO"].Value);
+                     pAsignaciones.Cantidad = Convert.ToString(row.Cells["CANTIDAD"].Value);
+                     pAsignaciones.Fecha = Convert.ToString(row.Cells["FECHA"].Value);
+
+                     comando.Parameters.Clear();*/
+                    comando.Parameters.AddWithValue("CodOrigen", Convert.ToString(row.Cells["Origen"].Value));
+                    comando.Parameters.AddWithValue("CodDestino", Convert.ToString(row.Cells["Destino"].Value));
+                    comando.Parameters.AddWithValue("CodProducto", Convert.ToString(row.Cells["Producto"].Value));
+                    comando.Parameters.AddWithValue("CantidadEnvio", Convert.ToString(row.Cells["CantidadEnvio"].Value));
+                    comando.Parameters.AddWithValue("FechaHora", Convert.ToString(row.Cells["FechaHora"].Value));
 
                     comando.ExecuteNonQuery();
                 }
-                MessageBox.Show("Datos agregados");
+                MessageBox.Show("Datos registrados");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al agregar");
+                Console.WriteLine(ex);
+                MessageBox.Show("Error al registrar");
             }
 
         }

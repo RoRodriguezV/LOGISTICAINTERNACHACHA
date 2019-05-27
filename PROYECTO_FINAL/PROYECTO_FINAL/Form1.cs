@@ -28,7 +28,7 @@ namespace PROYECTO_FINAL
                 verificar = BDconsultas.LogInAdmi(pers.CodigoPersona, pers.PassPersona);
                 if (verificar == true)
                 {
-                    RolSelecionado = BDconsultas.ObtenerCodigo(tb_usuario.Text);
+                    /*RolSelecionado = BDconsultas.ObtenerCodigo(tb_usuario.Text);
                     
                    
 
@@ -36,12 +36,12 @@ namespace PROYECTO_FINAL
                       {
                         string rolselec = RolSelecionado.CodRoles;
                         if(rolselec == "01")
-                        {
+                        {*/
                             MessageBox.Show("BIENVENIDO DE NUEVO ", "ADMINISTRADOR DE CENTRAL", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             MENU_CENTRAL menu_central = new MENU_CENTRAL();
                             menu_central.Show();
                             this.Hide();
-                        }
+                      /*  }
                         else
                         {
                             MessageBox.Show("BIENVENIDO DE NUEVO ", "ADMINISTRADOR DE SUCURSAL", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -50,7 +50,7 @@ namespace PROYECTO_FINAL
 
                     }
                       
-
+                    */
                 }
                 else
                 {
