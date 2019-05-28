@@ -21,7 +21,19 @@ namespace PROYECTO_FINAL
         {
             MENU_CENTRAL mcentral = new MENU_CENTRAL();
             mcentral.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void bt_registrar_Click(object sender, EventArgs e)
+        {
+            FPRODUCTOS productos = new FPRODUCTOS();
+            productos.ShowDialog();
+        }
+
+        private void bt_buscar_Click(object sender, EventArgs e)
+        {
+            FINSUMOS insumos = new FINSUMOS();
+            insumos.ShowDialog();
         }
 
         private void MENU_PRODUCTOS_Load(object sender, EventArgs e)
