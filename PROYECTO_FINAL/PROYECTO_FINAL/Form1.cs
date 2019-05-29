@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace PROYECTO_FINAL
 {
-    public partial class Form1 : Form
+    public partial class ControlDeMerma : Form
     {
-        public Form1()
+        public ControlDeMerma()
         {
             InitializeComponent();
         }

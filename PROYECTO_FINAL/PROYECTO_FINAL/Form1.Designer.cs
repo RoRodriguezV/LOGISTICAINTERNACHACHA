@@ -1,6 +1,6 @@
 ﻿namespace PROYECTO_FINAL
 {
-    partial class Form1
+    partial class ControlDeMerma
     {
         /// <summary>
         /// Required designer variable.

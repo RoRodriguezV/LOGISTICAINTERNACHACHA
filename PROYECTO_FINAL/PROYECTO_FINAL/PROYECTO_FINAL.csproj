@@ -121,7 +121,6 @@
     <Compile Include="MENU_SUCURSAL.Designer.cs">
       <DependentUpon>MENU_SUCURSAL.cs</DependentUpon>
     </Compile>
-    <Compile Include="merma.cs" />
     <Compile Include="persona.cs" />
     <Compile Include="producto.cs" />
     <Compile Include="Program.cs" />
@@ -191,6 +190,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Users\Renato Rodriguez\Documents\Visual Studio 2017\Projects\WindowsFormsApp4\WindowsFormsApp4\WindowsFormsApp4.csproj">
+      <Project>{896c8fb1-30e1-4cd9-a4c8-bae518db2f5e}</Project>
+      <Name>WindowsFormsApp4</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

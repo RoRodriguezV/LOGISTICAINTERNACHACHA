@@ -19,7 +19,7 @@ namespace PROYECTO_FINAL
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form1 inicio = new Form1();
+            ControlDeMerma inicio = new ControlDeMerma();
             inicio.Show();
             this.Hide();
         }

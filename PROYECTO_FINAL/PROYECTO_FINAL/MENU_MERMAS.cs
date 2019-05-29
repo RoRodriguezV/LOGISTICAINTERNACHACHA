@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using WindowsFormsApp4;
 namespace PROYECTO_FINAL
 {
     public partial class MENU_MERMAS : Form
@@ -21,6 +21,13 @@ namespace PROYECTO_FINAL
         {
             MENU_CENTRAL mcentral = new MENU_CENTRAL();
             mcentral.Show();
+            this.Hide();
+        }
+
+        private void bt_cantidades_Click(object sender, EventArgs e)
+        {
+            ControdeMerma ctrlMermas = new ControdeMerma();
+            ctrlMermas.Show();
             this.Hide();
         }
     }

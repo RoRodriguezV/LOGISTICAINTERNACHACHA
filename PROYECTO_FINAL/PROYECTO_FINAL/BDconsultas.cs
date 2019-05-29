@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using WindowsFormsApp4;
 
 namespace PROYECTO_FINAL
 {
@@ -341,6 +342,7 @@ namespace PROYECTO_FINAL
             return pperson;
 
         }
+       
 
     }
 }
