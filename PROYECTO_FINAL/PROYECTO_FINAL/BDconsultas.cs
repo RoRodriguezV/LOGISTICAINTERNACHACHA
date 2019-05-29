@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
-using WindowsFormsApp4;
+
 
 namespace PROYECTO_FINAL
 {
@@ -342,7 +342,51 @@ namespace PROYECTO_FINAL
             return pperson;
 
         }
-       
+        public static List<Mermas> ListarMermas()
+        {
+            List<Mermas> listMermas = new List<Mermas>();
+            MySqlCommand _comando = new MySqlCommand(
+             "SELECT CodSucursal,CodProducto,CantidadMerma,FechaInicio,FechaFin FROM merma", BDcomun.ObtenerConexion());
+            MySqlDataReader reader = _comando.ExecuteReader();
+            while (reader.Read())
+            {
+                Mermas mermas = new Mermas();
+                mermas.CodSucursal1 = reader.GetString(0);
+                mermas.CodProducto1 = reader.GetString(1);
+                mermas.CantidadMerma1 = reader.GetInt16(2);
+                mermas.FechaInicio1 = reader.GetDateTime(3);
+                mermas.FechaFin1 = reader.GetDateTime(4);
+
+                listMermas.Add(mermas);
+            }
+            BDcomun.ObtenerConexion().Close();
+            return listMermas;
+        }
+        public static List<Mermas> ListarMermasporFecha(MySqlParameter param, MySqlParameter param2)
+        {
+
+            List<Mermas> ListMermasFecha = new List<Mermas>();
+            MySqlCommand cmd = new MySqlCommand(
+            "SELECT CodSucursal,CodProducto,CantidadMerma,FechaInicio,FechaFin FROM merma where FechaInicio BETWEEN @p1 AND @p2 ", BDcomun.ObtenerConexion());
+            cmd.Parameters.Add(param);
+            cmd.Parameters.Add(param2);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Mermas mermas = new Mermas();
+                mermas.CodSucursal1 = reader.GetString(0);
+                mermas.CodProducto1 = reader.GetString(1);
+                mermas.CantidadMerma1 = reader.GetInt16(2);
+                mermas.FechaInicio1 = reader.GetDateTime(3);
+                mermas.FechaFin1 = reader.GetDateTime(4);
+
+                ListMermasFecha.Add(mermas);
+            }
+            BDcomun.ObtenerConexion().Close();
+            return ListMermasFecha;
+
+        }
+
 
     }
 }

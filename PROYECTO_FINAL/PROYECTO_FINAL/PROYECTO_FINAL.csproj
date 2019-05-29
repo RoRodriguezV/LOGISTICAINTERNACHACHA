@@ -78,6 +78,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlDeMermas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlDeMermas.Designer.cs">
+      <DependentUpon>ControlDeMermas.cs</DependentUpon>
+    </Compile>
     <Compile Include="insumo.cs" />
     <Compile Include="MENU_ASIGNACION.cs">
       <SubType>Form</SubType>
@@ -121,6 +127,7 @@
     <Compile Include="MENU_SUCURSAL.Designer.cs">
       <DependentUpon>MENU_SUCURSAL.cs</DependentUpon>
     </Compile>
+    <Compile Include="Merma.cs" />
     <Compile Include="persona.cs" />
     <Compile Include="producto.cs" />
     <Compile Include="Program.cs" />
@@ -143,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlDeMermas.resx">
+      <DependentUpon>ControlDeMermas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MENU_ASIGNACION.resx">
       <DependentUpon>MENU_ASIGNACION.cs</DependentUpon>
@@ -190,12 +200,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Users\Renato Rodriguez\Documents\Visual Studio 2017\Projects\WindowsFormsApp4\WindowsFormsApp4\WindowsFormsApp4.csproj">
-      <Project>{896c8fb1-30e1-4cd9-a4c8-bae518db2f5e}</Project>
-      <Name>WindowsFormsApp4</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
