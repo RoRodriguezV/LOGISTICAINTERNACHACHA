@@ -41,6 +41,7 @@
             this.bt_cantidades.TabIndex = 0;
             this.bt_cantidades.Text = "CANTIDAD DE INGREDIENTES PERDIDOS";
             this.bt_cantidades.UseVisualStyleBackColor = true;
+            this.bt_cantidades.Click += new System.EventHandler(this.bt_cantidades_Click);
             // 
             // bt_mapa
             // 

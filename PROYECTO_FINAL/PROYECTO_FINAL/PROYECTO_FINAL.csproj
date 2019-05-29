@@ -102,6 +102,12 @@
     <Compile Include="FPRODUCTOS.Designer.cs">
       <DependentUpon>FPRODUCTOS.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlDeMermas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlDeMermas.Designer.cs">
+      <DependentUpon>ControlDeMermas.cs</DependentUpon>
+    </Compile>
     <Compile Include="insumo.cs" />
     <Compile Include="InsumosDAL.cs" />
     <Compile Include="MENU_ASIGNACION.cs">
@@ -146,7 +152,7 @@
     <Compile Include="MENU_SUCURSAL.Designer.cs">
       <DependentUpon>MENU_SUCURSAL.cs</DependentUpon>
     </Compile>
-    <Compile Include="merma.cs" />
+    <Compile Include="Merma.cs" />
     <Compile Include="persona.cs" />
     <Compile Include="producto.cs" />
     <Compile Include="ProductosDAL.cs" />
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FPRODUCTOS.resx">
       <DependentUpon>FPRODUCTOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlDeMermas.resx">
+      <DependentUpon>ControlDeMermas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MENU_ASIGNACION.resx">
       <DependentUpon>MENU_ASIGNACION.cs</DependentUpon>

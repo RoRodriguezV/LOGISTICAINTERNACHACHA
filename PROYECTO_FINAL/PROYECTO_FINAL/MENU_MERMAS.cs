@@ -23,5 +23,12 @@ namespace PROYECTO_FINAL
             mcentral.Show();
             this.Hide();
         }
+
+        private void bt_cantidades_Click(object sender, EventArgs e)
+        {
+            ControlDeMerma ctrlmerma = new ControlDeMerma();
+            ctrlmerma.Show();
+            this.Hide();
+        }
     }
 }
