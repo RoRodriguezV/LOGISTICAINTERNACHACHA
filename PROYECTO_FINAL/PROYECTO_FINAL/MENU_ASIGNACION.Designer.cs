@@ -53,6 +53,7 @@
             this.bt_reporte.TabIndex = 0;
             this.bt_reporte.Text = "REPORTE ENVIOS";
             this.bt_reporte.UseVisualStyleBackColor = true;
+            this.bt_reporte.Click += new System.EventHandler(this.bt_reporte_Click);
             // 
             // bt_volver
             // 

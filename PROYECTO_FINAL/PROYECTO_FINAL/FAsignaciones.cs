@@ -16,41 +16,44 @@ namespace PROYECTO_FINAL
         public FAsignaciones()
         {
             InitializeComponent();
-            dgvAsignaciones.Columns.Add("Origen", "ORIGEN");
-            dgvAsignaciones.Columns.Add("Destino", "DESTINO");
-            dgvAsignaciones.Columns.Add("Producto", "PRODUCTO");
-            dgvAsignaciones.Columns.Add("CantidadEnvio", "CANTIDAD");
-            dgvAsignaciones.Columns.Add("FechaHora", "FECHA");
-        }
+            dgvAsignaciones.Columns.Add("origen", "ORIGEN");
+            dgvAsignaciones.Columns.Add("destino", "DESTINO");
+            dgvAsignaciones.Columns.Add("producto", "PRODUCTO");
+            dgvAsignaciones.Columns.Add("cantidad", "CANTIDAD");
+            dgvAsignaciones.Columns.Add("fecha", "FECHA");
 
+            Limpiar();
+            Combobox();
+        }
 
         void Combobox()
         {
-            String query = String.Format("SELECT NombreSucursal FROM sucursal", cbxOrigen.Text);
+            String query = String.Format("SELECT CodSucursal FROM sucursal", cbxOrigen.Text);
             MySqlCommand comando = new MySqlCommand(query, BDcomun.ObtenerConexion());
             MySqlDataReader reader = comando.ExecuteReader();
             cbxOrigen.Items.Clear();
             if (reader.HasRows)
                 while (reader.Read())
-                    cbxOrigen.Items.Add(reader.GetString("NombreSucursal"));
+                    cbxOrigen.Items.Add(reader.GetString("CodSucursal"));
 
-            String query2 = String.Format("SELECT NombreSucursal FROM sucursal", cbxDestino.Text);
+
+            String query2 = String.Format("SELECT CodSucursal FROM sucursal", cbxDestino.Text);
             MySqlCommand comando2 = new MySqlCommand(query2, BDcomun.ObtenerConexion());
             MySqlDataReader reader2 = comando2.ExecuteReader();
             cbxDestino.Items.Clear();
             if (reader2.HasRows)
                 while (reader2.Read())
-                    cbxDestino.Items.Add(reader2.GetString("NombreSucursal"));
+                    cbxDestino.Items.Add(reader2.GetString("CodSucursal"));
 
 
 
-            String _query = String.Format("SELECT NombreProducto FROM producto", cbxProducto.Text);
+            String _query = String.Format("SELECT CodProducto FROM producto", cbxProducto.Text);
             MySqlCommand _comando = new MySqlCommand(_query, BDcomun.ObtenerConexion());
             MySqlDataReader _reader = _comando.ExecuteReader();
             cbxProducto.Items.Clear();
             if (_reader.HasRows)
                 while (_reader.Read())
-                    cbxProducto.Items.Add(_reader.GetString("NombreProducto"));
+                    cbxProducto.Items.Add(_reader.GetString("CodProducto"));
         }
 
         void Limpiar()
@@ -62,41 +65,35 @@ namespace PROYECTO_FINAL
             dtpFecha.ResetText();
         }
 
-
-        void Habilitar()
-        {
-            cbxOrigen.Enabled = true;
-            cbxDestino.Enabled = true;
-            cbxProducto.Enabled = true;
-            txtCantidad.Enabled = true;
-            dtpFecha.Enabled = true;
-            btnRegistrar.Enabled = true;
-            btnAgregar.Enabled = true;
-            btnEliminar.Enabled = true;
-        }
-
-
-        void Deshabilitar()
-        {
-            cbxOrigen.Enabled = false;
-            cbxDestino.Enabled = false;
-            cbxProducto.Enabled = false;
-            txtCantidad.Enabled = false;
-            dtpFecha.Enabled = false;
-            btnRegistrar.Enabled = false;
-            btnAgregar.Enabled = false;
-            btnEliminar.Enabled = false;
-
-            btnNuevo.Enabled = true;
-        }
-
         private void FAsignaciones_Load(object sender, EventArgs e)
         {
             dgvAsignaciones.AllowUserToAddRows = false;
-            Deshabilitar();
         }
 
-        public int fila;
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(cbxOrigen.Text) || string.IsNullOrWhiteSpace(cbxDestino.Text) || string.IsNullOrWhiteSpace(cbxProducto.Text) || string.IsNullOrWhiteSpace(txtCantidad.Text) || string.IsNullOrWhiteSpace(dtpFecha.Text))
+
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            else
+            {
+               // Asigaciones pAsignaciones = new Asigaciones()
+               
+                dtpFecha.Format = DateTimePickerFormat.Custom;
+                dtpFecha.CustomFormat = "yyyy/MM/dd";
+     
+                dgvAsignaciones.Rows.Add(cbxOrigen.Text, cbxDestino.Text, cbxProducto.Text, txtCantidad.Text, dtpFecha.Text);
+
+                cbxOrigen.Text = "";
+                cbxDestino.Text = "";
+                cbxProducto.Text = "";
+                txtCantidad.Text = "";
+                dtpFecha.Text = "";
+            }
+        }
+
+        public int fila { get; set; }
+
         private void dgvAsignaciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvAsignaciones.SelectedRows.Count == 1)
@@ -107,31 +104,6 @@ namespace PROYECTO_FINAL
                 MessageBox.Show("debe de seleccionar una fila");
         }
 
-        private void btnNuevo_Click_1(object sender, EventArgs e)
-        {
-            Limpiar();
-            Habilitar();
-            Combobox();
-        }
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(cbxOrigen.Text) || string.IsNullOrWhiteSpace(cbxDestino.Text) || string.IsNullOrWhiteSpace(cbxProducto.Text) || string.IsNullOrWhiteSpace(txtCantidad.Text) || string.IsNullOrWhiteSpace(dtpFecha.Text))
-
-                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            else
-            {
-                Asigaciones pAsignaciones = new Asigaciones();
-
-                pAsignaciones.Fecha = dtpFecha.Value.Year + "/" + dtpFecha.Value.Month + "/" + dtpFecha.Value.Day;
-                dgvAsignaciones.Rows.Add(cbxOrigen.Text, cbxDestino.Text, cbxProducto.Text, txtCantidad.Text, dtpFecha.Text);
-
-                cbxOrigen.Text = "";
-                cbxDestino.Text = "";
-                cbxProducto.Text = "";
-                txtCantidad.Text = "";
-                dtpFecha.Text = pAsignaciones.Fecha;
-            }
-        }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             try
@@ -143,7 +115,8 @@ namespace PROYECTO_FINAL
                 MessageBox.Show("No hay ninguna columna seleccionada"); //Cuando se intenta borrar una fila que no se seleccionó
             }
         }
-        private void btnCancelar_Click(object sender, EventArgs e)
+
+        private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -152,38 +125,38 @@ namespace PROYECTO_FINAL
         {
 
             MySqlConnection conexion = BDcomun.ObtenerConexion();
-
-            //Asigaciones pAsignaciones = new Asigaciones();
-            MySqlCommand comando = new MySqlCommand(string.Format("Insert into envio (CodOrigen, CodDestino, CodProducto, CantidadEnvio, FechaHora) values (CodOrigen, CodDestino, CodProducto, CantidadEnvio, FechaHora )", BDcomun.ObtenerConexion()));
-            // pAsignaciones.Codigo_Origen, pAsignaciones.Codigo_Destino, pAsignaciones.Producto, pAsignaciones.Cantidad,pAsignaciones.Fecha), conexionBD.ObtenerConexion());
+            MySqlCommand comando;
 
             try
             {
                 foreach (DataGridViewRow row in dgvAsignaciones.Rows)
                 {
-                    /* pAsignaciones.Codigo_Origen =  Convert.ToString(row.Cells["ORIGEN"].Value);
-                     pAsignaciones.Codigo_Destino = Convert.ToString(row.Cells["DESTINO"].Value);
-                     pAsignaciones.Producto = Convert.ToString(row.Cells["PRODUCTO"].Value);
-                     pAsignaciones.Cantidad = Convert.ToString(row.Cells["CANTIDAD"].Value);
-                     pAsignaciones.Fecha = Convert.ToString(row.Cells["FECHA"].Value);
+                    comando = new MySqlCommand("Insert into envio values (?CodOrigen, ?CodDestino, ?CodProducto, ?CantidadEnvio, ?FechaHora) ", BDcomun.ObtenerConexion());
 
-                     comando.Parameters.Clear();*/
-                    comando.Parameters.AddWithValue("CodOrigen", Convert.ToString(row.Cells["Origen"].Value));
-                    comando.Parameters.AddWithValue("CodDestino", Convert.ToString(row.Cells["Destino"].Value));
-                    comando.Parameters.AddWithValue("CodProducto", Convert.ToString(row.Cells["Producto"].Value));
-                    comando.Parameters.AddWithValue("CantidadEnvio", Convert.ToString(row.Cells["CantidadEnvio"].Value));
-                    comando.Parameters.AddWithValue("FechaHora", Convert.ToString(row.Cells["FechaHora"].Value));
+                    comando.Parameters.Add("?CodOrigen", MySqlDbType.VarChar).Value = Convert.ToString(row.Cells["origen"].Value);
+                    comando.Parameters.Add("CodDestino", MySqlDbType.VarChar).Value = Convert.ToString(row.Cells["destino"].Value);
+                    comando.Parameters.Add("?CodProducto", MySqlDbType.VarChar).Value = Convert.ToString(row.Cells["producto"].Value);
+                    comando.Parameters.Add("?CantidadEnvio", MySqlDbType.Int16).Value = Convert.ToInt16(row.Cells["cantidad"].Value);
+                    comando.Parameters.Add("?FechaHora", MySqlDbType.Date).Value = Convert.ToDateTime(row.Cells["fecha"].Value);
 
                     comando.ExecuteNonQuery();
+
                 }
-                MessageBox.Show("Datos registrados");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-                MessageBox.Show("Error al registrar");
+
+                MessageBox.Show("Datos Registrados");
+
+                dgvAsignaciones.Rows.Clear();
             }
 
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
+                   
     }
+
+       
+    
 }

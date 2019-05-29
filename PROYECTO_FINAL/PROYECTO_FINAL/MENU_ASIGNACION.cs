@@ -27,7 +27,13 @@ namespace PROYECTO_FINAL
         private void bt_asignar_Click(object sender, EventArgs e)
         {
             FAsignaciones asignaciones = new FAsignaciones();
-            asignaciones.ShowDialog();
+            asignaciones.Show();
+        }
+
+        private void bt_reporte_Click(object sender, EventArgs e)
+        {
+            FReportesEnvios reportesenvios = new FReportesEnvios();
+            reportesenvios.Show();
         }
     }
 }

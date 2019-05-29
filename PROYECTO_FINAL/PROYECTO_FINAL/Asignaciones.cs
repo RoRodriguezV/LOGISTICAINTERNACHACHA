@@ -11,12 +11,12 @@ namespace PROYECTO_FINAL
         public string Codigo_Origen { get; set; }
         public string Codigo_Destino { get; set; }
         public string Producto { get; set; }
-        public string Cantidad { get; set; }
-        public string Fecha { get; set; }
+        public int Cantidad { get; set; }
+        public DateTime Fecha { get; set; }
 
         public Asigaciones() { }
 
-        public Asigaciones(string pCodigo_Origen, string pCodigo_Destino, string pProducto, string pCantidad, string pFecha)
+        public Asigaciones(string pCodigo_Origen, string pCodigo_Destino, string pProducto, int pCantidad, DateTime pFecha)
 
         {
             this.Codigo_Origen = pCodigo_Origen;

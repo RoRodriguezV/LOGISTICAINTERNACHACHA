@@ -84,6 +84,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FReportesEnvios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FReportesEnvios.Designer.cs">
+      <DependentUpon>FReportesEnvios.cs</DependentUpon>
+    </Compile>
     <Compile Include="insumo.cs" />
     <Compile Include="MENU_ASIGNACION.cs">
       <SubType>Form</SubType>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReportesEnvios.resx">
+      <DependentUpon>FReportesEnvios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MENU_ASIGNACION.resx">
       <DependentUpon>MENU_ASIGNACION.cs</DependentUpon>
