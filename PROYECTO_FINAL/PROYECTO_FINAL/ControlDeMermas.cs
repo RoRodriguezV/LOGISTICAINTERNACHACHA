@@ -56,5 +56,17 @@ namespace PROYECTO_FINAL
             param2.Value = dateTimePicker2.Value;
             dataGridView1.DataSource = BDconsultas.ListarMermasporFecha(param, param2);
         }
+
+        private void ControlDeMermas_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = BDconsultas.ListarMermas();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MENU_CENTRAL mcentral = new MENU_CENTRAL();
+            mcentral.Show();
+            this.Hide();
+        }
     }
 }

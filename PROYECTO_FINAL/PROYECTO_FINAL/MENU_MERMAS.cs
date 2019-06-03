@@ -26,7 +26,7 @@ namespace PROYECTO_FINAL
 
         private void bt_cantidades_Click(object sender, EventArgs e)
         {
-            ControlDeMerma ctrlmerma = new ControlDeMerma();
+            ControlDeMermas ctrlmerma = new ControlDeMermas();
             ctrlmerma.Show();
             this.Hide();
         }
