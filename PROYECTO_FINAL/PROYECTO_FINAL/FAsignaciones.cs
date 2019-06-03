@@ -91,7 +91,7 @@ namespace PROYECTO_FINAL
                 dtpFecha.Text = "";
             }
         }
-
+                                                             
         public int fila { get; set; }
 
         private void dgvAsignaciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
