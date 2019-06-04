@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
+
 namespace PROYECTO_FINAL
 {
     class BDconsultas
@@ -186,6 +187,29 @@ namespace PROYECTO_FINAL
             conexion.Close();
             return _lista;
         }
+        public static List<receta> BuscarReceta(string cod)
+        {
+            List<receta> _lista = new List<receta>();
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT * FROM receta where CodProducto = " + cod), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                receta preceta = new receta();
+                preceta.CodProducto = _reader.GetString(0);
+                preceta.CodInsumo = _reader.GetString(1);
+                preceta.CantidadReceta = _reader.GetInt32(2);
+               
+
+
+                _lista.Add(preceta);
+            }
+
+            conexion.Close();
+            return _lista;
+        }
         public static List<sucursal> BuscarSucursales()
         {
             List<sucursal> _lista = new List<sucursal>();
@@ -206,6 +230,29 @@ namespace PROYECTO_FINAL
 
 
                 _lista.Add(psucursal);
+            }
+
+            conexion.Close();
+            return _lista;
+        }
+        public static List<receta> BuscarRecetas()
+        {
+            List<receta> _lista = new List<receta>();
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT * FROM receta "), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                receta preceta = new receta();
+                preceta.CodProducto = _reader.GetString(0);
+                preceta.CodInsumo = _reader.GetString(1);
+                preceta.CantidadReceta = _reader.GetInt32(2);
+
+
+
+                _lista.Add(preceta);
             }
 
             conexion.Close();
@@ -341,6 +388,51 @@ namespace PROYECTO_FINAL
             return pperson;
 
         }
+        public static List<Mermas> ListarMermas()
+        {
+            List<Mermas> listMermas = new List<Mermas>();
+            MySqlCommand _comando = new MySqlCommand(
+             "SELECT CodSucursal,CodProducto,CantidadMerma,FechaInicio,FechaFin FROM merma", BDcomun.ObtenerConexion());
+            MySqlDataReader reader = _comando.ExecuteReader();
+            while (reader.Read())
+            {
+                Mermas mermas = new Mermas();
+                mermas.CodSucursal1 = reader.GetString(0);
+                mermas.CodProducto1 = reader.GetString(1);
+                mermas.CantidadMerma1 = reader.GetInt16(2);
+                mermas.FechaInicio1 = reader.GetDateTime(3);
+                mermas.FechaFin1 = reader.GetDateTime(4);
+
+                listMermas.Add(mermas);
+            }
+            BDcomun.ObtenerConexion().Close();
+            return listMermas;
+        }
+        public static List<Mermas> ListarMermasporFecha(MySqlParameter param, MySqlParameter param2)
+        {
+
+            List<Mermas> ListMermasFecha = new List<Mermas>();
+            MySqlCommand cmd = new MySqlCommand(
+            "SELECT CodSucursal,CodProducto,CantidadMerma,FechaInicio,FechaFin FROM merma where FechaInicio BETWEEN @p1 AND @p2 ", BDcomun.ObtenerConexion());
+            cmd.Parameters.Add(param);
+            cmd.Parameters.Add(param2);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Mermas mermas = new Mermas();
+                mermas.CodSucursal1 = reader.GetString(0);
+                mermas.CodProducto1 = reader.GetString(1);
+                mermas.CantidadMerma1 = reader.GetInt16(2);
+                mermas.FechaInicio1 = reader.GetDateTime(3);
+                mermas.FechaFin1 = reader.GetDateTime(4);
+
+                ListMermasFecha.Add(mermas);
+            }
+            BDcomun.ObtenerConexion().Close();
+            return ListMermasFecha;
+
+        }
+
 
     }
 }

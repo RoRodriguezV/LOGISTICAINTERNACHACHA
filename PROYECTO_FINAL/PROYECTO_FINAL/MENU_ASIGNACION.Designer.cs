@@ -35,27 +35,32 @@
             // 
             // bt_asignar
             // 
-            this.bt_asignar.Location = new System.Drawing.Point(177, 58);
+            this.bt_asignar.Location = new System.Drawing.Point(199, 72);
+            this.bt_asignar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bt_asignar.Name = "bt_asignar";
-            this.bt_asignar.Size = new System.Drawing.Size(264, 67);
+            this.bt_asignar.Size = new System.Drawing.Size(297, 84);
             this.bt_asignar.TabIndex = 0;
             this.bt_asignar.Text = "ASIGNAR ENVIOS";
             this.bt_asignar.UseVisualStyleBackColor = true;
+            this.bt_asignar.Click += new System.EventHandler(this.bt_asignar_Click);
             // 
             // bt_reporte
             // 
-            this.bt_reporte.Location = new System.Drawing.Point(177, 190);
+            this.bt_reporte.Location = new System.Drawing.Point(199, 238);
+            this.bt_reporte.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bt_reporte.Name = "bt_reporte";
-            this.bt_reporte.Size = new System.Drawing.Size(264, 67);
+            this.bt_reporte.Size = new System.Drawing.Size(297, 84);
             this.bt_reporte.TabIndex = 0;
             this.bt_reporte.Text = "REPORTE ENVIOS";
             this.bt_reporte.UseVisualStyleBackColor = true;
+            this.bt_reporte.Click += new System.EventHandler(this.bt_reporte_Click);
             // 
             // bt_volver
             // 
-            this.bt_volver.Location = new System.Drawing.Point(448, 333);
+            this.bt_volver.Location = new System.Drawing.Point(504, 416);
+            this.bt_volver.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bt_volver.Name = "bt_volver";
-            this.bt_volver.Size = new System.Drawing.Size(147, 29);
+            this.bt_volver.Size = new System.Drawing.Size(165, 36);
             this.bt_volver.TabIndex = 0;
             this.bt_volver.Text = "VOLVER";
             this.bt_volver.UseVisualStyleBackColor = true;
@@ -63,12 +68,13 @@
             // 
             // MENU_ASIGNACION
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 374);
+            this.ClientSize = new System.Drawing.Size(683, 468);
             this.Controls.Add(this.bt_volver);
             this.Controls.Add(this.bt_reporte);
             this.Controls.Add(this.bt_asignar);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MENU_ASIGNACION";
             this.Text = "MENU_ASIGNACION";
             this.ResumeLayout(false);
