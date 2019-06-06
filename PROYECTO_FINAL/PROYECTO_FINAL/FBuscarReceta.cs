@@ -44,5 +44,10 @@ namespace PROYECTO_FINAL
             menrec.Show();
             this.Hide();
         }
+
+        private void FBuscarReceta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

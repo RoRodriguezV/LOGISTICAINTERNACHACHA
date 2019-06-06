@@ -40,7 +40,7 @@
             // 
             this.cbxReceta.FormattingEnabled = true;
             this.cbxReceta.Location = new System.Drawing.Point(95, 106);
-            this.cbxReceta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxReceta.Margin = new System.Windows.Forms.Padding(4);
             this.cbxReceta.Name = "cbxReceta";
             this.cbxReceta.Size = new System.Drawing.Size(160, 24);
             this.cbxReceta.TabIndex = 0;
@@ -59,7 +59,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(120, 174);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             this.dgvBuscarReceta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBuscarReceta.Location = new System.Drawing.Point(315, 17);
-            this.dgvBuscarReceta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvBuscarReceta.Margin = new System.Windows.Forms.Padding(4);
             this.dgvBuscarReceta.Name = "dgvBuscarReceta";
             this.dgvBuscarReceta.Size = new System.Drawing.Size(448, 276);
             this.dgvBuscarReceta.TabIndex = 3;
@@ -96,9 +96,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxReceta);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FBuscarReceta";
             this.Text = "FBuscarReceta";
+            this.Load += new System.EventHandler(this.FBuscarReceta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarReceta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

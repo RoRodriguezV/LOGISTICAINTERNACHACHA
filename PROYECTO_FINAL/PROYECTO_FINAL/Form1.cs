@@ -45,7 +45,9 @@ namespace PROYECTO_FINAL
                         else
                         {
                             MessageBox.Show("BIENVENIDO DE NUEVO ", "ADMINISTRADOR DE SUCURSAL", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                            MENU_CENTRAL_SUCURSAL menu_sucursal = new MENU_CENTRAL_SUCURSAL();
+                            menu_sucursal.Show();
+                            this.Hide();
                         }
 
                     }

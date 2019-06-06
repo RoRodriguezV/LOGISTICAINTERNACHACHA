@@ -165,6 +165,12 @@
     <Compile Include="MENU_CENTRAL.Designer.cs">
       <DependentUpon>MENU_CENTRAL.cs</DependentUpon>
     </Compile>
+    <Compile Include="MENU_CENTRAL_SUCURSAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MENU_CENTRAL_SUCURSAL.Designer.cs">
+      <DependentUpon>MENU_CENTRAL_SUCURSAL.cs</DependentUpon>
+    </Compile>
     <Compile Include="MENU_MERMAS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MENU_CENTRAL.resx">
       <DependentUpon>MENU_CENTRAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MENU_CENTRAL_SUCURSAL.resx">
+      <DependentUpon>MENU_CENTRAL_SUCURSAL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MENU_MERMAS.resx">
       <DependentUpon>MENU_MERMAS.cs</DependentUpon>

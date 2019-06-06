@@ -36,6 +36,19 @@ namespace PROYECTO_FINAL
             return retorno;
 
         }
+        public static int AgregarReceta(receta preceta)
+        {
+
+            int retorno = 0;
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format("Insert into receta (CodInsumo, CodProducto, CantidadReceta) values ('{0}','{1}','{2}')",
+              preceta.CodInsumo, preceta.CodProducto, preceta.CantidadReceta), BDcomun.ObtenerConexion());
+            retorno = comando.ExecuteNonQuery();
+            conexion.Close();
+            return retorno;
+
+        }
         public static int AgregarPersona(persona ppersona)
         {
 
@@ -96,6 +109,21 @@ namespace PROYECTO_FINAL
             return retorno;
 
         }
+        public static int ActualizarReceta(receta prec)
+        {
+
+            int retorno = 0;
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format("Update receta set  CodInsumo='{0}', CodProducto='{1}', CantidadReceta='{2}' where CodProducto={3}",
+                prec.CodInsumo, prec.CodProducto, prec.CantidadReceta, prec.CodProducto), conexion);
+
+            retorno = comando.ExecuteNonQuery();
+            conexion.Close();
+
+            return retorno;
+
+        }
         public static int ActualizarPersona(persona ppersona)
         {
 
@@ -137,6 +165,23 @@ namespace PROYECTO_FINAL
             MySqlConnection conexion = BDcomun.ObtenerConexion();
 
             MySqlCommand comando = new MySqlCommand(string.Format(" DELETE  FROM asig_rol where CodRol = {0} ", pasig), conexion);
+
+            retorno = comando.ExecuteNonQuery();
+
+            conexion.Close();
+
+            return retorno;
+
+        }
+        public static int EliminarReceta(string preceta)
+
+        {
+
+            int retorno = 0;
+
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format(" DELETE  FROM receta where CodProducto = {0} ", preceta), conexion);
 
             retorno = comando.ExecuteNonQuery();
 
@@ -246,8 +291,8 @@ namespace PROYECTO_FINAL
             while (_reader.Read())
             {
                 receta preceta = new receta();
-                preceta.CodProducto = _reader.GetString(0);
-                preceta.CodInsumo = _reader.GetString(1);
+                preceta.CodInsumo = _reader.GetString(0);
+                preceta.CodProducto = _reader.GetString(1);
                 preceta.CantidadReceta = _reader.GetInt32(2);
 
 
@@ -280,6 +325,7 @@ namespace PROYECTO_FINAL
             conexion.Close();
             return _lista;
         }
+       
         public static List<persona> BuscarPersonas()
         {
             List<persona> _lista = new List<persona>();
@@ -364,6 +410,27 @@ namespace PROYECTO_FINAL
 
             conexion.Close();
             return pasig;
+
+        }
+        public static receta ObtenerReceta(string preceta)
+        {
+            receta prec = new receta();
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT * FROM receta where CodReceta = {0} ", preceta), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+
+                prec.CodInsumo = _reader.GetString(0);
+                prec.CodProducto = _reader.GetString(1);
+                prec.CodInsumo = _reader.GetString(2);
+
+
+            }
+
+            conexion.Close();
+            return prec;
 
         }
         public static persona ObtenerPersona(string ppersona)
