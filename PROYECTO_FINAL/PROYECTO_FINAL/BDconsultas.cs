@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
+
 namespace PROYECTO_FINAL
 {
     class BDconsultas
@@ -30,6 +31,19 @@ namespace PROYECTO_FINAL
 
             MySqlCommand comando = new MySqlCommand(string.Format("Insert into asig_rol (CodPersona, CodRol) values ('{0}','{1}')",
               pasig.CodPersona, pasig.CodRol), BDcomun.ObtenerConexion());
+            retorno = comando.ExecuteNonQuery();
+            conexion.Close();
+            return retorno;
+
+        }
+        public static int AgregarReceta(receta preceta)
+        {
+
+            int retorno = 0;
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format("Insert into receta (CodInsumo, CodProducto, CantidadReceta) values ('{0}','{1}','{2}')",
+              preceta.CodInsumo, preceta.CodProducto, preceta.CantidadReceta), BDcomun.ObtenerConexion());
             retorno = comando.ExecuteNonQuery();
             conexion.Close();
             return retorno;
@@ -95,6 +109,21 @@ namespace PROYECTO_FINAL
             return retorno;
 
         }
+        public static int ActualizarReceta(receta prec)
+        {
+
+            int retorno = 0;
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format("Update receta set  CodInsumo='{0}', CodProducto='{1}', CantidadReceta='{2}' where CodProducto={3}",
+                prec.CodInsumo, prec.CodProducto, prec.CantidadReceta, prec.CodProducto), conexion);
+
+            retorno = comando.ExecuteNonQuery();
+            conexion.Close();
+
+            return retorno;
+
+        }
         public static int ActualizarPersona(persona ppersona)
         {
 
@@ -136,6 +165,23 @@ namespace PROYECTO_FINAL
             MySqlConnection conexion = BDcomun.ObtenerConexion();
 
             MySqlCommand comando = new MySqlCommand(string.Format(" DELETE  FROM asig_rol where CodRol = {0} ", pasig), conexion);
+
+            retorno = comando.ExecuteNonQuery();
+
+            conexion.Close();
+
+            return retorno;
+
+        }
+        public static int EliminarReceta(string preceta)
+
+        {
+
+            int retorno = 0;
+
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format(" DELETE  FROM receta where CodProducto = {0} ", preceta), conexion);
 
             retorno = comando.ExecuteNonQuery();
 
@@ -186,6 +232,29 @@ namespace PROYECTO_FINAL
             conexion.Close();
             return _lista;
         }
+        public static List<receta> BuscarReceta(string cod)
+        {
+            List<receta> _lista = new List<receta>();
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT * FROM receta where CodProducto = " + cod), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                receta preceta = new receta();
+                preceta.CodProducto = _reader.GetString(0);
+                preceta.CodInsumo = _reader.GetString(1);
+                preceta.CantidadReceta = _reader.GetInt32(2);
+               
+
+
+                _lista.Add(preceta);
+            }
+
+            conexion.Close();
+            return _lista;
+        }
         public static List<sucursal> BuscarSucursales()
         {
             List<sucursal> _lista = new List<sucursal>();
@@ -206,6 +275,29 @@ namespace PROYECTO_FINAL
 
 
                 _lista.Add(psucursal);
+            }
+
+            conexion.Close();
+            return _lista;
+        }
+        public static List<receta> BuscarRecetas()
+        {
+            List<receta> _lista = new List<receta>();
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT * FROM receta "), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                receta preceta = new receta();
+                preceta.CodInsumo = _reader.GetString(0);
+                preceta.CodProducto = _reader.GetString(1);
+                preceta.CantidadReceta = _reader.GetInt32(2);
+
+
+
+                _lista.Add(preceta);
             }
 
             conexion.Close();
@@ -233,6 +325,7 @@ namespace PROYECTO_FINAL
             conexion.Close();
             return _lista;
         }
+       
         public static List<persona> BuscarPersonas()
         {
             List<persona> _lista = new List<persona>();
@@ -319,6 +412,27 @@ namespace PROYECTO_FINAL
             return pasig;
 
         }
+        public static receta ObtenerReceta(string preceta)
+        {
+            receta prec = new receta();
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT * FROM receta where CodReceta = {0} ", preceta), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+
+                prec.CodInsumo = _reader.GetString(0);
+                prec.CodProducto = _reader.GetString(1);
+                prec.CodInsumo = _reader.GetString(2);
+
+
+            }
+
+            conexion.Close();
+            return prec;
+
+        }
         public static persona ObtenerPersona(string ppersona)
         {
             persona pperson = new persona();
@@ -341,6 +455,51 @@ namespace PROYECTO_FINAL
             return pperson;
 
         }
+        public static List<Mermas> ListarMermas()
+        {
+            List<Mermas> listMermas = new List<Mermas>();
+            MySqlCommand _comando = new MySqlCommand(
+             "SELECT CodSucursal,CodProducto,CantidadMerma,FechaInicio,FechaFin FROM merma", BDcomun.ObtenerConexion());
+            MySqlDataReader reader = _comando.ExecuteReader();
+            while (reader.Read())
+            {
+                Mermas mermas = new Mermas();
+                mermas.CodSucursal1 = reader.GetString(0);
+                mermas.CodProducto1 = reader.GetString(1);
+                mermas.CantidadMerma1 = reader.GetInt16(2);
+                mermas.FechaInicio1 = reader.GetDateTime(3);
+                mermas.FechaFin1 = reader.GetDateTime(4);
+
+                listMermas.Add(mermas);
+            }
+            BDcomun.ObtenerConexion().Close();
+            return listMermas;
+        }
+        public static List<Mermas> ListarMermasporFecha(MySqlParameter param, MySqlParameter param2)
+        {
+
+            List<Mermas> ListMermasFecha = new List<Mermas>();
+            MySqlCommand cmd = new MySqlCommand(
+            "SELECT CodSucursal,CodProducto,CantidadMerma,FechaInicio,FechaFin FROM merma where FechaInicio BETWEEN @p1 AND @p2 ", BDcomun.ObtenerConexion());
+            cmd.Parameters.Add(param);
+            cmd.Parameters.Add(param2);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Mermas mermas = new Mermas();
+                mermas.CodSucursal1 = reader.GetString(0);
+                mermas.CodProducto1 = reader.GetString(1);
+                mermas.CantidadMerma1 = reader.GetInt16(2);
+                mermas.FechaInicio1 = reader.GetDateTime(3);
+                mermas.FechaFin1 = reader.GetDateTime(4);
+
+                ListMermasFecha.Add(mermas);
+            }
+            BDcomun.ObtenerConexion().Close();
+            return ListMermasFecha;
+
+        }
+
 
     }
 }

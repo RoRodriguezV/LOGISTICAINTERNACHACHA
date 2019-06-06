@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace PROYECTO_FINAL
 {
-    public partial class Form1 : Form
+    public partial class ControlDeMerma : Form
     {
-        public Form1()
+        public ControlDeMerma()
         {
             InitializeComponent();
         }
@@ -45,7 +45,9 @@ namespace PROYECTO_FINAL
                         else
                         {
                             MessageBox.Show("BIENVENIDO DE NUEVO ", "ADMINISTRADOR DE SUCURSAL", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                            MENU_CENTRAL_SUCURSAL menu_sucursal = new MENU_CENTRAL_SUCURSAL();
+                            menu_sucursal.Show();
+                            this.Hide();
                         }
 
                     }
@@ -62,6 +64,11 @@ namespace PROYECTO_FINAL
             {
                 MessageBox.Show("VUELVA A INTENTARLO", "ERROR CON LA BASE DE DATOS", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void ControlDeMerma_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

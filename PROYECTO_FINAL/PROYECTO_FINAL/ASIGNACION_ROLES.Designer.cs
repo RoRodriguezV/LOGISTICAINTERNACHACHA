@@ -77,6 +77,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(261, 24);
             this.comboBox2.TabIndex = 3;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -176,6 +177,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ASIG_ROL";
             this.Text = "ASIGNAR_ROL";
+            this.Load += new System.EventHandler(this.ASIG_ROL_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

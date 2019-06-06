@@ -151,5 +151,15 @@ namespace PROYECTO_FINAL
 
             }
         }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ASIG_ROL_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

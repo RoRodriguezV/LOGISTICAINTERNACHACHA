@@ -8,6 +8,7 @@ namespace PROYECTO_FINAL
 {
     public class sucursal
     {
+        //Variables 
         public string CodSucursal { get; set; }
         public string NombreSucursal { get; set; }
         public string DireccionSucural { get; set; }
@@ -19,8 +20,11 @@ namespace PROYECTO_FINAL
         {
 
         }
-        public sucursal(string CodSucursal, string NombreSucursal, string DireccionSucursal, double Latitud, double Longitud, int TelefonoSucursal)
+
+        //Constructor
+        public sucursal(string CodSucursal, string NombreSucursal, string DireccionSucural, double Latitud, double Longitud, int TelefonoSucursal)
         {
+
             this.CodSucursal = CodSucursal;
             this.NombreSucursal = NombreSucursal;
             this.DireccionSucural = DireccionSucural;
@@ -29,5 +33,8 @@ namespace PROYECTO_FINAL
             this.TelefonoSucursal = TelefonoSucursal;
 
         }
+            
     }
+
+        
 }
