@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnVolver = new System.Windows.Forms.Button();
             this.cbxOrigen = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -42,53 +43,62 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignaciones)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(984, 477);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(139, 48);
+            this.btnVolver.TabIndex = 48;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // cbxOrigen
             // 
             this.cbxOrigen.FormattingEnabled = true;
-            this.cbxOrigen.Location = new System.Drawing.Point(141, 74);
+            this.cbxOrigen.Location = new System.Drawing.Point(128, 53);
             this.cbxOrigen.Name = "cbxOrigen";
             this.cbxOrigen.Size = new System.Drawing.Size(454, 28);
-            this.cbxOrigen.TabIndex = 32;
+            this.cbxOrigen.TabIndex = 47;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(33, 82);
+            this.label5.Location = new System.Drawing.Point(20, 61);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 20);
-            this.label5.TabIndex = 31;
+            this.label5.TabIndex = 46;
             this.label5.Text = "Origen: ";
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(430, 425);
+            this.btnEliminar.Location = new System.Drawing.Point(417, 404);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(122, 48);
-            this.btnEliminar.TabIndex = 30;
+            this.btnEliminar.TabIndex = 45;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(678, 498);
+            this.btnRegistrar.Location = new System.Drawing.Point(665, 477);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(122, 48);
-            this.btnRegistrar.TabIndex = 29;
+            this.btnRegistrar.TabIndex = 44;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(208, 425);
+            this.btnAgregar.Location = new System.Drawing.Point(195, 404);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(122, 48);
-            this.btnAgregar.TabIndex = 28;
+            this.btnAgregar.TabIndex = 43;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -96,93 +106,84 @@
             // dgvAsignaciones
             // 
             this.dgvAsignaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAsignaciones.Location = new System.Drawing.Point(678, 54);
+            this.dgvAsignaciones.Location = new System.Drawing.Point(665, 33);
             this.dgvAsignaciones.Name = "dgvAsignaciones";
             this.dgvAsignaciones.RowTemplate.Height = 28;
             this.dgvAsignaciones.Size = new System.Drawing.Size(458, 419);
-            this.dgvAsignaciones.TabIndex = 27;
+            this.dgvAsignaciones.TabIndex = 42;
+            this.dgvAsignaciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAsignaciones_CellContentClick_1);
             // 
             // dtpFecha
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(185, 343);
+            this.dtpFecha.Location = new System.Drawing.Point(172, 322);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(388, 26);
-            this.dtpFecha.TabIndex = 26;
+            this.dtpFecha.TabIndex = 41;
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(265, 261);
+            this.txtCantidad.Location = new System.Drawing.Point(252, 240);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(255, 26);
-            this.txtCantidad.TabIndex = 25;
+            this.txtCantidad.TabIndex = 40;
             // 
             // cbxProducto
             // 
             this.cbxProducto.FormattingEnabled = true;
-            this.cbxProducto.Location = new System.Drawing.Point(265, 195);
+            this.cbxProducto.Location = new System.Drawing.Point(252, 174);
             this.cbxProducto.Name = "cbxProducto";
             this.cbxProducto.Size = new System.Drawing.Size(258, 28);
-            this.cbxProducto.TabIndex = 24;
+            this.cbxProducto.TabIndex = 39;
             // 
             // cbxDestino
             // 
             this.cbxDestino.FormattingEnabled = true;
-            this.cbxDestino.Location = new System.Drawing.Point(141, 137);
+            this.cbxDestino.Location = new System.Drawing.Point(128, 116);
             this.cbxDestino.Name = "cbxDestino";
             this.cbxDestino.Size = new System.Drawing.Size(454, 28);
-            this.cbxDestino.TabIndex = 23;
+            this.cbxDestino.TabIndex = 38;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(61, 343);
+            this.label4.Location = new System.Drawing.Point(48, 322);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 20);
-            this.label4.TabIndex = 22;
+            this.label4.TabIndex = 37;
             this.label4.Text = "Fecha:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(136, 261);
+            this.label3.Location = new System.Drawing.Point(123, 240);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 20);
-            this.label3.TabIndex = 21;
+            this.label3.TabIndex = 36;
             this.label3.Text = "Cantidad:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(136, 203);
+            this.label2.Location = new System.Drawing.Point(123, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 20);
-            this.label2.TabIndex = 20;
+            this.label2.TabIndex = 35;
             this.label2.Text = "Producto:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 140);
+            this.label1.Location = new System.Drawing.Point(20, 119);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 20);
-            this.label1.TabIndex = 19;
+            this.label1.TabIndex = 34;
             this.label1.Text = "Destino: ";
-            // 
-            // btnVolver
-            // 
-            this.btnVolver.Location = new System.Drawing.Point(997, 498);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(139, 48);
-            this.btnVolver.TabIndex = 33;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // FAsignaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1206, 570);
+            this.ClientSize = new System.Drawing.Size(1141, 589);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.cbxOrigen);
             this.Controls.Add(this.label5);
@@ -209,6 +210,7 @@
 
         #endregion
 
+        private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.ComboBox cbxOrigen;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnEliminar;
@@ -223,6 +225,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnVolver;
     }
 }

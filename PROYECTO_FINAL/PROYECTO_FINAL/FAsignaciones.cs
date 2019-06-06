@@ -77,11 +77,11 @@ namespace PROYECTO_FINAL
                 MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
             {
-               // Asigaciones pAsignaciones = new Asigaciones()
-               
+                // Asigaciones pAsignaciones = new Asigaciones()
+
                 dtpFecha.Format = DateTimePickerFormat.Custom;
                 dtpFecha.CustomFormat = "yyyy/MM/dd";
-     
+
                 dgvAsignaciones.Rows.Add(cbxOrigen.Text, cbxDestino.Text, cbxProducto.Text, txtCantidad.Text, dtpFecha.Text);
 
                 cbxOrigen.Text = "";
@@ -91,18 +91,8 @@ namespace PROYECTO_FINAL
                 dtpFecha.Text = "";
             }
         }
-                                                             
         public int fila { get; set; }
 
-        private void dgvAsignaciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgvAsignaciones.SelectedRows.Count == 1)
-            {
-                string fila = dgvAsignaciones.CurrentRow.Cells[0].Value.ToString();
-            }
-            else
-                MessageBox.Show("debe de seleccionar una fila");
-        }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -116,14 +106,8 @@ namespace PROYECTO_FINAL
             }
         }
 
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-
             MySqlConnection conexion = BDcomun.ObtenerConexion();
             MySqlCommand comando;
 
@@ -154,9 +138,20 @@ namespace PROYECTO_FINAL
                 MessageBox.Show(ex.ToString());
             }
         }
-                   
-    }
 
-       
-    
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dgvAsignaciones_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvAsignaciones.SelectedRows.Count == 1)
+            {
+                string fila = dgvAsignaciones.CurrentRow.Cells[0].Value.ToString();
+            }
+            else
+                MessageBox.Show("debe de seleccionar una fila");
+        }
+    }
 }

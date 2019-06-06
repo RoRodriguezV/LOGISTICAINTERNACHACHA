@@ -17,7 +17,6 @@ namespace PROYECTO_FINAL
         {
             InitializeComponent();
         }
-
         public void LlenarDatosEnvios(DataGridView dvg)
         {
             try
@@ -38,12 +37,12 @@ namespace PROYECTO_FINAL
                 MessageBox.Show("ERROR");
             }
         }
+
         private void btnMostrar_Click(object sender, EventArgs e)
         {
             LlenarDatosEnvios(dgvEnvios);
             dgvEnvios.Update();
         }
-
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
