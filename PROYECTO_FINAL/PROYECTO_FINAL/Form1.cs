@@ -19,8 +19,10 @@ namespace PROYECTO_FINAL
         }
 
         public roles RolSelecionado { get; set; }
+        public string CodSucursal;
         private void bt_verificar_Click(object sender, EventArgs e)
         {
+
             try
             {
                 bool verificar = false;
@@ -37,10 +39,12 @@ namespace PROYECTO_FINAL
                         string rolselec = RolSelecionado.CodRoles;
                         if(rolselec == "01")
                         {
+                            CodSucursal = tb_usuario.Text;
                             MessageBox.Show("BIENVENIDO DE NUEVO ", "ADMINISTRADOR DE CENTRAL", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             MENU_CENTRAL menu_central = new MENU_CENTRAL();
                             menu_central.Show();
                             this.Hide();
+                            
                         }
                         else
                         {
@@ -69,6 +73,11 @@ namespace PROYECTO_FINAL
         private void ControlDeMerma_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void tb_pass_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

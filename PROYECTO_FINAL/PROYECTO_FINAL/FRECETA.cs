@@ -167,5 +167,10 @@ namespace PROYECTO_FINAL
 
             }
         }
+
+        private void txtcantidad_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -94,7 +94,7 @@ namespace PROYECTO_FINAL
         {
             MENU_PERSONAL perso = new MENU_PERSONAL();
             perso.Show();
-            perso.Hide();
+            this.Hide();
         }
 
         private void bt_actualizar_Click(object sender, EventArgs e)

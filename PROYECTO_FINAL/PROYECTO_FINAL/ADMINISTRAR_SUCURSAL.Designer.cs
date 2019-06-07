@@ -377,7 +377,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtLatitud;
@@ -398,5 +397,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button bt_eliminar;
         private System.Windows.Forms.Button bt_actualizar;
+        public System.Windows.Forms.TextBox txtCodigo;
     }
 }

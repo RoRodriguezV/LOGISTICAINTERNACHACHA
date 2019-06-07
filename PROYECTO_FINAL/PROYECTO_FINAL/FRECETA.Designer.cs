@@ -101,6 +101,7 @@
             this.txtcantidad.Name = "txtcantidad";
             this.txtcantidad.Size = new System.Drawing.Size(160, 22);
             this.txtcantidad.TabIndex = 6;
+            this.txtcantidad.TextChanged += new System.EventHandler(this.txtcantidad_TextChanged);
             // 
             // bteliminar
             // 
@@ -156,7 +157,7 @@
             // 
             // btrefrescar
             // 
-            this.btrefrescar.Location = new System.Drawing.Point(516, 347);
+            this.btrefrescar.Location = new System.Drawing.Point(487, 348);
             this.btrefrescar.Name = "btrefrescar";
             this.btrefrescar.Size = new System.Drawing.Size(137, 23);
             this.btrefrescar.TabIndex = 14;
