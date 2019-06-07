@@ -16,6 +16,11 @@ namespace PROYECTO_FINAL
         public FReportesEnvios()
         {
             InitializeComponent();
+            label2.Visible = false;
+            FechaBusqueda.Visible = false;
+
+            label3.Visible = false;
+            cbxSucursal.Visible = false;
         }
         public void LlenarDatosEnvios(DataGridView dvg)
         {
@@ -38,8 +43,33 @@ namespace PROYECTO_FINAL
             }
         }
 
+        public void LlenarDatosEnviosSucursales(DataGridView dvg)
+        {
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("SELECT CodOrigen, CodDestino, CodProducto, CantidadEnvio, FechaHora FROM envio WHERE CodeDstino = '{0}'", cbxSucursal), BDcomun.ObtenerConexion());
+                MySqlDataAdapter da = new MySqlDataAdapter(comando);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dvg.DataSource = dt;
+
+            }
+            catch
+            {
+                MessageBox.Show("ERROR");
+            }
+        }
+
         private void btnMostrar_Click(object sender, EventArgs e)
         {
+            if(cbxSucursal.Visible == true)
+            {
+                LlenarDatosEnviosSucursales(dgvEnvios);
+                dgvEnvios.Update();
+            }
+
+            else
+
             LlenarDatosEnvios(dgvEnvios);
             dgvEnvios.Update();
         }
@@ -47,6 +77,33 @@ namespace PROYECTO_FINAL
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label3.Visible = false;
+            cbxSucursal.Visible = false;
+            label2.Visible = true;
+            FechaBusqueda.Visible = true;
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            label2.Visible = false;
+            FechaBusqueda.Visible = false;
+            label3.Visible = true;
+            cbxSucursal.Visible = true;
+
+            String query = String.Format("SELECT CodSucursal FROM sucursal", cbxSucursal.Text);
+            MySqlCommand comando = new MySqlCommand(query, BDcomun.ObtenerConexion());
+            MySqlDataReader reader = comando.ExecuteReader();
+            cbxSucursal.Items.Clear();
+            if (reader.HasRows)
+                while (reader.Read())
+                    cbxSucursal.Items.Add(reader.GetString("CodSucursal"));
+
+
         }
     }
 }
