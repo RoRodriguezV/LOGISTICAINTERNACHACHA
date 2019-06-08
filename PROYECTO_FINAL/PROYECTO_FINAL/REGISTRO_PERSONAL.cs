@@ -16,6 +16,8 @@ namespace PROYECTO_FINAL
         {
             InitializeComponent();
             dataGridView1.DataSource = BDconsultas.BuscarPersonas();
+            
+
 
         }
 

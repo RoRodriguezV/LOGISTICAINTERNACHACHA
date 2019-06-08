@@ -39,9 +39,8 @@ namespace PROYECTO_FINAL
                         string rolselec = RolSelecionado.CodRoles;
                         if(rolselec == "01")
                         {
-                            CodSucursal = tb_usuario.Text;
-                            ADMINISTRAR_SUCURSAL SUC = new ADMINISTRAR_SUCURSAL();
-                            SUC.txtCodigo.Text = CodSucursal;
+
+                                                      
                             MessageBox.Show("BIENVENIDO DE NUEVO ", "ADMINISTRADOR DE CENTRAL", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             MENU_CENTRAL menu_central = new MENU_CENTRAL();
                             menu_central.Show();
@@ -50,7 +49,8 @@ namespace PROYECTO_FINAL
                         }
                         else
                         {
-                            MessageBox.Show("BIENVENIDO DE NUEVO ", "ADMINISTRADOR DE SUCURSAL", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            CodSucursal = RolSelecionado.CodRoles;
+                            MessageBox.Show("BIENVENIDO DE NUEVO ADMINISTRADOR", "ADMINISTRADOR DE SUCURSAL N°" + CodSucursal, MessageBoxButtons.OK, MessageBoxIcon.Information);
                             MENU_CENTRAL_SUCURSAL menu_sucursal = new MENU_CENTRAL_SUCURSAL();
                             menu_sucursal.Show();
                             this.Hide();

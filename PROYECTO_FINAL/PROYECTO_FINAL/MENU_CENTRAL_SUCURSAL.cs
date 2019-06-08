@@ -15,8 +15,8 @@ namespace PROYECTO_FINAL
         public MENU_CENTRAL_SUCURSAL()
         {
             InitializeComponent();
-            
-            
+
+            textBox1.Text = ControlDeMerma.CodSucursal;
         }
 
         private void MENU_CENTRAL_SUCURSAL_Load(object sender, EventArgs e)
@@ -26,8 +26,12 @@ namespace PROYECTO_FINAL
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ADMINISTRAR_SUCURSAL sucu = new ADMINISTRAR_SUCURSAL();
-            //sucu.txtCodigo.Text = textBox1.Text;
+           
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
