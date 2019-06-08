@@ -43,17 +43,18 @@ namespace PROYECTO_FINAL
             }
         }
 
+
         public void LlenarDatosEnviosSucursales(DataGridView dvg)
         {
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("SELECT CodOrigen, CodDestino, CodProducto, CantidadEnvio, FechaHora FROM envio WHERE CodeDstino = '{0}'", cbxSucursal), BDcomun.ObtenerConexion());
-                MySqlDataAdapter da = new MySqlDataAdapter(comando);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dvg.DataSource = dt;
-
+                MySqlCommand comando = new MySqlCommand(String.Format("SELECT CodOrigen, CodDestino, CodProducto, CantidadEnvio, FechaHora FROM envio WHERE CodDestino = '{0}'", cbxSucursal), BDcomun.ObtenerConexion());
+                MySqlDataAdapter ds = new MySqlDataAdapter(comando);
+                DataTable dr = new DataTable();
+                ds.Fill(dr);
+                dvg.DataSource = dr;
             }
+
             catch
             {
                 MessageBox.Show("ERROR");

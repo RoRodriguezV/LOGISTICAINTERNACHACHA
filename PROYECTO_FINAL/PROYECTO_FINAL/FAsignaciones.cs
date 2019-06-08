@@ -72,7 +72,15 @@ namespace PROYECTO_FINAL
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(cbxOrigen.Text) || string.IsNullOrWhiteSpace(cbxDestino.Text) || string.IsNullOrWhiteSpace(cbxProducto.Text) || string.IsNullOrWhiteSpace(txtCantidad.Text) || string.IsNullOrWhiteSpace(dtpFecha.Text))
+
+            MySqlCommand comando = new MySqlCommand(String.Format("SELECT CantidadDetalle FROM detallestock WHERE CodDestino = '{0}' and CodProducto = '{1}'", cbxDestino, cbxProducto), BDcomun.ObtenerConexion());
+            MySqlDataReader reader = comando.ExecuteReader();
+            String dt = reader.GetString(1);
+
+           /* if (txtCantidad > dt)
+            {*/
+
+                if (string.IsNullOrWhiteSpace(cbxOrigen.Text) || string.IsNullOrWhiteSpace(cbxDestino.Text) || string.IsNullOrWhiteSpace(cbxProducto.Text) || string.IsNullOrWhiteSpace(txtCantidad.Text) || string.IsNullOrWhiteSpace(dtpFecha.Text))
 
                 MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
@@ -90,6 +98,10 @@ namespace PROYECTO_FINAL
                 txtCantidad.Text = "";
                 dtpFecha.Text = "";
             }
+       /* }
+            else
+
+                MessageBox.Show("Nohay suficiente cantidad en el stock");*/
         }
         public int fila { get; set; }
 
@@ -108,35 +120,35 @@ namespace PROYECTO_FINAL
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            MySqlConnection conexion = BDcomun.ObtenerConexion();
-            MySqlCommand comando;
+                MySqlConnection conexion = BDcomun.ObtenerConexion();
+                MySqlCommand comando;
 
-            try
-            {
-                foreach (DataGridViewRow row in dgvAsignaciones.Rows)
+                try
                 {
-                    comando = new MySqlCommand("Insert into envio values (?CodOrigen, ?CodDestino, ?CodProducto, ?CantidadEnvio, ?FechaHora) ", BDcomun.ObtenerConexion());
+                    foreach (DataGridViewRow row in dgvAsignaciones.Rows)
+                    {
+                        comando = new MySqlCommand("Insert into envio values (?CodOrigen, ?CodDestino, ?CodProducto, ?CantidadEnvio, ?FechaHora) ", BDcomun.ObtenerConexion());
 
-                    comando.Parameters.Add("?CodOrigen", MySqlDbType.VarChar).Value = Convert.ToString(row.Cells["origen"].Value);
-                    comando.Parameters.Add("CodDestino", MySqlDbType.VarChar).Value = Convert.ToString(row.Cells["destino"].Value);
-                    comando.Parameters.Add("?CodProducto", MySqlDbType.VarChar).Value = Convert.ToString(row.Cells["producto"].Value);
-                    comando.Parameters.Add("?CantidadEnvio", MySqlDbType.Int16).Value = Convert.ToInt16(row.Cells["cantidad"].Value);
-                    comando.Parameters.Add("?FechaHora", MySqlDbType.Date).Value = Convert.ToDateTime(row.Cells["fecha"].Value);
+                        comando.Parameters.Add("?CodOrigen", MySqlDbType.VarChar).Value = Convert.ToString(row.Cells["origen"].Value);
+                        comando.Parameters.Add("CodDestino", MySqlDbType.VarChar).Value = Convert.ToString(row.Cells["destino"].Value);
+                        comando.Parameters.Add("?CodProducto", MySqlDbType.VarChar).Value = Convert.ToString(row.Cells["producto"].Value);
+                        comando.Parameters.Add("?CantidadEnvio", MySqlDbType.Int16).Value = Convert.ToInt16(row.Cells["cantidad"].Value);
+                        comando.Parameters.Add("?FechaHora", MySqlDbType.Date).Value = Convert.ToDateTime(row.Cells["fecha"].Value);
 
-                    comando.ExecuteNonQuery();
+                        comando.ExecuteNonQuery();
 
+                    }
+
+                    MessageBox.Show("Datos Registrados");
+
+                    dgvAsignaciones.Rows.Clear();
                 }
 
-                MessageBox.Show("Datos Registrados");
+                catch (Exception ex)
+                {
 
-                dgvAsignaciones.Rows.Clear();
-            }
-
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.ToString());
-            }
+                    MessageBox.Show(ex.ToString());
+                }
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
