@@ -19,7 +19,7 @@ namespace PROYECTO_FINAL
         }
 
         public roles RolSelecionado { get; set; }
-        public string CodSucursal;
+        public static string CodSucursal;
         private void bt_verificar_Click(object sender, EventArgs e)
         {
 
@@ -40,6 +40,8 @@ namespace PROYECTO_FINAL
                         if(rolselec == "01")
                         {
                             CodSucursal = tb_usuario.Text;
+                            ADMINISTRAR_SUCURSAL SUC = new ADMINISTRAR_SUCURSAL();
+                            SUC.txtCodigo.Text = CodSucursal;
                             MessageBox.Show("BIENVENIDO DE NUEVO ", "ADMINISTRADOR DE CENTRAL", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             MENU_CENTRAL menu_central = new MENU_CENTRAL();
                             menu_central.Show();
