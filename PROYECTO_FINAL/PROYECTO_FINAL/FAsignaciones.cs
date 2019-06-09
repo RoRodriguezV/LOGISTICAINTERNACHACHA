@@ -13,6 +13,9 @@ namespace PROYECTO_FINAL
 {
     public partial class FAsignaciones : Form
     {
+        private int cant;
+        private int cant1;
+
         public FAsignaciones()
         {
             InitializeComponent();
@@ -73,12 +76,13 @@ namespace PROYECTO_FINAL
         private void btnAgregar_Click(object sender, EventArgs e)
         {
 
-            MySqlCommand comando = new MySqlCommand(String.Format("SELECT CantidadDetalle FROM detallestock WHERE CodDestino = '{0}' and CodProducto = '{1}'", cbxDestino, cbxProducto), BDcomun.ObtenerConexion());
+            MySqlCommand comando = new MySqlCommand(String.Format("SELECT CantidadDetalle FROM detallestock WHERE CodSucursal = '{0}' and CodProducto = '{1}'", cbxOrigen, cbxProducto), BDcomun.ObtenerConexion());
             MySqlDataReader reader = comando.ExecuteReader();
-            String dt = reader.GetString(1);
-
-           /* if (txtCantidad > dt)
-            {*/
+            String dt = reader.GetString("CantidadDetalle");//falta que se guarde bien el dato cantidad en este objeto para que haga la comparacion
+            cant1 = Convert.ToInt32(dt);
+            cant = Convert.ToInt32(txtCantidad);
+            if ( cant > cant1)
+            {
 
                 if (string.IsNullOrWhiteSpace(cbxOrigen.Text) || string.IsNullOrWhiteSpace(cbxDestino.Text) || string.IsNullOrWhiteSpace(cbxProducto.Text) || string.IsNullOrWhiteSpace(txtCantidad.Text) || string.IsNullOrWhiteSpace(dtpFecha.Text))
 
@@ -98,10 +102,10 @@ namespace PROYECTO_FINAL
                 txtCantidad.Text = "";
                 dtpFecha.Text = "";
             }
-       /* }
+       }
             else
 
-                MessageBox.Show("Nohay suficiente cantidad en el stock");*/
+                MessageBox.Show("Nohay suficiente cantidad en el stock");
         }
         public int fila { get; set; }
 
