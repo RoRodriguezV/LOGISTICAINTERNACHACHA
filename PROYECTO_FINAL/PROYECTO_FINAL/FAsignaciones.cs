@@ -71,6 +71,27 @@ namespace PROYECTO_FINAL
         private void FAsignaciones_Load(object sender, EventArgs e)
         {
             dgvAsignaciones.AllowUserToAddRows = false;
+            dgvStockActual.AllowUserToAddRows = false;
+            StockActual(dgvStockActual);
+            dgvStockActual.Enabled = false;
+        }
+
+
+        public void StockActual(DataGridView dvg)// falta que llene el datagriview
+        {
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("SELECT NombreProducto, CantidadDetalle  FROM detallestock WHERE CodSucursal = 1"), BDcomun.ObtenerConexion());
+                MySqlDataAdapter ds = new MySqlDataAdapter(comando);
+                DataTable dr = new DataTable();
+                ds.Fill(dr);
+                dvg.DataSource = dr;
+            }
+
+            catch
+            {
+                MessageBox.Show("ERROR");
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

@@ -43,7 +43,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvStockActual = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignaciones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStockActual)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVolver
@@ -106,10 +108,10 @@
             // dgvAsignaciones
             // 
             this.dgvAsignaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAsignaciones.Location = new System.Drawing.Point(665, 33);
+            this.dgvAsignaciones.Location = new System.Drawing.Point(665, 254);
             this.dgvAsignaciones.Name = "dgvAsignaciones";
             this.dgvAsignaciones.RowTemplate.Height = 28;
-            this.dgvAsignaciones.Size = new System.Drawing.Size(458, 419);
+            this.dgvAsignaciones.Size = new System.Drawing.Size(467, 182);
             this.dgvAsignaciones.TabIndex = 42;
             this.dgvAsignaciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAsignaciones_CellContentClick_1);
             // 
@@ -179,11 +181,21 @@
             this.label1.TabIndex = 34;
             this.label1.Text = "Destino: ";
             // 
+            // dgvStockActual
+            // 
+            this.dgvStockActual.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStockActual.Location = new System.Drawing.Point(665, 20);
+            this.dgvStockActual.Name = "dgvStockActual";
+            this.dgvStockActual.RowTemplate.Height = 28;
+            this.dgvStockActual.Size = new System.Drawing.Size(467, 182);
+            this.dgvStockActual.TabIndex = 49;
+            // 
             // FAsignaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1141, 589);
+            this.ClientSize = new System.Drawing.Size(1186, 589);
+            this.Controls.Add(this.dgvStockActual);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.cbxOrigen);
             this.Controls.Add(this.label5);
@@ -203,6 +215,7 @@
             this.Text = "FAsignaciones";
             this.Load += new System.EventHandler(this.FAsignaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignaciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStockActual)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,5 +238,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvStockActual;
     }
 }
