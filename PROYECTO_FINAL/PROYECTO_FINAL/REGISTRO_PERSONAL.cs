@@ -159,5 +159,20 @@ namespace PROYECTO_FINAL
             tb_telefono.Clear();
             tb_pass.Clear();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_codigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
