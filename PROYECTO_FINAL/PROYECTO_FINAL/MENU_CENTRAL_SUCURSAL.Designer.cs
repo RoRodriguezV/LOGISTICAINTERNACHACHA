@@ -37,7 +37,7 @@
             this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(166, 13);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(41, 22);
+            this.textBox1.Size = new System.Drawing.Size(67, 22);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 

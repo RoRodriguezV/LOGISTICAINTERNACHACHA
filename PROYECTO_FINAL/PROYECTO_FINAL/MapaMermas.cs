@@ -99,7 +99,7 @@ namespace PROYECTO_FINAL
                 FechaBusqueda.CustomFormat = "yyyy/MM/dd";
                 String fecha1 = FechaBusqueda.Value.Date.ToString("yyyy/MM/dd");
 
-                MySqlCommand comando = new MySqlCommand(String.Format("SELECT s.CodSucursal,s.NombreSucursal,s.Latitud,s.Longitud,p.NombreProducto,m.CantidadMerma,m.FechaHora FROM merma m INNER JOIN sucursal s ON m.CodSucursal= s.CodSucursal INNER JOIN producto p ON m.CodProducto = p.CodProducto WHERE m.FechaHora = '{0}'", fecha1), BDcomun.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("SELECT s.CodSucursal,s.NombreSucursal,s.Latitud,s.Longitud,p.NombreProducto,m.CantidadMerma,m.FechaInicio FROM merma m INNER JOIN sucursal s ON m.CodSucursal= s.CodSucursal INNER JOIN producto p ON m.CodProducto = p.CodProducto WHERE m.FechaInicio = '{0}'", fecha1), BDcomun.ObtenerConexion());
                 MySqlDataAdapter da = new MySqlDataAdapter(comando);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
