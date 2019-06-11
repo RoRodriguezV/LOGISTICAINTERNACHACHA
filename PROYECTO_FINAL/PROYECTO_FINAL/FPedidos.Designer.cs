@@ -197,6 +197,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Name = "FPedidos";
+            this.Text = "Menu Pedido";
             this.Load += new System.EventHandler(this.FPedidos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).EndInit();
             this.ResumeLayout(false);

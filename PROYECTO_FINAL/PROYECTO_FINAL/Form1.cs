@@ -68,5 +68,10 @@ namespace PROYECTO_FINAL
         {
 
         }
+
+        private void tb_pass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

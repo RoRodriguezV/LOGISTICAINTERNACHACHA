@@ -19,7 +19,9 @@ namespace PROYECTO_FINAL
 
         private void Button1_Click(object sender, EventArgs e)
         {
-
+            FPedidos pedid = new FPedidos();
+            pedid.Show();
+            this.Hide();
         }
 
         private void Button2_Click(object sender, EventArgs e)

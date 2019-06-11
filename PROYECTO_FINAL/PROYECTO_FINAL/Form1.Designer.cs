@@ -59,7 +59,7 @@
             // tb_usuario
             // 
             this.tb_usuario.Location = new System.Drawing.Point(249, 134);
-            this.tb_usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_usuario.Margin = new System.Windows.Forms.Padding(2);
             this.tb_usuario.Name = "tb_usuario";
             this.tb_usuario.Size = new System.Drawing.Size(161, 20);
             this.tb_usuario.TabIndex = 1;
@@ -67,11 +67,12 @@
             // tb_pass
             // 
             this.tb_pass.Location = new System.Drawing.Point(249, 183);
-            this.tb_pass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_pass.Margin = new System.Windows.Forms.Padding(2);
             this.tb_pass.Name = "tb_pass";
             this.tb_pass.PasswordChar = '*';
             this.tb_pass.Size = new System.Drawing.Size(161, 20);
             this.tb_pass.TabIndex = 1;
+            this.tb_pass.TextChanged += new System.EventHandler(this.tb_pass_TextChanged);
             // 
             // label3
             // 
@@ -86,7 +87,7 @@
             // bt_verificar
             // 
             this.bt_verificar.Location = new System.Drawing.Point(186, 242);
-            this.bt_verificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_verificar.Margin = new System.Windows.Forms.Padding(2);
             this.bt_verificar.Name = "bt_verificar";
             this.bt_verificar.Size = new System.Drawing.Size(160, 41);
             this.bt_verificar.TabIndex = 3;
@@ -105,7 +106,7 @@
             this.Controls.Add(this.tb_usuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ControlDeMerma";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.ControlDeMerma_Load);

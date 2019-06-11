@@ -21,6 +21,8 @@ namespace PROYECTO_FINAL
             dgvPedido.Columns.Add("producto", "PRODUCTO");
             dgvPedido.Columns.Add("cantidad", "CANTIDAD");
             dgvPedido.Columns.Add("fecha", "FECHA");
+            dgvPedido.Columns.Add("estado", "ESTADO");
+           
 
             Limpiar();
             Combobox();
@@ -62,6 +64,7 @@ namespace PROYECTO_FINAL
             cbProducto.Items.Clear();
             tbCantidad.Clear();
             dtFecha.ResetText();
+            
         }
         private void FPedidos_Load(object sender, EventArgs e)
         {
@@ -75,18 +78,20 @@ namespace PROYECTO_FINAL
                 MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
             {
-               
 
+               
                 dtFecha.Format = DateTimePickerFormat.Custom;
                 dtFecha.CustomFormat = "yyyy/MM/dd";
 
-                dgvPedido.Rows.Add(cbOrigen.Text, cbDestino.Text, cbProducto.Text, tbCantidad.Text, dtFecha.Text);
+                dgvPedido.Rows.Add(cbOrigen.Text, cbDestino.Text, cbProducto.Text, tbCantidad.Text, dtFecha.Text, "Pendiente");
 
                 cbOrigen.Text = "";
                 cbDestino.Text = "";
                 cbProducto.Text = "";
                 tbCantidad.Text = "";
                 dtFecha.Text = "";
+                dtFecha.Text = "";
+                
             }
         }
         public int fila { get; set; }
@@ -112,13 +117,14 @@ namespace PROYECTO_FINAL
             {
                 foreach (DataGridViewRow row in dgvPedido.Rows)
                 {
-                    comando = new MySqlCommand("Insert into envio values (?CdOrigen, ?CdDestino, ?CdProducto, ?CantidadPedido, ?FechaPedido) ", BDcomun.ObtenerConexion());
+                    comando = new MySqlCommand("Insert into pedidos values (?CodOrigen, ?CodDestino, ?CodProducto, ?CantidadPedido, ?Fecha, ?Estado) ", BDcomun.ObtenerConexion());
 
-                    comando.Parameters.Add("?CdOrigen", MySqlDbType.VarChar).Value = Convert.ToString(row.Cells["origen"].Value);
-                    comando.Parameters.Add("?CdDestino", MySqlDbType.VarChar).Value = Convert.ToString(row.Cells["destino"].Value);
-                    comando.Parameters.Add("?CdProducto", MySqlDbType.VarChar).Value = Convert.ToString(row.Cells["producto"].Value);
+                    comando.Parameters.Add("?CodOrigen", MySqlDbType.VarChar).Value = Convert.ToString(row.Cells["origen"].Value);
+                    comando.Parameters.Add("?CodDestino", MySqlDbType.VarChar).Value = Convert.ToString(row.Cells["destino"].Value);
+                    comando.Parameters.Add("?CodProducto", MySqlDbType.VarChar).Value = Convert.ToString(row.Cells["producto"].Value);
                     comando.Parameters.Add("?CantidadPedido", MySqlDbType.Int16).Value = Convert.ToInt16(row.Cells["cantidad"].Value);
-                    comando.Parameters.Add("?FechaPedido", MySqlDbType.Date).Value = Convert.ToDateTime(row.Cells["fecha"].Value);
+                    comando.Parameters.Add("?Fecha", MySqlDbType.Date).Value = Convert.ToDateTime(row.Cells["fecha"].Value);
+                    comando.Parameters.Add("?Estado", MySqlDbType.VarChar).Value = Convert.ToString(row.Cells["estado"].Value);
 
                     comando.ExecuteNonQuery();
 
