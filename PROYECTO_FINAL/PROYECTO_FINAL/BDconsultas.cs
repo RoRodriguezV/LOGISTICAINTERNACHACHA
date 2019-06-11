@@ -79,6 +79,25 @@ namespace PROYECTO_FINAL
             return proles;
 
         }
+        public static sucursal ObtenerLat(string coordenadas)
+        {
+            sucursal psuc = new sucursal();
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT Latitud, Longitud FROM sucursal where CodSucursal = {0} ", coordenadas), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                psuc.Latitud = _reader.GetInt32(0);
+                psuc.Longitud = _reader.GetInt32(1);
+
+
+            }
+
+            conexion.Close();
+            return psuc;
+
+        }
         public static int ActualizarSucursal(sucursal pactusuc)
         {
 
