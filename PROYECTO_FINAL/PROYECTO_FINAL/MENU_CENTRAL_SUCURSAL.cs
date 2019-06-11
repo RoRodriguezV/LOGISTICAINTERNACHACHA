@@ -44,6 +44,8 @@ namespace PROYECTO_FINAL
             gMapControl1.MaxZoom = 24;
             gMapControl1.Zoom = 9;
             gMapControl1.AutoScroll = true;
+            dataGridView1.Columns.Add("Distancia", "DISTANCIA");
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -73,7 +75,7 @@ namespace PROYECTO_FINAL
                     marker = new GMarkerGoogle(new PointLatLng(LatInicial, LngInicial), GMarkerGoogleType.red);
                     markerOverlay.Markers.Add(marker);
                     marker.ToolTipMode = MarkerTooltipMode.Always;
-                    marker.ToolTipText = String.Format("SUCURSAL:{0} \n PRODUCTO:{1} ", NombreSucursal, DireccionSucursal);
+                    marker.ToolTipText = String.Format("SUCURSAL:{0} \n DIRECCIÓN:{1} ", NombreSucursal, DireccionSucursal);
                     gMapControl1.Overlays.Add(markerOverlay);
 
                 }
@@ -85,12 +87,20 @@ namespace PROYECTO_FINAL
                 MessageBox.Show("ERROR");
             }
         }
-
+        
         private void button1_Click_1(object sender, EventArgs e)
         {
             ControlDeMerma contro = new ControlDeMerma();
             contro.Show();
             this.Hide();
+        }
+
+        private void btdistancias_Click(object sender, EventArgs e)
+        {
+
+            //Empezamos la formula de distancia entre dos puntos d(P1, P2)=raiz((x2-x1)^2 + (y2-y1)^2)
+            double resultado = Math.Sqrt((Math.Pow(((Convert.ToDouble(dataGridView1.CurrentRow.Cells[3].Value) - LatInicial)), 2))+ (Math.Pow(((Convert.ToDouble(dataGridView1.CurrentRow.Cells[4].Value) - LngInicial)), 2)));
+            dataGridView1.CurrentRow.Cells[6].Value = Convert.ToString(resultado);
         }
     }
 }
