@@ -44,13 +44,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvStockActual = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignaciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStockActual)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(984, 477);
+            this.btnVolver.Location = new System.Drawing.Point(984, 515);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(139, 48);
             this.btnVolver.TabIndex = 48;
@@ -87,7 +89,7 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(665, 477);
+            this.btnRegistrar.Location = new System.Drawing.Point(665, 515);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(122, 48);
             this.btnRegistrar.TabIndex = 44;
@@ -108,7 +110,7 @@
             // dgvAsignaciones
             // 
             this.dgvAsignaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAsignaciones.Location = new System.Drawing.Point(665, 254);
+            this.dgvAsignaciones.Location = new System.Drawing.Point(665, 292);
             this.dgvAsignaciones.Name = "dgvAsignaciones";
             this.dgvAsignaciones.RowTemplate.Height = 28;
             this.dgvAsignaciones.Size = new System.Drawing.Size(467, 182);
@@ -128,6 +130,7 @@
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(255, 26);
             this.txtCantidad.TabIndex = 40;
+            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             // 
             // cbxProducto
             // 
@@ -184,17 +187,40 @@
             // dgvStockActual
             // 
             this.dgvStockActual.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStockActual.Location = new System.Drawing.Point(665, 20);
+            this.dgvStockActual.Enabled = false;
+            this.dgvStockActual.Location = new System.Drawing.Point(665, 78);
             this.dgvStockActual.Name = "dgvStockActual";
             this.dgvStockActual.RowTemplate.Height = 28;
             this.dgvStockActual.Size = new System.Drawing.Size(467, 182);
             this.dgvStockActual.TabIndex = 49;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(777, 22);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(244, 36);
+            this.label6.TabIndex = 50;
+            this.label6.Text = "STOCK ACTUAL";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(48, 538);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(51, 20);
+            this.label7.TabIndex = 51;
+            this.label7.Text = "label7";
             // 
             // FAsignaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1186, 589);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvStockActual);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.cbxOrigen);
@@ -239,5 +265,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvStockActual;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

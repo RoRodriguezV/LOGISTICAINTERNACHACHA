@@ -44,12 +44,12 @@ namespace PROYECTO_FINAL
         }
 
 
-        public void LlenarDatosEnviosSucursales(DataGridView grid)// falta que llene el datagriview
+        public void LlenarDatosEnviosSucursales(DataGridView grid)
         {
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("SELECT CodOrigen, CodProducto, CantidadEnvio, FechaHora FROM envio WHERE CodDestino = '{0}'", cbxSucursal), BDcomun.ObtenerConexion());
-                MySqlDataAdapter ds = new MySqlDataAdapter(comando);
+                MySqlCommand comando1 = new MySqlCommand(String.Format("SELECT CodOrigen, CodProducto, CantidadEnvio, FechaHora FROM envio WHERE CodDestino = '{0}'", cbxSucursal.SelectedItem), BDcomun.ObtenerConexion());
+                MySqlDataAdapter ds = new MySqlDataAdapter(comando1);
                 DataTable dr = new DataTable();
                 ds.Fill(dr);
                 grid.DataSource = dr;

@@ -13,7 +13,7 @@ namespace PROYECTO_FINAL
 {
     public partial class FAsignaciones : Form
     {
-        private int cant;
+        private int cant { get; set; }
         private int cant1;
 
         public FAsignaciones()
@@ -73,7 +73,7 @@ namespace PROYECTO_FINAL
             dgvAsignaciones.AllowUserToAddRows = false;
             dgvStockActual.AllowUserToAddRows = false;
             StockActual(dgvStockActual);
-            dgvStockActual.Enabled = false;
+            GuardarCant();
         }
 
 
@@ -94,22 +94,39 @@ namespace PROYECTO_FINAL
             }
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        public void GuardarCant()
         {
-
             MySqlCommand comando = new MySqlCommand(String.Format("SELECT CantidadDetalle FROM detallestock WHERE CodSucursal = '{0}' and CodProducto = '{1}'", cbxOrigen, cbxProducto), BDcomun.ObtenerConexion());
             MySqlDataReader reader = comando.ExecuteReader();
-            String dt = reader.GetString("CantidadDetalle");//falta que se guarde bien el dato cantidad en este objeto para que haga la comparacion
-            cant1 = Convert.ToInt32(dt);
-            cant = Convert.ToInt32(txtCantidad);
-            if ( cant > cant1)
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    reader.Read();
+                   label7.Text =  reader["detallestock.CantidadDetalle"].ToString();
+                    cant1 = Convert.ToInt32(label7.Text);
+                    //Int32 dt = new Int32();
+                    //cant1 = Convert.ToInt32(dt);
+                    //cant1.CompareTo("CantidadDetalle");
+
+                }
+            }
+            //Int32 dt = new Int32();//falta que se guarde bien el dato cantidad en este objeto para que haga la comparacion
+            //cant1 = Convert.ToInt32(dt);
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+            //cant1 = Convert.ToInt32(textBox1.Text);
+        {
+            cant = Convert.ToInt32(txtCantidad.Text);
+            if ( cant < cant1)
             {
 
                 if (string.IsNullOrWhiteSpace(cbxOrigen.Text) || string.IsNullOrWhiteSpace(cbxDestino.Text) || string.IsNullOrWhiteSpace(cbxProducto.Text) || string.IsNullOrWhiteSpace(txtCantidad.Text) || string.IsNullOrWhiteSpace(dtpFecha.Text))
 
                 MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            else
-            {
+              else
+             {
                 // Asigaciones pAsignaciones = new Asigaciones()
 
                 dtpFecha.Format = DateTimePickerFormat.Custom;
@@ -122,12 +139,13 @@ namespace PROYECTO_FINAL
                 cbxProducto.Text = "";
                 txtCantidad.Text = "";
                 dtpFecha.Text = "";
+                }
             }
-       }
             else
 
-                MessageBox.Show("Nohay suficiente cantidad en el stock");
+                MessageBox.Show("No hay suficiente cantidad en el stock");
         }
+
         public int fila { get; set; }
 
 
@@ -189,6 +207,10 @@ namespace PROYECTO_FINAL
             }
             else
                 MessageBox.Show("debe de seleccionar una fila");
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }
