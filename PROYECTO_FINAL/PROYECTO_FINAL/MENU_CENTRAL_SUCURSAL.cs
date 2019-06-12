@@ -21,7 +21,7 @@ namespace PROYECTO_FINAL
         DataTable dt;
         double LatInicial;
         double LngInicial;
-        public sucursal LatSelec { get; set; }
+        public sucursal coordenadas { get; set; }
         public MENU_CENTRAL_SUCURSAL()
         {
             InitializeComponent();
@@ -33,9 +33,9 @@ namespace PROYECTO_FINAL
 
         private void MENU_CENTRAL_SUCURSAL_Load(object sender, EventArgs e)
         {
-            LatSelec = BDconsultas.ObtenerLat(label2.Text);
-            LatInicial = LatSelec.Latitud;
-            LngInicial = LatSelec.Longitud;
+            coordenadas = BDconsultas.ObtenerLat(label2.Text);
+            LatInicial = coordenadas.Latitud;
+            LngInicial = coordenadas.Longitud;
             gMapControl1.DragButton = MouseButtons.Left;
             gMapControl1.CanDragMap = true;
             gMapControl1.MapProvider = GMapProviders.GoogleMap;
@@ -97,10 +97,18 @@ namespace PROYECTO_FINAL
 
         private void btdistancias_Click(object sender, EventArgs e)
         {
-
+            coordenadas = BDconsultas.ObtenerLat(label2.Text);
+            LatInicial = coordenadas.Latitud;
+            LngInicial = coordenadas.Longitud;
             //Empezamos la formula de distancia entre dos puntos d(P1, P2)=raiz((x2-x1)^2 + (y2-y1)^2)
-            double resultado = Math.Sqrt((Math.Pow(((Convert.ToDouble(dataGridView1.CurrentRow.Cells[3].Value) - LatInicial)), 2))+ (Math.Pow(((Convert.ToDouble(dataGridView1.CurrentRow.Cells[4].Value) - LngInicial)), 2)));
-            dataGridView1.CurrentRow.Cells[6].Value = Convert.ToString(resultado);
+            double x2 = Convert.ToDouble(dataGridView1.CurrentRow.Cells[3].Value.ToString());
+            double x1 = LatInicial;
+            double y2 = Convert.ToDouble(dataGridView1.CurrentRow.Cells[4].Value.ToString());
+            double y1 = LngInicial;
+            double x = x2 - x1;
+            double y = y2 - y1;
+            double resultado = Math.Sqrt((Math.Pow(x,2))+(Math.Pow(y,2)));
+            dataGridView1.CurrentRow.Cells[6].Value = (resultado);
         }
     }
 }

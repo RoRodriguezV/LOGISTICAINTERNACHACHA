@@ -88,8 +88,8 @@ namespace PROYECTO_FINAL
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
-                psuc.Latitud = _reader.GetInt32(0);
-                psuc.Longitud = _reader.GetInt32(1);
+                psuc.Latitud = _reader.GetDouble(0);
+                psuc.Longitud = _reader.GetDouble(1);
 
 
             }
