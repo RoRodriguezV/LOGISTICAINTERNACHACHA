@@ -65,6 +65,21 @@ namespace PROYECTO_FINAL
             dtpFecha.ResetText();
         }
 
+
+
+        public FAsignaciones (String text)
+            {
+
+            InitializeComponent();
+            cbxOrigen.Text = "Origen:" + text;
+            cbxDestino.Text = "Destino:" + text;
+            cbxProducto.Text = "Producto:" + text;
+            txtCantidad.Text = "Cantidad" + text;
+
+        }
+
+
+
         private void FAsignaciones_Load(object sender, EventArgs e)
         {
             dgvAsignaciones.AllowUserToAddRows = false;
@@ -152,6 +167,11 @@ namespace PROYECTO_FINAL
             }
             else
                 MessageBox.Show("debe de seleccionar una fila");
+        }
+
+        private void cbxOrigen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

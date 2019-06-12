@@ -19,9 +19,19 @@ namespace PROYECTO_FINAL
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FAsignaciones f2 = new FAsignaciones();
+
+            String texto = dgv_stock.Text;
+            FAsignaciones a = new FAsignaciones(texto);
+            a.Show();
+
+
+
+            
+            
+            
+            /*FAsignaciones f2 = new FAsignaciones();
             f2.Show();
-            this.Hide();
+            this.Hide();*/
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -31,20 +41,20 @@ namespace PROYECTO_FINAL
 
         private void btRechazar_Click(object sender, EventArgs e)
         {
-
+            dgv_stock.Rows.Remove(dgv_stock.CurrentRow);
         }
 
         private void dgv_stock_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            dgv_stock.Columns.Add("origen","Origen");
-            dgv_stock.Columns.Add("destino", "Destino");
-            dgv_stock.Columns.Add("producto", "Producto");
-            dgv_stock.Columns.Add("cantidad", "Cantidad");
+            
         }
 
         private void FEstadoDeSolicitud_Load(object sender, EventArgs e)
         {
-
+            dgv_stock.Columns.Add("origen", "Origen");
+            dgv_stock.Columns.Add("destino", "Destino");
+            dgv_stock.Columns.Add("producto", "Producto");
+            dgv_stock.Columns.Add("cantidad", "Cantidad");
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -54,7 +64,13 @@ namespace PROYECTO_FINAL
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            dgv_stock.Rows.Add();
+            dgv_stock.Rows.Add(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+
+            
         }
     }
 }

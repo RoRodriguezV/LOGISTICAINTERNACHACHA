@@ -24,7 +24,7 @@ namespace PROYECTO_FINAL
         }
 
         //Constructor
-        public Mermas(string CodSucursal, string CodProucto,int CantidadMerma, DateTime FechaInicio, DateTime FechaFin)
+        public Mermas(string CodSucursal, string CodProucto, int CantidadMerma, DateTime FechaInicio, DateTime FechaFin)
         {
             CodSucursal1 = CodSucursal;
             CodProducto1 = CodProducto;
@@ -35,11 +35,14 @@ namespace PROYECTO_FINAL
 
         //Getters y Setters de todas las variables
         public string CodSucursal1 { get => CodSucursal; set => CodSucursal = value; }
-        public string CodProducto1 { get => CodProducto; set => CodProducto = value; }
+      /*  public string CodProducto1 { get => CodProducto; set => CodProducto = value; }
         public int CantidadMerma1 { get => CantidadMerma; set => CantidadMerma = value; }
         public DateTime FechaInicio1 { get => FechaInicio; set => FechaInicio = value; }
-        public DateTime FechaFin1 { get => FechaFin; set => FechaFin = value; }
+        public DateTime FechaFin1 { get => FechaFin; set => FechaFin = value; }*/
 
+
+        }
     }
 }
+
 

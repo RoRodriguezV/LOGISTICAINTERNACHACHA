@@ -79,5 +79,15 @@ namespace PROYECTO_FINAL
             menrec.Show();
             this.Hide();
         }
+
+        private void dg_datos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void FRECETA_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
