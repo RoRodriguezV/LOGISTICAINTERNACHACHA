@@ -17,16 +17,25 @@ namespace PROYECTO_FINAL
             InitializeComponent();
         }
 
-        private void e_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            MENU_CENTRAL mcentral = new MENU_CENTRAL();
-            mcentral.Show();
+            FRECETA f2 = new FRECETA ();
+            f2.Show();
             this.Hide();
         }
 
-        private void bt_buscar_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
+            MENU_CENTRAL mcentral = new MENU_CENTRAL();
+            mcentral.Show();
+            this.Hide(); 
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FBuscarReceta fbuscar = new FBuscarReceta();
+            fbuscar.Show();
+            this.Hide();
         }
     }
 }

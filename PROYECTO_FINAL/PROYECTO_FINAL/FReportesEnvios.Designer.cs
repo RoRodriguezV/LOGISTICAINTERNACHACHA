@@ -29,40 +29,29 @@
         private void InitializeComponent()
         {
             this.btnVolver = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.FechaBusqueda = new System.Windows.Forms.DateTimePicker();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.dgvEnvios = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbxSucursal = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnFechas = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnFechas = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbxSucursal = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnvios)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(979, 582);
+            this.btnVolver.Location = new System.Drawing.Point(714, 577);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(163, 50);
             this.btnVolver.TabIndex = 21;
             this.btnVolver.Text = "VOLVER";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(448, 97);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(259, 36);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Seleccionar fecha:";
             // 
             // label1
             // 
@@ -80,7 +69,7 @@
             this.FechaBusqueda.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FechaBusqueda.Font = new System.Drawing.Font("Courier Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FechaBusqueda.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechaBusqueda.Location = new System.Drawing.Point(844, 86);
+            this.FechaBusqueda.Location = new System.Drawing.Point(675, 90);
             this.FechaBusqueda.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FechaBusqueda.Name = "FechaBusqueda";
             this.FechaBusqueda.Size = new System.Drawing.Size(298, 42);
@@ -89,7 +78,7 @@
             // btnMostrar
             // 
             this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrar.Location = new System.Drawing.Point(596, 265);
+            this.btnMostrar.Location = new System.Drawing.Point(386, 276);
             this.btnMostrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(426, 69);
@@ -101,76 +90,87 @@
             // dgvEnvios
             // 
             this.dgvEnvios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEnvios.Location = new System.Drawing.Point(52, 381);
+            this.dgvEnvios.Location = new System.Drawing.Point(23, 376);
             this.dgvEnvios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvEnvios.Name = "dgvEnvios";
-            this.dgvEnvios.Size = new System.Drawing.Size(870, 251);
+            this.dgvEnvios.Size = new System.Drawing.Size(666, 251);
             this.dgvEnvios.TabIndex = 16;
             // 
-            // label3
+            // button2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(448, 175);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(299, 36);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Seleccionar sucursal:";
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(81, 254);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(163, 50);
+            this.button2.TabIndex = 29;
+            this.button2.Text = "SUCURSALES";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // cbxSucursal
+            // btnFechas
             // 
-            this.cbxSucursal.FormattingEnabled = true;
-            this.cbxSucursal.Location = new System.Drawing.Point(874, 175);
-            this.cbxSucursal.Name = "cbxSucursal";
-            this.cbxSucursal.Size = new System.Drawing.Size(268, 28);
-            this.cbxSucursal.TabIndex = 23;
+            this.btnFechas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFechas.Location = new System.Drawing.Point(81, 160);
+            this.btnFechas.Name = "btnFechas";
+            this.btnFechas.Size = new System.Drawing.Size(163, 50);
+            this.btnFechas.TabIndex = 28;
+            this.btnFechas.Text = "FECHAS";
+            this.btnFechas.UseVisualStyleBackColor = true;
+            this.btnFechas.Click += new System.EventHandler(this.btnFechas_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(46, 97);
+            this.label4.Location = new System.Drawing.Point(13, 86);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(286, 36);
-            this.label4.TabIndex = 24;
+            this.label4.TabIndex = 27;
             this.label4.Text = "TIPO DE BUSUEDA";
             // 
-            // btnFechas
+            // cbxSucursal
             // 
-            this.btnFechas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFechas.Location = new System.Drawing.Point(114, 171);
-            this.btnFechas.Name = "btnFechas";
-            this.btnFechas.Size = new System.Drawing.Size(163, 50);
-            this.btnFechas.TabIndex = 25;
-            this.btnFechas.Text = "FECHAS";
-            this.btnFechas.UseVisualStyleBackColor = true;
-            this.btnFechas.Click += new System.EventHandler(this.button1_Click);
+            this.cbxSucursal.FormattingEnabled = true;
+            this.cbxSucursal.Location = new System.Drawing.Point(675, 182);
+            this.cbxSucursal.Name = "cbxSucursal";
+            this.cbxSucursal.Size = new System.Drawing.Size(268, 28);
+            this.cbxSucursal.TabIndex = 32;
             // 
-            // button2
+            // label3
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(114, 265);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(163, 50);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "SUCURSALES";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(337, 174);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(299, 36);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Seleccionar sucursal:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(337, 96);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(259, 36);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Seleccionar fecha:";
             // 
             // FReportesEnvios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 657);
+            this.ClientSize = new System.Drawing.Size(986, 647);
+            this.Controls.Add(this.cbxSucursal);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnFechas);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.cbxSucursal);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnVolver);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FechaBusqueda);
             this.Controls.Add(this.btnMostrar);
@@ -186,15 +186,15 @@
         #endregion
 
         private System.Windows.Forms.Button btnVolver;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker FechaBusqueda;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.DataGridView dgvEnvios;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbxSucursal;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnFechas;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnFechas;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbxSucursal;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

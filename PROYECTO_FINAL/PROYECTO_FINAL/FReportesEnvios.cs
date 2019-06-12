@@ -43,7 +43,6 @@ namespace PROYECTO_FINAL
             }
         }
 
-
         public void LlenarDatosEnviosSucursales(DataGridView grid)
         {
             try
@@ -63,7 +62,7 @@ namespace PROYECTO_FINAL
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-            if(cbxSucursal.Visible == true)
+            if (cbxSucursal.Visible == true)
             {
                 LlenarDatosEnviosSucursales(dgvEnvios);
                 dgvEnvios.Update();
@@ -71,22 +70,23 @@ namespace PROYECTO_FINAL
 
             else
 
-            LlenarDatosEnvios(dgvEnvios);
+                LlenarDatosEnvios(dgvEnvios);
             dgvEnvios.Update();
         }
+
+      
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnFechas_Click(object sender, EventArgs e)
         {
             label3.Visible = false;
             cbxSucursal.Visible = false;
             label2.Visible = true;
             FechaBusqueda.Visible = true;
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -103,8 +103,6 @@ namespace PROYECTO_FINAL
             if (reader.HasRows)
                 while (reader.Read())
                     cbxSucursal.Items.Add(reader.GetString("CodSucursal"));
-
-
         }
     }
 }

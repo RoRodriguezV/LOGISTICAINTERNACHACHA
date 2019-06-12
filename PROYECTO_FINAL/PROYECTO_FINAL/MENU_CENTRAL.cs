@@ -62,7 +62,9 @@ namespace PROYECTO_FINAL
 
         private void button7_Click(object sender, EventArgs e)
         {
-            
+            MENU_RECETA menureceta = new MENU_RECETA();
+            menureceta.Show();
+            this.Hide();
         }
     }
 }

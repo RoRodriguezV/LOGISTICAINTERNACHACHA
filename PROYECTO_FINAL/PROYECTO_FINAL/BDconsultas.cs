@@ -187,6 +187,29 @@ namespace PROYECTO_FINAL
             conexion.Close();
             return _lista;
         }
+        public static List<receta> BuscarReceta(string cod)
+        {
+            List<receta> _lista = new List<receta>();
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT * FROM receta where CodProducto = " + cod), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                receta preceta = new receta();
+                preceta.CodProducto = _reader.GetString(0);
+                preceta.CodInsumo = _reader.GetString(1);
+                preceta.CantidadReceta = _reader.GetInt32(2);
+               
+
+
+                _lista.Add(preceta);
+            }
+
+            conexion.Close();
+            return _lista;
+        }
         public static List<sucursal> BuscarSucursales()
         {
             List<sucursal> _lista = new List<sucursal>();
@@ -207,6 +230,29 @@ namespace PROYECTO_FINAL
 
 
                 _lista.Add(psucursal);
+            }
+
+            conexion.Close();
+            return _lista;
+        }
+        public static List<receta> BuscarRecetas()
+        {
+            List<receta> _lista = new List<receta>();
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT * FROM receta "), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                receta preceta = new receta();
+                preceta.CodProducto = _reader.GetString(0);
+                preceta.CodInsumo = _reader.GetString(1);
+                preceta.CantidadReceta = _reader.GetInt32(2);
+
+
+
+                _lista.Add(preceta);
             }
 
             conexion.Close();

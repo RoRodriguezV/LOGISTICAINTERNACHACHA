@@ -151,5 +151,10 @@ namespace PROYECTO_FINAL
 
             }
         }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

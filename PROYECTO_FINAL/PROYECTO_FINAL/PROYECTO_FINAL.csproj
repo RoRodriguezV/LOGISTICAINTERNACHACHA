@@ -40,7 +40,7 @@
     </Reference>
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.3.5\Assemblies\v2.0\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\..\MySQL\MySQL Connector Net 6.3.5\Assemblies\v2.0\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -91,6 +91,12 @@
     <Compile Include="FBuscarProducto.Designer.cs">
       <DependentUpon>FBuscarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="FBuscarReceta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBuscarReceta.Designer.cs">
+      <DependentUpon>FBuscarReceta.cs</DependentUpon>
+    </Compile>
     <Compile Include="FINSUMOS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ForMermas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForMermas.Designer.cs">
+      <DependentUpon>ForMermas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FPRODUCTOS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +126,12 @@
     </Compile>
     <Compile Include="ControlDeMermas.Designer.cs">
       <DependentUpon>ControlDeMermas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRECETA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRECETA.Designer.cs">
+      <DependentUpon>FRECETA.cs</DependentUpon>
     </Compile>
     <Compile Include="FReportesEnvios.cs">
       <SubType>Form</SubType>
@@ -171,6 +189,12 @@
     <Compile Include="MENU_PRODUCTOS.Designer.cs">
       <DependentUpon>MENU_PRODUCTOS.cs</DependentUpon>
     </Compile>
+    <Compile Include="MENU_RECETA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MENU_RECETA.Designer.cs">
+      <DependentUpon>MENU_RECETA.cs</DependentUpon>
+    </Compile>
     <Compile Include="MENU_SUCURSAL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,17 +232,26 @@
     <EmbeddedResource Include="FBuscarProducto.resx">
       <DependentUpon>FBuscarProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FBuscarReceta.resx">
+      <DependentUpon>FBuscarReceta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FINSUMOS.resx">
       <DependentUpon>FINSUMOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ForMermas.resx">
+      <DependentUpon>ForMermas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FPRODUCTOS.resx">
       <DependentUpon>FPRODUCTOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlDeMermas.resx">
       <DependentUpon>ControlDeMermas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRECETA.resx">
+      <DependentUpon>FRECETA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FReportesEnvios.resx">
       <DependentUpon>FReportesEnvios.cs</DependentUpon>
@@ -246,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MENU_PRODUCTOS.resx">
       <DependentUpon>MENU_PRODUCTOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MENU_RECETA.resx">
+      <DependentUpon>MENU_RECETA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MENU_SUCURSAL.resx">
       <DependentUpon>MENU_SUCURSAL.cs</DependentUpon>
