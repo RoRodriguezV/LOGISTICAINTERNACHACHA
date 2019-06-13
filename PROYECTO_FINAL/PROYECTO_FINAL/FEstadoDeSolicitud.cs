@@ -27,7 +27,7 @@ namespace PROYECTO_FINAL
         {
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("SELECT CodOrigen, CodDestino, CodProducto, CantidadPedido, Fecha , Estado  FROM pedidos "), BDcomun.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("SELECT CodOrigen, CodDestino, CodProducto, CantidadPedido, Fecha , Estado  FROM pedidos where Estado = 'Pendiente'"), BDcomun.ObtenerConexion());
                 MySqlDataAdapter ds = new MySqlDataAdapter(comando);
                 DataTable dr = new DataTable();
                 ds.Fill(dr);
@@ -45,15 +45,35 @@ namespace PROYECTO_FINAL
             
             if (dgv_stock.SelectedRows.Count == 1)
             {
+                pedido pPedido = new pedido();
+                pPedido.Codigo_Origen = dgv_stock.CurrentRow.Cells[0].Value.ToString();
+                pPedido.Codigo_Destino = dgv_stock.CurrentRow.Cells[1].Value.ToString();
+                pPedido.Codigo_Producto = dgv_stock.CurrentRow.Cells[2].Value.ToString();
+                pPedido.Cantidad = dgv_stock.CurrentRow.Cells[3].Value.ToString();
+
+                MySqlConnection conexion = BDcomun.ObtenerConexion();
+                MySqlCommand comando;
+
+
+                comando = new MySqlCommand(string.Format("Update pedidos set Estado='Aceptado' where CodOrigen={0} and CodDestino ={1} and CodProducto ={2} ",
+                pPedido.Codigo_Origen, pPedido.Codigo_Destino, pPedido.Codigo_Producto), conexion);
+                comando.ExecuteNonQuery();
+
+                //MessageBox.Show("Pedidos Registrados");
+
                 FAsignaciones asignaciones = new FAsignaciones();
                 asignaciones.cbxOrigen.Text = dgv_stock.CurrentRow.Cells[0].Value.ToString();
                 asignaciones.cbxDestino.Text = dgv_stock.CurrentRow.Cells[1].Value.ToString();
                 asignaciones.cbxProducto.Text = dgv_stock.CurrentRow.Cells[2].Value.ToString();
                 asignaciones.txtCantidad.Text = dgv_stock.CurrentRow.Cells[3].Value.ToString();
                 asignaciones.Show();
+
+
             }
             else
                 MessageBox.Show("debe de seleccionar una fila");
+
+
         }
 
         private void dgv_stock_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -70,7 +90,7 @@ namespace PROYECTO_FINAL
         {
             if (dgv_stock.SelectedRows.Count == 1)
             {
-                /*pedido pPedido = new pedido();
+                pedido pPedido = new pedido();
                 pPedido.Codigo_Origen = dgv_stock.CurrentRow.Cells[0].Value.ToString();
                 pPedido.Codigo_Destino = dgv_stock.CurrentRow.Cells[1].Value.ToString();
                 pPedido.Codigo_Producto = dgv_stock.CurrentRow.Cells[2].Value.ToString();
@@ -80,11 +100,11 @@ namespace PROYECTO_FINAL
                 MySqlCommand comando;
 
                
-                        comando = new MySqlCommand(string.Format("Update pedidos set Estado='Rechazado' where CodOrigen='{0}' and CodDestino ='{1}' and CodProducto '{2}' ",
+                        comando = new MySqlCommand(string.Format("Update pedidos set Estado='Rechazado' where CodOrigen={0} and CodDestino ={1} and CodProducto ={2} ",
                         pPedido.Codigo_Origen, pPedido.Codigo_Destino, pPedido.Codigo_Producto), conexion);
                         comando.ExecuteNonQuery();
 
-                    MessageBox.Show("Datos Registrados");*/
+                    MessageBox.Show("Pedidos Registrados");
 
                     dgv_stock.Rows.RemoveAt(fila);
 

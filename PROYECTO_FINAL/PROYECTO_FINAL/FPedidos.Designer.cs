@@ -49,17 +49,17 @@
             // dgvPedido
             // 
             this.dgvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPedido.Location = new System.Drawing.Point(423, 56);
+            this.dgvPedido.Location = new System.Drawing.Point(474, 59);
             this.dgvPedido.Name = "dgvPedido";
-            this.dgvPedido.Size = new System.Drawing.Size(267, 233);
+            this.dgvPedido.Size = new System.Drawing.Size(546, 272);
             this.dgvPedido.TabIndex = 29;
             this.dgvPedido.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPedido_CellContentClick);
             // 
             // bVolver
             // 
-            this.bVolver.Location = new System.Drawing.Point(615, 320);
+            this.bVolver.Location = new System.Drawing.Point(878, 403);
             this.bVolver.Name = "bVolver";
-            this.bVolver.Size = new System.Drawing.Size(75, 33);
+            this.bVolver.Size = new System.Drawing.Size(142, 33);
             this.bVolver.TabIndex = 28;
             this.bVolver.Text = "Volver";
             this.bVolver.UseVisualStyleBackColor = true;
@@ -67,9 +67,9 @@
             // 
             // bRealizarPedido
             // 
-            this.bRealizarPedido.Location = new System.Drawing.Point(423, 320);
+            this.bRealizarPedido.Location = new System.Drawing.Point(492, 403);
             this.bRealizarPedido.Name = "bRealizarPedido";
-            this.bRealizarPedido.Size = new System.Drawing.Size(98, 33);
+            this.bRealizarPedido.Size = new System.Drawing.Size(165, 33);
             this.bRealizarPedido.TabIndex = 27;
             this.bRealizarPedido.Text = "Realizar Pedido";
             this.bRealizarPedido.UseVisualStyleBackColor = true;
@@ -77,9 +77,9 @@
             // 
             // bEliminar
             // 
-            this.bEliminar.Location = new System.Drawing.Point(250, 298);
+            this.bEliminar.Location = new System.Drawing.Point(292, 345);
             this.bEliminar.Name = "bEliminar";
-            this.bEliminar.Size = new System.Drawing.Size(75, 33);
+            this.bEliminar.Size = new System.Drawing.Size(136, 33);
             this.bEliminar.TabIndex = 26;
             this.bEliminar.Text = "Eliminar";
             this.bEliminar.UseVisualStyleBackColor = true;
@@ -87,9 +87,9 @@
             // 
             // bAgregar
             // 
-            this.bAgregar.Location = new System.Drawing.Point(60, 298);
+            this.bAgregar.Location = new System.Drawing.Point(61, 345);
             this.bAgregar.Name = "bAgregar";
-            this.bAgregar.Size = new System.Drawing.Size(75, 33);
+            this.bAgregar.Size = new System.Drawing.Size(136, 33);
             this.bAgregar.TabIndex = 25;
             this.bAgregar.Text = "Agregar";
             this.bAgregar.UseVisualStyleBackColor = true;
@@ -99,7 +99,7 @@
             // 
             this.dtFecha.Location = new System.Drawing.Point(125, 253);
             this.dtFecha.Name = "dtFecha";
-            this.dtFecha.Size = new System.Drawing.Size(200, 26);
+            this.dtFecha.Size = new System.Drawing.Size(303, 26);
             this.dtFecha.TabIndex = 24;
             // 
             // label10
@@ -122,17 +122,17 @@
             // 
             // tbCantidad
             // 
-            this.tbCantidad.Location = new System.Drawing.Point(136, 207);
+            this.tbCantidad.Location = new System.Drawing.Point(185, 207);
             this.tbCantidad.Name = "tbCantidad";
-            this.tbCantidad.Size = new System.Drawing.Size(100, 26);
+            this.tbCantidad.Size = new System.Drawing.Size(243, 26);
             this.tbCantidad.TabIndex = 21;
             // 
             // cbProducto
             // 
             this.cbProducto.FormattingEnabled = true;
-            this.cbProducto.Location = new System.Drawing.Point(136, 163);
+            this.cbProducto.Location = new System.Drawing.Point(185, 168);
             this.cbProducto.Name = "cbProducto";
-            this.cbProducto.Size = new System.Drawing.Size(121, 28);
+            this.cbProducto.Size = new System.Drawing.Size(243, 28);
             this.cbProducto.TabIndex = 20;
             // 
             // label8
@@ -149,7 +149,7 @@
             this.cbDestino.FormattingEnabled = true;
             this.cbDestino.Location = new System.Drawing.Point(136, 121);
             this.cbDestino.Name = "cbDestino";
-            this.cbDestino.Size = new System.Drawing.Size(121, 28);
+            this.cbDestino.Size = new System.Drawing.Size(292, 28);
             this.cbDestino.TabIndex = 18;
             // 
             // cbOrigen
@@ -157,7 +157,7 @@
             this.cbOrigen.FormattingEnabled = true;
             this.cbOrigen.Location = new System.Drawing.Point(136, 74);
             this.cbOrigen.Name = "cbOrigen";
-            this.cbOrigen.Size = new System.Drawing.Size(121, 28);
+            this.cbOrigen.Size = new System.Drawing.Size(292, 28);
             this.cbOrigen.TabIndex = 17;
             // 
             // label7
@@ -182,7 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 418);
+            this.ClientSize = new System.Drawing.Size(1044, 480);
             this.Controls.Add(this.dgvPedido);
             this.Controls.Add(this.bVolver);
             this.Controls.Add(this.bRealizarPedido);

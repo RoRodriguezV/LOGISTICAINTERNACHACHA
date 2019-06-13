@@ -35,13 +35,15 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(115, 82);
+            this.button1.Location = new System.Drawing.Point(129, 102);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 75);
+            this.button1.Size = new System.Drawing.Size(189, 94);
             this.button1.TabIndex = 0;
             this.button1.Text = "ADMINISTRAR SUCURSALES";
             this.button1.UseVisualStyleBackColor = true;
@@ -49,9 +51,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(115, 321);
+            this.button2.Location = new System.Drawing.Point(129, 401);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(174, 75);
+            this.button2.Size = new System.Drawing.Size(196, 94);
             this.button2.TabIndex = 0;
             this.button2.Text = "ADMINISTRAR PRODUCTOS / INSUMOS";
             this.button2.UseVisualStyleBackColor = true;
@@ -59,9 +62,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(115, 198);
+            this.button3.Location = new System.Drawing.Point(129, 248);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(168, 74);
+            this.button3.Size = new System.Drawing.Size(189, 92);
             this.button3.TabIndex = 0;
             this.button3.Text = "ASIGNACION DE ENVIOS";
             this.button3.UseVisualStyleBackColor = true;
@@ -69,9 +73,10 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(424, 198);
+            this.button4.Location = new System.Drawing.Point(477, 248);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(174, 74);
+            this.button4.Size = new System.Drawing.Size(196, 92);
             this.button4.TabIndex = 0;
             this.button4.Text = "CONTROL DE MERMAS";
             this.button4.UseVisualStyleBackColor = true;
@@ -79,9 +84,10 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(424, 80);
+            this.button6.Location = new System.Drawing.Point(477, 100);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(168, 78);
+            this.button6.Size = new System.Drawing.Size(189, 98);
             this.button6.TabIndex = 0;
             this.button6.Text = "ADMINISTRAR PERSONAL";
             this.button6.UseVisualStyleBackColor = true;
@@ -89,9 +95,10 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(626, 401);
+            this.button5.Location = new System.Drawing.Point(779, 503);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(112, 23);
+            this.button5.Size = new System.Drawing.Size(126, 29);
             this.button5.TabIndex = 1;
             this.button5.Text = "VOLVER";
             this.button5.UseVisualStyleBackColor = true;
@@ -99,19 +106,32 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(424, 318);
+            this.button7.Location = new System.Drawing.Point(477, 398);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(174, 78);
+            this.button7.Size = new System.Drawing.Size(196, 98);
             this.button7.TabIndex = 2;
             this.button7.Text = "ADMINISTRAR RECETAS";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(734, 248);
+            this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(189, 92);
+            this.button8.TabIndex = 3;
+            this.button8.Text = "PEDIDOS ENVIOS PARA SUCURSALES";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // MENU_CENTRAL
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 436);
+            this.ClientSize = new System.Drawing.Size(935, 545);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
@@ -119,6 +139,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MENU_CENTRAL";
             this.Text = "MENU ADMINISTRADOR CENTRAL";
             this.ResumeLayout(false);
@@ -134,5 +155,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }
