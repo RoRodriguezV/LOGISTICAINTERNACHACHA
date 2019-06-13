@@ -69,7 +69,7 @@ namespace PROYECTO_FINAL
                 Habilitar();
                 btnGuardar.Enabled = false;
             }
-
+       
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)

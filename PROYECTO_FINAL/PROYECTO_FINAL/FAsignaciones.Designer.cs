@@ -238,21 +238,21 @@
         #endregion
 
         private System.Windows.Forms.Button btnVolver;
-        private System.Windows.Forms.ComboBox cbxOrigen;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dgvAsignaciones;
-        private System.Windows.Forms.DateTimePicker dtpFecha;
-        private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.ComboBox cbxProducto;
-        private System.Windows.Forms.ComboBox cbxDestino;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dgvStockActual;
+        public System.Windows.Forms.ComboBox cbxOrigen;
+        public System.Windows.Forms.DateTimePicker dtpFecha;
+        public System.Windows.Forms.TextBox txtCantidad;
+        public System.Windows.Forms.ComboBox cbxProducto;
+        public System.Windows.Forms.ComboBox cbxDestino;
     }
 }

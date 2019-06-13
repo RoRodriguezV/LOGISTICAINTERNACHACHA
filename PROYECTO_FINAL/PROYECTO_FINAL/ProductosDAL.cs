@@ -23,7 +23,6 @@ namespace PROYECTO_FINAL
 
         public static int AgregarDetalleStock(producto pProducto)
         {
-
             int retorno = 0;
             MySqlCommand comando = new MySqlCommand(string.Format("Insert into detallestock (CodSucursal, CodProducto, CantidadDetalle, NombreProducto ) values ('{0}','{1}','{2}', '{3}' )",
            pProducto.CodSucursal = "1", pProducto.CodProducto, pProducto.Cantidad, pProducto.NombreProducto), BDcomun.ObtenerConexion());
@@ -35,7 +34,7 @@ namespace PROYECTO_FINAL
         {
             List<producto> _lista = new List<producto>();
 
-            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT  CodProducto, NombreProducto, TipoProducto, Cantidad FROM producto where NombreProducto ='{0}'", pNombreProducto), BDcomun.ObtenerConexion());
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT CodProducto, NombreProducto, TipoProducto, Cantidad FROM producto where NombreProducto ='{0}'", pNombreProducto), BDcomun.ObtenerConexion());
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
@@ -52,12 +51,12 @@ namespace PROYECTO_FINAL
 
         }
 
-        public static producto Obtenerproducto(int pCodProducto)
+        public static producto ObtenerProducto(int pCodProducto)
         {
             producto pProducto = new producto();
             MySqlConnection conexion = BDcomun.ObtenerConexion();
 
-            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT  CodProducto, NombreProducto, TipoProducto, Cantidad FROM producto where CodProducto ='{0}'", pCodProducto), conexion);
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT CodProducto, NombreProducto, TipoProducto, Cantidad FROM producto where CodProducto ='{0}'", pCodProducto), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
            while (_reader.Read())
             {
@@ -71,6 +70,8 @@ namespace PROYECTO_FINAL
             return pProducto;
 
         }
+
+         
 
         public static int Actualizar(producto pProducto)
         {

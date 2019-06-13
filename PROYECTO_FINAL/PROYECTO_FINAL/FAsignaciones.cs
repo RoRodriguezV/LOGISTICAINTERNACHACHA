@@ -28,9 +28,19 @@ namespace PROYECTO_FINAL
 
             Limpiar();
             Combobox();
-            GuardarCant();
-            //intento();
+
         }
+
+       /* public FAsignaciones(String text)
+        {
+
+            InitializeComponent();
+            cbxOrigen.Text = "Origen:" + text;
+            cbxDestino.Text = "Destino:" + text;
+            cbxProducto.Text = "Producto:" + text;
+            txtCantidad.Text = "Cantidad" + text;
+
+        }*/
 
         void Combobox()
         {
@@ -76,7 +86,6 @@ namespace PROYECTO_FINAL
             dgvAsignaciones.AllowUserToAddRows = false;
             dgvStockActual.AllowUserToAddRows = false;
             StockActual(dgvStockActual);
-            //GuardarCant();
         }
 
         public void StockActual(DataGridView dvg)
@@ -96,60 +105,35 @@ namespace PROYECTO_FINAL
             }
         }
 
-        /* public static List<Asigaciones> Buscar(string pCodigo_Origen, string pProducto)
-         {
-             List<Asigaciones> _lista = new List<Asigaciones>();
 
-             MySqlCommand _comando = new MySqlCommand(String.Format("SELECT CantidadDetalle FROM detallestock WHERE CodSucursal = '{0}' and CodProducto = '{1}'",pCodigo_Origen, pProducto), BDcomun.ObtenerConexion());
-             MySqlDataReader _reader = _comando.ExecuteReader();
-             while (_reader.Read())
-             {
-                 Asigaciones pAsignacion = new Asigaciones();
-                 pAsignacion.Cantidad = _reader.GetInt32(0);
-
-                 _lista.Add(pAsignacion);
-             }
-
-             return _lista;
-         }*/
-
-
-        /* public void intento()
+         public void intento()
          {
              String query = String.Format("SELECT CantidadDetalle FROM detallestock WHERE CodSucursal = '{0}' and CodProducto = '{1}'", cbxOrigen.Text, cbxProducto.Text);
              MySqlCommand comando = new MySqlCommand(query, BDcomun.ObtenerConexion());
              MySqlDataReader reader = comando.ExecuteReader();
-             if (reader.HasRows)
                  while (reader.Read())
-                     cant1.Equals(reader.GetString("CantidadDetalle"));
+                     cant1= reader.GetInt32("CantidadDetalle");
+         }
 
-         }*/
-        public void GuardarCant()
+      /*  public static int Actualizar(producto pProducto)
         {
-            MySqlCommand comando = new MySqlCommand(String.Format("SELECT CantidadDetalle FROM detallestock WHERE CodSucursal = '{0}' and CodProducto = '{1}'", cbxOrigen.Text, cbxProducto.Text), BDcomun.ObtenerConexion());
-            MySqlDataReader reader = comando.ExecuteReader();
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    Asigaciones pAsignacion = new Asigaciones();
-                    pAsignacion.Cantidad = reader.GetInt32(0);
-                    //cant1 = Convert.ToInt32(pAsignacion.Cantidad);
-                    //reader.Read();
-                    //label7.Text =  reader["detallestock.CantidadDetalle"].ToString();
-                    //cant1 = Convert.ToInt32(label7.Text);
-                    //Int32 dt = new Int32();//falta que se guarde bien el dato cantidad en este objeto para que haga la comparacion
-                    //cant1 = Convert.ToInt32(dt);
-                    //cant1.CompareTo("CantidadDetalle");
-                }
-            }
-        }
+            int retorno = 0;
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format("Update producto set NombreProducto='{0}', TipoProducto='{1}', Cantidad ='{2}' where CodProducto={3}",
+                pProducto.NombreProducto, pProducto.TipoProducto, pProducto.Cantidad, pProducto.CodProducto), conexion);
+
+            retorno = comando.ExecuteNonQuery();
+            conexion.Close();
+
+            return retorno;
+
+        }*/
 
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Asigaciones pAsignaciones = new Asigaciones();
-            cant1 = Convert.ToInt32(pAsignaciones.Cantidad);
+            intento();
             cant = Convert.ToInt32(txtCantidad.Text);
             if (cant < cant1)
             {
@@ -159,8 +143,6 @@ namespace PROYECTO_FINAL
                     MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 else
                 {
-                    // Asigaciones pAsignaciones = new Asigaciones()
-
                     dtpFecha.Format = DateTimePickerFormat.Custom;
                     dtpFecha.CustomFormat = "yyyy/MM/dd";
 
