@@ -14,7 +14,7 @@ using GMap.NET.WindowsForms.Markers;
 
 namespace PROYECTO_FINAL
 {
-    public partial class MENU_CENTRAL_SUCURSAL : Form
+    public partial class MENU_DISTANCIAS : Form
     {
         GMarkerGoogle marker;
         GMapOverlay markerOverlay;
@@ -22,7 +22,7 @@ namespace PROYECTO_FINAL
         double LatInicial;
         double LngInicial;
         public sucursal coordenadas { get; set; }
-        public MENU_CENTRAL_SUCURSAL()
+        public MENU_DISTANCIAS()
         {
             InitializeComponent();
 
@@ -31,7 +31,7 @@ namespace PROYECTO_FINAL
             dataGridView1.DataSource = BDconsultas.BuscarSucursales();
         }
 
-        private void MENU_CENTRAL_SUCURSAL_Load(object sender, EventArgs e)
+        private void MENU_DISTANCIAS_Load(object sender, EventArgs e)
         {
             coordenadas = BDconsultas.ObtenerLat(label2.Text);
             LatInicial = coordenadas.Latitud;
@@ -50,7 +50,7 @@ namespace PROYECTO_FINAL
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -87,7 +87,7 @@ namespace PROYECTO_FINAL
                 MessageBox.Show("ERROR");
             }
         }
-        
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             ControlDeMerma contro = new ControlDeMerma();
@@ -107,8 +107,15 @@ namespace PROYECTO_FINAL
             double y1 = LngInicial;
             double x = x2 - x1;
             double y = y2 - y1;
-            double resultado = Math.Sqrt((Math.Pow(x,2))+(Math.Pow(y,2)));
+            double resultado = Math.Sqrt((Math.Pow(x, 2)) + (Math.Pow(y, 2)));
             dataGridView1.CurrentRow.Cells[6].Value = (resultado);
+        }
+
+        private void btvolver_Click(object sender, EventArgs e)
+        {
+            MENU_SUCURSALES mensuc = new MENU_SUCURSALES();
+            mensuc.Show();
+            this.Hide();
         }
     }
 }

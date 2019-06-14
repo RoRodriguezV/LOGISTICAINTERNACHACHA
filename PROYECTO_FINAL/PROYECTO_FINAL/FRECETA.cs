@@ -75,7 +75,7 @@ namespace PROYECTO_FINAL
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -170,7 +170,7 @@ namespace PROYECTO_FINAL
 
         private void txtcantidad_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

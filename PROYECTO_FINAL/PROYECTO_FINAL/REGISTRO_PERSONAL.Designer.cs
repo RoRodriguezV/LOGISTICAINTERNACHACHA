@@ -68,6 +68,7 @@
             this.label1.Size = new System.Drawing.Size(67, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "CÓDIGO:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -77,6 +78,7 @@
             this.label2.Size = new System.Drawing.Size(72, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "NOMBRE:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -181,6 +183,7 @@
             this.tb_codigo.Name = "tb_codigo";
             this.tb_codigo.Size = new System.Drawing.Size(207, 22);
             this.tb_codigo.TabIndex = 3;
+            this.tb_codigo.TextChanged += new System.EventHandler(this.tb_codigo_TextChanged);
             // 
             // tb_nombre
             // 

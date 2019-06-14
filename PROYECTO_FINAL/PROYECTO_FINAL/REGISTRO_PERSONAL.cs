@@ -16,8 +16,6 @@ namespace PROYECTO_FINAL
         {
             InitializeComponent();
             dataGridView1.DataSource = BDconsultas.BuscarPersonas();
-            
-
 
         }
 
@@ -96,7 +94,7 @@ namespace PROYECTO_FINAL
         {
             MENU_PERSONAL perso = new MENU_PERSONAL();
             perso.Show();
-            this.Hide();
+            perso.Hide();
         }
 
         private void bt_actualizar_Click(object sender, EventArgs e)
@@ -160,6 +158,21 @@ namespace PROYECTO_FINAL
             tb_apellido.Clear();
             tb_telefono.Clear();
             tb_pass.Clear();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_codigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

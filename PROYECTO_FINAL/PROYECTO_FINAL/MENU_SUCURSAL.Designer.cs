@@ -37,7 +37,7 @@
             // 
             this.bt_registrar.Location = new System.Drawing.Point(169, 52);
             this.bt_registrar.Name = "bt_registrar";
-            this.bt_registrar.Size = new System.Drawing.Size(262, 89);
+            this.bt_registrar.Size = new System.Drawing.Size(255, 89);
             this.bt_registrar.TabIndex = 0;
             this.bt_registrar.Text = "REGISTRAR - ACTUALIZAR SUCURSAL";
             this.bt_registrar.UseVisualStyleBackColor = true;

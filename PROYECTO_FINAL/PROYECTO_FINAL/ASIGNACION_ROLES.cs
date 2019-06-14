@@ -156,10 +156,5 @@ namespace PROYECTO_FINAL
         {
 
         }
-
-        private void ASIG_ROL_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

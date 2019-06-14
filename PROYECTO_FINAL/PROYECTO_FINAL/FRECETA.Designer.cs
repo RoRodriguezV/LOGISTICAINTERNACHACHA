@@ -87,28 +87,27 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 194);
+            this.label3.Location = new System.Drawing.Point(53, 182);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 17);
+            this.label3.Size = new System.Drawing.Size(68, 17);
             this.label3.TabIndex = 4;
-            this.label3.Text = "CANTIDAD:";
+            this.label3.Text = "Cantidad:";
             // 
             // txtcantidad
             // 
-            this.txtcantidad.Location = new System.Drawing.Point(136, 189);
+            this.txtcantidad.Location = new System.Drawing.Point(136, 182);
             this.txtcantidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtcantidad.Name = "txtcantidad";
             this.txtcantidad.Size = new System.Drawing.Size(160, 22);
             this.txtcantidad.TabIndex = 6;
-            this.txtcantidad.TextChanged += new System.EventHandler(this.txtcantidad_TextChanged);
             // 
             // bteliminar
             // 
-            this.bteliminar.Location = new System.Drawing.Point(43, 287);
+            this.bteliminar.Location = new System.Drawing.Point(78, 319);
             this.bteliminar.Margin = new System.Windows.Forms.Padding(4);
             this.bteliminar.Name = "bteliminar";
-            this.bteliminar.Size = new System.Drawing.Size(144, 73);
+            this.bteliminar.Size = new System.Drawing.Size(108, 36);
             this.bteliminar.TabIndex = 9;
             this.bteliminar.Text = "ELIMINAR";
             this.bteliminar.UseVisualStyleBackColor = true;
@@ -116,12 +115,12 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(321, 112);
+            this.button3.Location = new System.Drawing.Point(323, 133);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(144, 66);
             this.button3.TabIndex = 10;
-            this.button3.Text = "GUARDAR";
+            this.button3.Text = "GUARDAR INFORMACION";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -137,7 +136,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(824, 423);
+            this.button4.Location = new System.Drawing.Point(816, 399);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(122, 23);
             this.button4.TabIndex = 12;
@@ -147,42 +146,39 @@
             // 
             // btactualizar
             // 
-            this.btactualizar.Location = new System.Drawing.Point(260, 287);
+            this.btactualizar.Location = new System.Drawing.Point(250, 319);
             this.btactualizar.Name = "btactualizar";
-            this.btactualizar.Size = new System.Drawing.Size(152, 73);
+            this.btactualizar.Size = new System.Drawing.Size(115, 36);
             this.btactualizar.TabIndex = 13;
             this.btactualizar.Text = "ACTUALIZAR";
             this.btactualizar.UseVisualStyleBackColor = true;
-            this.btactualizar.Click += new System.EventHandler(this.btactualizar_Click);
             // 
             // btrefrescar
             // 
-            this.btrefrescar.Location = new System.Drawing.Point(487, 348);
+            this.btrefrescar.Location = new System.Drawing.Point(487, 347);
             this.btrefrescar.Name = "btrefrescar";
-            this.btrefrescar.Size = new System.Drawing.Size(137, 23);
+            this.btrefrescar.Size = new System.Drawing.Size(129, 23);
             this.btrefrescar.TabIndex = 14;
             this.btrefrescar.Text = "REFRESCAR";
             this.btrefrescar.UseVisualStyleBackColor = true;
-            this.btrefrescar.Click += new System.EventHandler(this.btrefrescar_Click);
             // 
             // btseleccionar
             // 
-            this.btseleccionar.Location = new System.Drawing.Point(680, 378);
+            this.btseleccionar.Location = new System.Drawing.Point(656, 378);
             this.btseleccionar.Name = "btseleccionar";
-            this.btseleccionar.Size = new System.Drawing.Size(167, 23);
+            this.btseleccionar.Size = new System.Drawing.Size(125, 44);
             this.btseleccionar.TabIndex = 15;
             this.btseleccionar.Text = "SELECCIONAR";
             this.btseleccionar.UseVisualStyleBackColor = true;
-            this.btseleccionar.Click += new System.EventHandler(this.btseleccionar_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 19);
+            this.label4.Location = new System.Drawing.Point(14, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(466, 32);
-            this.label4.TabIndex = 16;
+            this.label4.TabIndex = 17;
             this.label4.Text = "ADMINISTRACIÓN DE RECETAS";
             // 
             // FRECETA
