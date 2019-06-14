@@ -66,5 +66,17 @@ namespace PROYECTO_FINAL
             menureceta.Show();
             this.Hide();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            MENU_SUCURSALES menusucursales = new MENU_SUCURSALES();
+            menusucursales.Show();
+            this.Hide();
+        }
+
+        private void MENU_CENTRAL_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

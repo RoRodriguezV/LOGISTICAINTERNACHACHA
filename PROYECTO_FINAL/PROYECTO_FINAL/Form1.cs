@@ -19,6 +19,7 @@ namespace PROYECTO_FINAL
         }
 
         public roles RolSelecionado { get; set; }
+        public static string CodSucursal;
         private void bt_verificar_Click(object sender, EventArgs e)
         {
             try
@@ -44,8 +45,9 @@ namespace PROYECTO_FINAL
                         }
                         else
                         {
-                            MessageBox.Show("BIENVENIDO DE NUEVO ", "ADMINISTRADOR DE SUCURSAL", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            MENU_CENTRAL_SUCURSAL menu_sucursal = new MENU_CENTRAL_SUCURSAL();
+                            CodSucursal = RolSelecionado.CodRoles;
+                            MessageBox.Show("BIENVENIDO DE NUEVO ADMINISTRADOR", "ADMINISTRADOR DE SUCURSAL N°" + CodSucursal, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MENU_SUCURSALES menu_sucursal = new MENU_SUCURSALES();
                             menu_sucursal.Show();
                             this.Hide();
                         }

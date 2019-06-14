@@ -35,7 +35,7 @@ namespace PROYECTO_FINAL
                 pProducto.Cantidad = txtCantidad.Text.Trim(); 
 
 
-                int resultado = ProductosDAL.AgregarProductos(pProducto);
+                int resultado = ProductosDAL.AgregarProductos(pProducto) & ProductosDAL.AgregarDetalleStock(pProducto);
                 if (resultado > 0)
                 {
                     MessageBox.Show("Compra Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -69,7 +69,7 @@ namespace PROYECTO_FINAL
                 Habilitar();
                 btnGuardar.Enabled = false;
             }
-
+       
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)

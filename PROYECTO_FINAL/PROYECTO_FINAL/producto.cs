@@ -8,6 +8,7 @@ namespace PROYECTO_FINAL
 {
     public class producto
     {
+        public string CodSucursal { get; set; }
         public string CodProducto { get; set; }
         public string NombreProducto { get; set; }
         public string TipoProducto { get; set; }
@@ -17,8 +18,9 @@ namespace PROYECTO_FINAL
         {
 
         }
-        public producto (string pCodProducto, string pNombreProducto, string pTipoProducto, string pCantidad)
+        public producto (string pCodSucursal, string pCodProducto, string pNombreProducto, string pTipoProducto, string pCantidad)
         {
+            this.CodSucursal = pCodSucursal;
             this.CodProducto = pCodProducto;
             this.NombreProducto = pNombreProducto;
             this.TipoProducto = pTipoProducto;

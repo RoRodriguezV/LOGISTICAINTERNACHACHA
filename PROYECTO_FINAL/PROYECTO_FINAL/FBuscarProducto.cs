@@ -27,7 +27,6 @@ namespace PROYECTO_FINAL
 
         }
 
-        public producto productoSeleccionado { get; set; }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -46,12 +45,13 @@ namespace PROYECTO_FINAL
 
         }
 
+        public producto productoSeleccionado { get; set; }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (dgvBuscarProducto.SelectedRows.Count == 1)
             {
                 int CodProducto = Convert.ToInt32(dgvBuscarProducto.CurrentRow.Cells[0].Value);
-                productoSeleccionado = ProductosDAL.Obtenerproducto(CodProducto);
+                productoSeleccionado = ProductosDAL.ObtenerProducto(CodProducto);
 
                 this.Close();
             }
@@ -59,5 +59,6 @@ namespace PROYECTO_FINAL
             else
                 MessageBox.Show("debe seleccionar una fila");
         }
+
     }
 }

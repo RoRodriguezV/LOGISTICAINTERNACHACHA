@@ -89,7 +89,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(626, 401);
+            this.button5.Location = new System.Drawing.Point(580, 413);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(112, 23);
             this.button5.TabIndex = 1;
@@ -111,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 436);
+            this.ClientSize = new System.Drawing.Size(704, 436);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
@@ -121,6 +121,7 @@
             this.Controls.Add(this.button1);
             this.Name = "MENU_CENTRAL";
             this.Text = "MENU ADMINISTRADOR CENTRAL";
+            this.Load += new System.EventHandler(this.MENU_CENTRAL_Load);
             this.ResumeLayout(false);
 
         }

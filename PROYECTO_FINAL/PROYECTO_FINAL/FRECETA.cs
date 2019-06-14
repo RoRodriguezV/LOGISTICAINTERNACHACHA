@@ -75,7 +75,7 @@ namespace PROYECTO_FINAL
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -98,7 +98,7 @@ namespace PROYECTO_FINAL
 
             else
 
-                MessageBox.Show("Se cancelo la eliminación", "Eliminación Cancelada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Se cancelo la eliminación", "Receta Cancelada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -166,6 +166,11 @@ namespace PROYECTO_FINAL
                 }
 
             }
+        }
+
+        private void txtcantidad_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

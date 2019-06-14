@@ -13,6 +13,10 @@ namespace PROYECTO_FINAL
 {
     public partial class FAsignaciones : Form
     {
+
+        private int cant { get; set; }
+        private int cant1;
+
         public FAsignaciones()
         {
             InitializeComponent();
@@ -24,7 +28,19 @@ namespace PROYECTO_FINAL
 
             Limpiar();
             Combobox();
+
         }
+
+       /* public FAsignaciones(String text)
+        {
+
+            InitializeComponent();
+            cbxOrigen.Text = "Origen:" + text;
+            cbxDestino.Text = "Destino:" + text;
+            cbxProducto.Text = "Producto:" + text;
+            txtCantidad.Text = "Cantidad" + text;
+
+        }*/
 
         void Combobox()
         {
@@ -68,28 +84,80 @@ namespace PROYECTO_FINAL
         private void FAsignaciones_Load(object sender, EventArgs e)
         {
             dgvAsignaciones.AllowUserToAddRows = false;
+            dgvStockActual.AllowUserToAddRows = false;
+            StockActual(dgvStockActual);
         }
+
+        public void StockActual(DataGridView dvg)
+        {
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(String.Format("SELECT NombreProducto, CantidadDetalle  FROM detallestock WHERE CodSucursal = 1"), BDcomun.ObtenerConexion());
+                MySqlDataAdapter ds = new MySqlDataAdapter(comando);
+                DataTable dr = new DataTable();
+                ds.Fill(dr);
+                dvg.DataSource = dr;
+            }
+
+            catch
+            {
+                MessageBox.Show("ERROR");
+            }
+        }
+
+
+         public void intento()
+         {
+             String query = String.Format("SELECT CantidadDetalle FROM detallestock WHERE CodSucursal = '{0}' and CodProducto = '{1}'", cbxOrigen.Text, cbxProducto.Text);
+             MySqlCommand comando = new MySqlCommand(query, BDcomun.ObtenerConexion());
+             MySqlDataReader reader = comando.ExecuteReader();
+                 while (reader.Read())
+                     cant1= reader.GetInt32("CantidadDetalle");
+         }
+
+      /*  public static int Actualizar(producto pProducto)
+        {
+            int retorno = 0;
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format("Update producto set NombreProducto='{0}', TipoProducto='{1}', Cantidad ='{2}' where CodProducto={3}",
+                pProducto.NombreProducto, pProducto.TipoProducto, pProducto.Cantidad, pProducto.CodProducto), conexion);
+
+            retorno = comando.ExecuteNonQuery();
+            conexion.Close();
+
+            return retorno;
+
+        }*/
+
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(cbxOrigen.Text) || string.IsNullOrWhiteSpace(cbxDestino.Text) || string.IsNullOrWhiteSpace(cbxProducto.Text) || string.IsNullOrWhiteSpace(txtCantidad.Text) || string.IsNullOrWhiteSpace(dtpFecha.Text))
-
-                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            else
+            intento();
+            cant = Convert.ToInt32(txtCantidad.Text);
+            if (cant < cant1)
             {
-                // Asigaciones pAsignaciones = new Asigaciones()
 
-                dtpFecha.Format = DateTimePickerFormat.Custom;
-                dtpFecha.CustomFormat = "yyyy/MM/dd";
+                if (string.IsNullOrWhiteSpace(cbxOrigen.Text) || string.IsNullOrWhiteSpace(cbxDestino.Text) || string.IsNullOrWhiteSpace(cbxProducto.Text) || string.IsNullOrWhiteSpace(txtCantidad.Text) || string.IsNullOrWhiteSpace(dtpFecha.Text))
 
-                dgvAsignaciones.Rows.Add(cbxOrigen.Text, cbxDestino.Text, cbxProducto.Text, txtCantidad.Text, dtpFecha.Text);
+                    MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                else
+                {
+                    dtpFecha.Format = DateTimePickerFormat.Custom;
+                    dtpFecha.CustomFormat = "yyyy/MM/dd";
 
-                cbxOrigen.Text = "";
-                cbxDestino.Text = "";
-                cbxProducto.Text = "";
-                txtCantidad.Text = "";
-                dtpFecha.Text = "";
+                    dgvAsignaciones.Rows.Add(cbxOrigen.Text, cbxDestino.Text, cbxProducto.Text, txtCantidad.Text, dtpFecha.Text);
+
+                    cbxOrigen.Text = "";
+                    cbxDestino.Text = "";
+                    cbxProducto.Text = "";
+                    txtCantidad.Text = "";
+                    dtpFecha.Text = "";
+                }
             }
+            else
+
+                MessageBox.Show("No hay suficiente cantidad en el stock");
         }
         public int fila { get; set; }
 
