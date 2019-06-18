@@ -346,7 +346,7 @@ namespace PROYECTO_FINAL
         {
             List<Mermas> listMermas = new List<Mermas>();
             MySqlCommand _comando = new MySqlCommand(
-             "SELECT CodSucursal,CodProducto,CantidadMerma,FechaInicio,FechaFin FROM merma", BDcomun.ObtenerConexion());
+             "SELECT CodSucursal,merma.CodProducto,CantidadMerma,FechaInicio,FechaFin,CantidadMerma*PrecioInsumo AS TotalPrecio FROM merma INNER JOIN producto ON merma.CodProducto=producto.CodProducto  INNER JOIN receta ON  producto.CodProducto = receta.CodProducto INNER JOIN insumo ON receta.CodInsumo = insumo.CodInsumo", BDcomun.ObtenerConexion());
             MySqlDataReader reader = _comando.ExecuteReader();
             while (reader.Read())
             {
