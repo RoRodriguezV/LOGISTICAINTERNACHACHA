@@ -221,5 +221,7 @@ namespace PROYECTO_FINAL
             else
                 MessageBox.Show("debe de seleccionar una fila");
         }
+
+        
     }
 }

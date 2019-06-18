@@ -50,152 +50,189 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 264);
+            this.label4.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(65, 214);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 17);
+            this.label4.Size = new System.Drawing.Size(100, 15);
             this.label4.TabIndex = 3;
             this.label4.Text = "FECHA INICIO:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 208);
+            this.label3.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(31, 169);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 17);
+            this.label3.Size = new System.Drawing.Size(134, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "CANTIDAD MERMA:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 151);
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(21, 123);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 17);
+            this.label2.Size = new System.Drawing.Size(144, 15);
             this.label2.TabIndex = 5;
             this.label2.Text = "CODIGO PRODUCTO:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label5.Location = new System.Drawing.Point(47, 95);
+            this.label5.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(27, 77);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 17);
+            this.label5.Size = new System.Drawing.Size(138, 15);
             this.label5.TabIndex = 6;
             this.label5.Text = "CÓDIGO SUCURSAL:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(206, 29);
+            this.label6.Font = new System.Drawing.Font("Lucida Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(247, 20);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(378, 36);
+            this.label6.Size = new System.Drawing.Size(334, 31);
             this.label6.TabIndex = 7;
             this.label6.Text = "REGISTRO DE MERMAS";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 304);
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(65, 247);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 17);
+            this.label1.Size = new System.Drawing.Size(95, 15);
             this.label1.TabIndex = 12;
             this.label1.Text = "FECHA FINAL:";
             // 
             // dtpFechaInicio
             // 
-            this.dtpFechaInicio.Location = new System.Drawing.Point(212, 264);
-            this.dtpFechaInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpFechaInicio.Location = new System.Drawing.Point(174, 214);
+            this.dtpFechaInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
-            this.dtpFechaInicio.Size = new System.Drawing.Size(345, 22);
+            this.dtpFechaInicio.Size = new System.Drawing.Size(260, 20);
             this.dtpFechaInicio.TabIndex = 42;
             // 
             // dtpFechaFinal
             // 
-            this.dtpFechaFinal.Location = new System.Drawing.Point(212, 304);
-            this.dtpFechaFinal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpFechaFinal.Location = new System.Drawing.Point(174, 247);
+            this.dtpFechaFinal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpFechaFinal.Name = "dtpFechaFinal";
-            this.dtpFechaFinal.Size = new System.Drawing.Size(345, 22);
+            this.dtpFechaFinal.Size = new System.Drawing.Size(260, 20);
             this.dtpFechaFinal.TabIndex = 43;
             // 
             // bt_eliminar
             // 
-            this.bt_eliminar.Location = new System.Drawing.Point(423, 358);
+            this.bt_eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bt_eliminar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_eliminar.ForeColor = System.Drawing.Color.White;
+            this.bt_eliminar.Location = new System.Drawing.Point(326, 291);
+            this.bt_eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_eliminar.Name = "bt_eliminar";
-            this.bt_eliminar.Size = new System.Drawing.Size(134, 56);
+            this.bt_eliminar.Size = new System.Drawing.Size(111, 46);
             this.bt_eliminar.TabIndex = 44;
             this.bt_eliminar.Text = "ELIMINAR";
-            this.bt_eliminar.UseVisualStyleBackColor = true;
+            this.bt_eliminar.UseVisualStyleBackColor = false;
             this.bt_eliminar.Click += new System.EventHandler(this.bt_eliminar_Click);
             // 
             // bt_registrar
             // 
-            this.bt_registrar.Location = new System.Drawing.Point(213, 358);
+            this.bt_registrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bt_registrar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_registrar.ForeColor = System.Drawing.Color.White;
+            this.bt_registrar.Location = new System.Drawing.Point(74, 291);
+            this.bt_registrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_registrar.Name = "bt_registrar";
-            this.bt_registrar.Size = new System.Drawing.Size(122, 56);
+            this.bt_registrar.Size = new System.Drawing.Size(108, 46);
             this.bt_registrar.TabIndex = 46;
             this.bt_registrar.Text = "AGREGAR";
-            this.bt_registrar.UseVisualStyleBackColor = true;
+            this.bt_registrar.UseVisualStyleBackColor = false;
             this.bt_registrar.Click += new System.EventHandler(this.bt_registrar_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(619, 95);
+            this.dataGridView1.Location = new System.Drawing.Point(464, 77);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(462, 287);
+            this.dataGridView1.Size = new System.Drawing.Size(346, 233);
             this.dataGridView1.TabIndex = 47;
             // 
             // comBoxCodSucur
             // 
             this.comBoxCodSucur.FormattingEnabled = true;
-            this.comBoxCodSucur.Location = new System.Drawing.Point(212, 95);
+            this.comBoxCodSucur.Location = new System.Drawing.Point(174, 77);
+            this.comBoxCodSucur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comBoxCodSucur.Name = "comBoxCodSucur";
-            this.comBoxCodSucur.Size = new System.Drawing.Size(345, 24);
+            this.comBoxCodSucur.Size = new System.Drawing.Size(260, 21);
             this.comBoxCodSucur.TabIndex = 48;
             // 
             // comBoxCodPro
             // 
             this.comBoxCodPro.FormattingEnabled = true;
-            this.comBoxCodPro.Location = new System.Drawing.Point(212, 148);
+            this.comBoxCodPro.Location = new System.Drawing.Point(174, 120);
+            this.comBoxCodPro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comBoxCodPro.Name = "comBoxCodPro";
-            this.comBoxCodPro.Size = new System.Drawing.Size(345, 24);
+            this.comBoxCodPro.Size = new System.Drawing.Size(260, 21);
             this.comBoxCodPro.TabIndex = 49;
             // 
             // textBoxCantMer
             // 
-            this.textBoxCantMer.Location = new System.Drawing.Point(212, 208);
+            this.textBoxCantMer.Location = new System.Drawing.Point(174, 169);
+            this.textBoxCantMer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCantMer.Name = "textBoxCantMer";
-            this.textBoxCantMer.Size = new System.Drawing.Size(345, 22);
+            this.textBoxCantMer.Size = new System.Drawing.Size(260, 20);
             this.textBoxCantMer.TabIndex = 50;
             // 
             // REGISTRAR
             // 
-            this.REGISTRAR.Location = new System.Drawing.Point(661, 415);
+            this.REGISTRAR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.REGISTRAR.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.REGISTRAR.ForeColor = System.Drawing.Color.White;
+            this.REGISTRAR.Location = new System.Drawing.Point(587, 325);
+            this.REGISTRAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.REGISTRAR.Name = "REGISTRAR";
-            this.REGISTRAR.Size = new System.Drawing.Size(113, 51);
+            this.REGISTRAR.Size = new System.Drawing.Size(123, 48);
             this.REGISTRAR.TabIndex = 51;
             this.REGISTRAR.Text = "REGISTRAR";
-            this.REGISTRAR.UseVisualStyleBackColor = true;
+            this.REGISTRAR.UseVisualStyleBackColor = false;
             this.REGISTRAR.Click += new System.EventHandler(this.REGISTRAR_Click);
             // 
             // VOLVER
             // 
-            this.VOLVER.Location = new System.Drawing.Point(908, 415);
+            this.VOLVER.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.VOLVER.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VOLVER.ForeColor = System.Drawing.Color.White;
+            this.VOLVER.Location = new System.Drawing.Point(738, 363);
+            this.VOLVER.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.VOLVER.Name = "VOLVER";
-            this.VOLVER.Size = new System.Drawing.Size(101, 51);
+            this.VOLVER.Size = new System.Drawing.Size(87, 31);
             this.VOLVER.TabIndex = 52;
             this.VOLVER.Text = "VOLVER";
-            this.VOLVER.UseVisualStyleBackColor = true;
+            this.VOLVER.UseVisualStyleBackColor = false;
             this.VOLVER.Click += new System.EventHandler(this.VOLVER_Click);
             // 
             // ForMermas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1115, 499);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(836, 405);
             this.Controls.Add(this.VOLVER);
             this.Controls.Add(this.REGISTRAR);
             this.Controls.Add(this.textBoxCantMer);
@@ -212,6 +249,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ForMermas";
             this.Text = "ForMermas";
             this.Load += new System.EventHandler(this.ForMermas_Load);

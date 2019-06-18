@@ -39,69 +39,78 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(397, 30);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(181, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(317, 33);
+            this.label1.Size = new System.Drawing.Size(292, 31);
             this.label1.TabIndex = 7;
             this.label1.Text = "ESTADO DE PEDIDO";
             // 
             // btRechazar
             // 
-            this.btRechazar.Location = new System.Drawing.Point(101, 267);
-            this.btRechazar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btRechazar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btRechazar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btRechazar.ForeColor = System.Drawing.Color.White;
+            this.btRechazar.Location = new System.Drawing.Point(444, 307);
             this.btRechazar.Name = "btRechazar";
-            this.btRechazar.Size = new System.Drawing.Size(158, 72);
+            this.btRechazar.Size = new System.Drawing.Size(118, 47);
             this.btRechazar.TabIndex = 6;
             this.btRechazar.Text = "RECHAZAR";
-            this.btRechazar.UseVisualStyleBackColor = true;
+            this.btRechazar.UseVisualStyleBackColor = false;
             this.btRechazar.Click += new System.EventHandler(this.btRechazar_Click);
             // 
             // btAceptar
             // 
-            this.btAceptar.Location = new System.Drawing.Point(101, 170);
-            this.btAceptar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btAceptar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAceptar.ForeColor = System.Drawing.Color.White;
+            this.btAceptar.Location = new System.Drawing.Point(108, 307);
             this.btAceptar.Name = "btAceptar";
-            this.btAceptar.Size = new System.Drawing.Size(158, 68);
+            this.btAceptar.Size = new System.Drawing.Size(118, 44);
             this.btAceptar.TabIndex = 5;
             this.btAceptar.Text = "ACEPTAR";
-            this.btAceptar.UseVisualStyleBackColor = true;
+            this.btAceptar.UseVisualStyleBackColor = false;
             this.btAceptar.Click += new System.EventHandler(this.btAceptar_Click);
             // 
             // dgv_stock
             // 
             this.dgv_stock.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_stock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_stock.Location = new System.Drawing.Point(301, 122);
-            this.dgv_stock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgv_stock.Location = new System.Drawing.Point(108, 59);
             this.dgv_stock.Name = "dgv_stock";
-            this.dgv_stock.Size = new System.Drawing.Size(615, 325);
+            this.dgv_stock.Size = new System.Drawing.Size(454, 225);
             this.dgv_stock.TabIndex = 4;
             this.dgv_stock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_stock_CellContentClick);
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(887, 478);
+            this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnVolver.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.Color.White;
+            this.btnVolver.Location = new System.Drawing.Point(558, 373);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(139, 48);
+            this.btnVolver.Size = new System.Drawing.Size(106, 31);
             this.btnVolver.TabIndex = 49;
             this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // FEstadoDeSolicitud
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1085, 559);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(678, 415);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btRechazar);
             this.Controls.Add(this.btAceptar);
             this.Controls.Add(this.dgv_stock);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FEstadoDeSolicitud";
-            this.Text = "FEstadoDeSolicitud";
+            this.Text = "Estado De Solicitud";
             this.Load += new System.EventHandler(this.FEstadoDeSolicitud_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_stock)).EndInit();
             this.ResumeLayout(false);

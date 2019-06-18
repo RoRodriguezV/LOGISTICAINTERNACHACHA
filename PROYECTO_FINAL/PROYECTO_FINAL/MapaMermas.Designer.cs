@@ -116,7 +116,7 @@
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Courier Std", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(815, 543);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(383, 68);
@@ -127,7 +127,7 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Courier Std", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(857, 470);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(268, 48);
@@ -139,10 +139,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Courier Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(819, 402);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(175, 21);
+            this.label3.Size = new System.Drawing.Size(206, 24);
             this.label3.TabIndex = 19;
             this.label3.Text = "TOTAL DE MERMAS";
             // 
@@ -157,41 +157,42 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Courier Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(734, 76);
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(754, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 21);
+            this.label2.Size = new System.Drawing.Size(192, 18);
             this.label2.TabIndex = 17;
-            this.label2.Text = "SELECCIONAR FECHA";
+            this.label2.Text = "SELECCIONAR FECHA:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Courier Std", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(900, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 32);
+            this.label1.Size = new System.Drawing.Size(146, 31);
             this.label1.TabIndex = 16;
             this.label1.Text = "MERMAS ";
             // 
             // FechaBusqueda
             // 
-            this.FechaBusqueda.Font = new System.Drawing.Font("Courier Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaBusqueda.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FechaBusqueda.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FechaBusqueda.Location = new System.Drawing.Point(998, 69);
             this.FechaBusqueda.Name = "FechaBusqueda";
-            this.FechaBusqueda.Size = new System.Drawing.Size(200, 30);
+            this.FechaBusqueda.Size = new System.Drawing.Size(200, 26);
             this.FechaBusqueda.TabIndex = 15;
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Courier Std", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(841, 139);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(284, 45);
             this.button1.TabIndex = 14;
             this.button1.Text = "MOSTRAR MERMAS";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
@@ -207,7 +208,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1252, 642);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(1219, 635);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
@@ -220,6 +222,7 @@
             this.Controls.Add(this.chart2);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.gMapControl1);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "MapaMermas";
             this.Text = "MapaMermas";
             this.Load += new System.EventHandler(this.MapaMermas_Load);

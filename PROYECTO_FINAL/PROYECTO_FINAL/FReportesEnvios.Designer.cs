@@ -44,126 +44,128 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(714, 577);
+            this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnVolver.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Location = new System.Drawing.Point(564, 383);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(163, 50);
+            this.btnVolver.Size = new System.Drawing.Size(86, 32);
             this.btnVolver.TabIndex = 21;
             this.btnVolver.Text = "VOLVER";
-            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(277, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(251, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 51);
+            this.label1.Size = new System.Drawing.Size(129, 31);
             this.label1.TabIndex = 19;
             this.label1.Text = "ENVIOS ";
             // 
             // FechaBusqueda
             // 
             this.FechaBusqueda.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FechaBusqueda.Font = new System.Drawing.Font("Courier Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FechaBusqueda.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechaBusqueda.Location = new System.Drawing.Point(675, 90);
-            this.FechaBusqueda.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FechaBusqueda.Location = new System.Drawing.Point(450, 58);
             this.FechaBusqueda.Name = "FechaBusqueda";
-            this.FechaBusqueda.Size = new System.Drawing.Size(298, 42);
+            this.FechaBusqueda.Size = new System.Drawing.Size(200, 29);
             this.FechaBusqueda.TabIndex = 18;
             // 
             // btnMostrar
             // 
-            this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrar.Location = new System.Drawing.Point(386, 276);
-            this.btnMostrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnMostrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnMostrar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrar.Location = new System.Drawing.Point(453, 155);
             this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(426, 69);
+            this.btnMostrar.Size = new System.Drawing.Size(197, 37);
             this.btnMostrar.TabIndex = 17;
             this.btnMostrar.Text = "MOSTRAR ENVIOS";
-            this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.UseVisualStyleBackColor = false;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // dgvEnvios
             // 
             this.dgvEnvios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEnvios.Location = new System.Drawing.Point(23, 376);
-            this.dgvEnvios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvEnvios.Location = new System.Drawing.Point(15, 216);
             this.dgvEnvios.Name = "dgvEnvios";
-            this.dgvEnvios.Size = new System.Drawing.Size(666, 251);
+            this.dgvEnvios.Size = new System.Drawing.Size(493, 191);
             this.dgvEnvios.TabIndex = 16;
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(81, 254);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(15, 149);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(163, 50);
+            this.button2.Size = new System.Drawing.Size(133, 31);
             this.button2.TabIndex = 29;
             this.button2.Text = "SUCURSALES";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnFechas
             // 
-            this.btnFechas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFechas.Location = new System.Drawing.Point(81, 160);
+            this.btnFechas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnFechas.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFechas.Location = new System.Drawing.Point(15, 94);
+            this.btnFechas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFechas.Name = "btnFechas";
-            this.btnFechas.Size = new System.Drawing.Size(163, 50);
+            this.btnFechas.Size = new System.Drawing.Size(133, 31);
             this.btnFechas.TabIndex = 28;
             this.btnFechas.Text = "FECHAS";
-            this.btnFechas.UseVisualStyleBackColor = true;
+            this.btnFechas.UseVisualStyleBackColor = false;
             this.btnFechas.Click += new System.EventHandler(this.btnFechas_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 86);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(9, 56);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(286, 36);
+            this.label4.Size = new System.Drawing.Size(208, 25);
             this.label4.TabIndex = 27;
-            this.label4.Text = "TIPO DE BUSUEDA";
+            this.label4.Text = "TIPO DE BUSQUEDA";
             // 
             // cbxSucursal
             // 
             this.cbxSucursal.FormattingEnabled = true;
-            this.cbxSucursal.Location = new System.Drawing.Point(675, 182);
+            this.cbxSucursal.Location = new System.Drawing.Point(450, 112);
+            this.cbxSucursal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxSucursal.Name = "cbxSucursal";
-            this.cbxSucursal.Size = new System.Drawing.Size(268, 28);
+            this.cbxSucursal.Size = new System.Drawing.Size(200, 21);
             this.cbxSucursal.TabIndex = 32;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(337, 174);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(276, 113);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(299, 36);
+            this.label3.Size = new System.Drawing.Size(168, 18);
             this.label3.TabIndex = 31;
             this.label3.Text = "Seleccionar sucursal:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(337, 96);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(300, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(259, 36);
+            this.label2.Size = new System.Drawing.Size(147, 18);
             this.label2.TabIndex = 30;
             this.label2.Text = "Seleccionar fecha:";
             // 
             // FReportesEnvios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 647);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(657, 421);
             this.Controls.Add(this.cbxSucursal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -175,8 +177,10 @@
             this.Controls.Add(this.FechaBusqueda);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.dgvEnvios);
+            this.ForeColor = System.Drawing.Color.White;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FReportesEnvios";
-            this.Text = "FReportesEnvios";
+            this.Text = "Reportes Envios";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnvios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

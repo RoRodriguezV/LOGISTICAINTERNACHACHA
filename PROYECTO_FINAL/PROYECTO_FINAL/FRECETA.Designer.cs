@@ -48,10 +48,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 76);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(72, 105);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 17);
+            this.label1.Size = new System.Drawing.Size(83, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "CHACHA:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -59,133 +60,156 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(136, 73);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Location = new System.Drawing.Point(180, 105);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 24);
+            this.comboBox1.Size = new System.Drawing.Size(157, 21);
             this.comboBox1.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 137);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(34, 171);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 17);
+            this.label2.Size = new System.Drawing.Size(120, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "INGREDIENTE:";
             // 
             // ComboBoxIngrediente
             // 
             this.ComboBoxIngrediente.FormattingEnabled = true;
-            this.ComboBoxIngrediente.Location = new System.Drawing.Point(136, 133);
-            this.ComboBoxIngrediente.Margin = new System.Windows.Forms.Padding(4);
+            this.ComboBoxIngrediente.Location = new System.Drawing.Point(180, 171);
             this.ComboBoxIngrediente.Name = "ComboBoxIngrediente";
-            this.ComboBoxIngrediente.Size = new System.Drawing.Size(160, 24);
+            this.ComboBoxIngrediente.Size = new System.Drawing.Size(157, 21);
             this.ComboBoxIngrediente.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 182);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(60, 235);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 17);
+            this.label3.Size = new System.Drawing.Size(97, 18);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Cantidad:";
+            this.label3.Text = "CANTIDAD:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtcantidad
             // 
-            this.txtcantidad.Location = new System.Drawing.Point(136, 182);
-            this.txtcantidad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtcantidad.Location = new System.Drawing.Point(180, 235);
             this.txtcantidad.Name = "txtcantidad";
-            this.txtcantidad.Size = new System.Drawing.Size(160, 22);
+            this.txtcantidad.Size = new System.Drawing.Size(157, 20);
             this.txtcantidad.TabIndex = 6;
             // 
             // bteliminar
             // 
-            this.bteliminar.Location = new System.Drawing.Point(78, 319);
-            this.bteliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.bteliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bteliminar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bteliminar.ForeColor = System.Drawing.Color.White;
+            this.bteliminar.Location = new System.Drawing.Point(59, 346);
             this.bteliminar.Name = "bteliminar";
-            this.bteliminar.Size = new System.Drawing.Size(108, 36);
+            this.bteliminar.Size = new System.Drawing.Size(121, 36);
             this.bteliminar.TabIndex = 9;
             this.bteliminar.Text = "ELIMINAR";
-            this.bteliminar.UseVisualStyleBackColor = true;
+            this.bteliminar.UseVisualStyleBackColor = false;
             this.bteliminar.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(323, 133);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button3.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(144, 279);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 66);
+            this.button3.Size = new System.Drawing.Size(148, 61);
             this.button3.TabIndex = 10;
             this.button3.Text = "GUARDAR INFORMACION";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dg_datos
             // 
             this.dg_datos.AccessibleDescription = "dg_datos";
             this.dg_datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_datos.Location = new System.Drawing.Point(487, 33);
-            this.dg_datos.Margin = new System.Windows.Forms.Padding(4);
+            this.dg_datos.Location = new System.Drawing.Point(415, 44);
             this.dg_datos.Name = "dg_datos";
-            this.dg_datos.Size = new System.Drawing.Size(459, 338);
+            this.dg_datos.Size = new System.Drawing.Size(344, 275);
             this.dg_datos.TabIndex = 11;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(816, 399);
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button4.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(688, 392);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(122, 23);
+            this.button4.Size = new System.Drawing.Size(95, 26);
             this.button4.TabIndex = 12;
             this.button4.Text = "VOLVER";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btactualizar
             // 
-            this.btactualizar.Location = new System.Drawing.Point(250, 319);
+            this.btactualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btactualizar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btactualizar.ForeColor = System.Drawing.Color.White;
+            this.btactualizar.Location = new System.Drawing.Point(262, 346);
+            this.btactualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btactualizar.Name = "btactualizar";
-            this.btactualizar.Size = new System.Drawing.Size(115, 36);
+            this.btactualizar.Size = new System.Drawing.Size(126, 36);
             this.btactualizar.TabIndex = 13;
             this.btactualizar.Text = "ACTUALIZAR";
-            this.btactualizar.UseVisualStyleBackColor = true;
+            this.btactualizar.UseVisualStyleBackColor = false;
             // 
             // btrefrescar
             // 
-            this.btrefrescar.Location = new System.Drawing.Point(487, 347);
+            this.btrefrescar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btrefrescar.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btrefrescar.ForeColor = System.Drawing.Color.White;
+            this.btrefrescar.Location = new System.Drawing.Point(415, 293);
+            this.btrefrescar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btrefrescar.Name = "btrefrescar";
-            this.btrefrescar.Size = new System.Drawing.Size(129, 23);
+            this.btrefrescar.Size = new System.Drawing.Size(100, 26);
             this.btrefrescar.TabIndex = 14;
             this.btrefrescar.Text = "REFRESCAR";
-            this.btrefrescar.UseVisualStyleBackColor = true;
+            this.btrefrescar.UseVisualStyleBackColor = false;
             // 
             // btseleccionar
             // 
-            this.btseleccionar.Location = new System.Drawing.Point(656, 378);
+            this.btseleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btseleccionar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btseleccionar.ForeColor = System.Drawing.Color.White;
+            this.btseleccionar.Location = new System.Drawing.Point(515, 346);
+            this.btseleccionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btseleccionar.Name = "btseleccionar";
-            this.btseleccionar.Size = new System.Drawing.Size(125, 44);
+            this.btseleccionar.Size = new System.Drawing.Size(142, 43);
             this.btseleccionar.TabIndex = 15;
             this.btseleccionar.Text = "SELECCIONAR";
-            this.btseleccionar.UseVisualStyleBackColor = true;
+            this.btseleccionar.UseVisualStyleBackColor = false;
+            this.btseleccionar.Click += new System.EventHandler(this.btseleccionar_Click_1);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 9);
+            this.label4.Font = new System.Drawing.Font("Lucida Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(174, 9);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(466, 32);
+            this.label4.Size = new System.Drawing.Size(451, 31);
             this.label4.TabIndex = 17;
             this.label4.Text = "ADMINISTRACIÓN DE RECETAS";
             // 
             // FRECETA
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 446);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(780, 416);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btseleccionar);
             this.Controls.Add(this.btrefrescar);
@@ -200,9 +224,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRECETA";
-            this.Text = "FRECETA";
+            this.Text = "RECETA";
             this.Load += new System.EventHandler(this.FRECETA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dg_datos)).EndInit();
             this.ResumeLayout(false);
