@@ -63,11 +63,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
+<<<<<<< HEAD
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(11, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(402, 31);
+=======
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(395, 31);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.label1.TabIndex = 0;
             this.label1.Text = "ADMINISTRAR SUCURSALES";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -75,119 +83,210 @@
             // label2
             // 
             this.label2.AutoSize = true;
+<<<<<<< HEAD
             this.label2.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(49, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 15);
+=======
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label2.Location = new System.Drawing.Point(44, 78);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.label2.TabIndex = 1;
             this.label2.Text = "CÓDIGO:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+<<<<<<< HEAD
             this.label3.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(44, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 15);
+=======
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label3.Location = new System.Drawing.Point(40, 103);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 13);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.label3.TabIndex = 1;
             this.label3.Text = "NOMBRE:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+<<<<<<< HEAD
             this.label4.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(34, 142);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 15);
+=======
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label4.Location = new System.Drawing.Point(32, 134);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 13);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.label4.TabIndex = 1;
             this.label4.Text = "TELÉFONO:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+<<<<<<< HEAD
             this.label5.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(44, 172);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 15);
+=======
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label5.Location = new System.Drawing.Point(40, 164);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 13);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.label5.TabIndex = 1;
             this.label5.Text = "LATITUD:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+<<<<<<< HEAD
             this.label6.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(31, 204);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 15);
+=======
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label6.Location = new System.Drawing.Point(32, 192);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 13);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.label6.TabIndex = 1;
             this.label6.Text = "LONGITUD:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+<<<<<<< HEAD
             this.label7.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(25, 239);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 15);
+=======
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label7.Location = new System.Drawing.Point(28, 221);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 13);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.label7.TabIndex = 1;
             this.label7.Text = "DIRECCIÓN:";
             // 
             // txtCodigo
             // 
+<<<<<<< HEAD
             this.txtCodigo.Location = new System.Drawing.Point(133, 77);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(189, 20);
+=======
+            this.txtCodigo.Location = new System.Drawing.Point(121, 73);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(162, 20);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.txtCodigo.TabIndex = 2;
             // 
             // txtNombre
             // 
+<<<<<<< HEAD
             this.txtNombre.Location = new System.Drawing.Point(133, 107);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(189, 20);
+=======
+            this.txtNombre.Location = new System.Drawing.Point(121, 99);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(162, 20);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.txtNombre.TabIndex = 2;
             // 
             // txtTelefono
             // 
+<<<<<<< HEAD
             this.txtTelefono.Location = new System.Drawing.Point(133, 142);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(189, 20);
+=======
+            this.txtTelefono.Location = new System.Drawing.Point(121, 131);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(162, 20);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.txtTelefono.TabIndex = 2;
             // 
             // txtLatitud
             // 
+<<<<<<< HEAD
             this.txtLatitud.Location = new System.Drawing.Point(133, 170);
             this.txtLatitud.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLatitud.Name = "txtLatitud";
             this.txtLatitud.Size = new System.Drawing.Size(189, 20);
+=======
+            this.txtLatitud.Location = new System.Drawing.Point(121, 160);
+            this.txtLatitud.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLatitud.Name = "txtLatitud";
+            this.txtLatitud.Size = new System.Drawing.Size(162, 20);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.txtLatitud.TabIndex = 2;
             // 
             // txtLongitud
             // 
+<<<<<<< HEAD
             this.txtLongitud.Location = new System.Drawing.Point(133, 202);
             this.txtLongitud.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLongitud.Name = "txtLongitud";
             this.txtLongitud.Size = new System.Drawing.Size(189, 20);
+=======
+            this.txtLongitud.Location = new System.Drawing.Point(121, 191);
+            this.txtLongitud.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLongitud.Name = "txtLongitud";
+            this.txtLongitud.Size = new System.Drawing.Size(162, 20);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.txtLongitud.TabIndex = 2;
             // 
             // txtDireccion
             // 
+<<<<<<< HEAD
             this.txtDireccion.Location = new System.Drawing.Point(133, 234);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(189, 20);
+=======
+            this.txtDireccion.Location = new System.Drawing.Point(121, 217);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(162, 20);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.txtDireccion.TabIndex = 2;
             // 
             // bt_guardar
             // 
+<<<<<<< HEAD
             this.bt_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.bt_guardar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_guardar.ForeColor = System.Drawing.Color.White;
@@ -195,6 +294,12 @@
             this.bt_guardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_guardar.Name = "bt_guardar";
             this.bt_guardar.Size = new System.Drawing.Size(168, 64);
+=======
+            this.bt_guardar.Location = new System.Drawing.Point(92, 270);
+            this.bt_guardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_guardar.Name = "bt_guardar";
+            this.bt_guardar.Size = new System.Drawing.Size(144, 60);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.bt_guardar.TabIndex = 3;
             this.bt_guardar.Text = "GUARDAR";
             this.bt_guardar.UseVisualStyleBackColor = false;
@@ -208,8 +313,13 @@
             this.gMapControl1.GrayScaleMode = false;
             this.gMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gMapControl1.LevelsKeepInMemmory = 5;
+<<<<<<< HEAD
             this.gMapControl1.Location = new System.Drawing.Point(431, -26);
             this.gMapControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.gMapControl1.Location = new System.Drawing.Point(436, 10);
+            this.gMapControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.gMapControl1.MarkersEnabled = true;
             this.gMapControl1.MaxZoom = 2;
             this.gMapControl1.MinZoom = 2;
@@ -223,7 +333,11 @@
             this.gMapControl1.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gMapControl1.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gMapControl1.ShowTileGridLines = false;
+<<<<<<< HEAD
             this.gMapControl1.Size = new System.Drawing.Size(469, 564);
+=======
+            this.gMapControl1.Size = new System.Drawing.Size(402, 524);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.gMapControl1.TabIndex = 5;
             this.gMapControl1.Zoom = 0D;
             this.gMapControl1.Load += new System.EventHandler(this.gMapControl1_Load);
@@ -231,15 +345,24 @@
             // 
             // webBrowser1
             // 
+<<<<<<< HEAD
             this.webBrowser1.Location = new System.Drawing.Point(906, 10);
             this.webBrowser1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(18, 18);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(722, 665);
+=======
+            this.webBrowser1.Location = new System.Drawing.Point(776, 10);
+            this.webBrowser1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(15, 16);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(619, 617);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.webBrowser1.TabIndex = 6;
             // 
             // bt_buscar
             // 
+<<<<<<< HEAD
             this.bt_buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.bt_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.bt_buscar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -248,6 +371,12 @@
             this.bt_buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_buscar.Name = "bt_buscar";
             this.bt_buscar.Size = new System.Drawing.Size(81, 59);
+=======
+            this.bt_buscar.Location = new System.Drawing.Point(295, 217);
+            this.bt_buscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_buscar.Name = "bt_buscar";
+            this.bt_buscar.Size = new System.Drawing.Size(48, 19);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.bt_buscar.TabIndex = 7;
             this.bt_buscar.Text = "Buscar en mapa";
             this.bt_buscar.UseVisualStyleBackColor = false;
@@ -255,10 +384,17 @@
             // 
             // bt_volver
             // 
+<<<<<<< HEAD
             this.bt_volver.Location = new System.Drawing.Point(11, 654);
             this.bt_volver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_volver.Name = "bt_volver";
             this.bt_volver.Size = new System.Drawing.Size(108, 21);
+=======
+            this.bt_volver.Location = new System.Drawing.Point(9, 608);
+            this.bt_volver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_volver.Name = "bt_volver";
+            this.bt_volver.Size = new System.Drawing.Size(92, 19);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.bt_volver.TabIndex = 3;
             this.bt_volver.Text = "VOLVER";
             this.bt_volver.UseVisualStyleBackColor = true;
@@ -272,11 +408,19 @@
             // 
             // trackZoom
             // 
+<<<<<<< HEAD
             this.trackZoom.Location = new System.Drawing.Point(529, 600);
             this.trackZoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.trackZoom.Maximum = 20;
             this.trackZoom.Name = "trackZoom";
             this.trackZoom.Size = new System.Drawing.Size(298, 45);
+=======
+            this.trackZoom.Location = new System.Drawing.Point(454, 557);
+            this.trackZoom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trackZoom.Maximum = 20;
+            this.trackZoom.Name = "trackZoom";
+            this.trackZoom.Size = new System.Drawing.Size(256, 45);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.trackZoom.TabIndex = 16;
             this.trackZoom.Value = 10;
             this.trackZoom.ValueChanged += new System.EventHandler(this.trackZoom_ValueChanged);
@@ -284,18 +428,32 @@
             // label9
             // 
             this.label9.AutoSize = true;
+<<<<<<< HEAD
             this.label9.Location = new System.Drawing.Point(473, 609);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(41, 14);
+=======
+            this.label9.Location = new System.Drawing.Point(405, 566);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(39, 13);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.label9.TabIndex = 18;
             this.label9.Text = "ZOOM";
             // 
             // bt_satelital
             // 
+<<<<<<< HEAD
             this.bt_satelital.Location = new System.Drawing.Point(619, 654);
             this.bt_satelital.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_satelital.Name = "bt_satelital";
             this.bt_satelital.Size = new System.Drawing.Size(91, 21);
+=======
+            this.bt_satelital.Location = new System.Drawing.Point(530, 608);
+            this.bt_satelital.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_satelital.Name = "bt_satelital";
+            this.bt_satelital.Size = new System.Drawing.Size(78, 19);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.bt_satelital.TabIndex = 19;
             this.bt_satelital.Text = "SATELITAL";
             this.bt_satelital.UseVisualStyleBackColor = true;
@@ -303,10 +461,17 @@
             // 
             // bt_normal
             // 
+<<<<<<< HEAD
             this.bt_normal.Location = new System.Drawing.Point(475, 654);
             this.bt_normal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_normal.Name = "bt_normal";
             this.bt_normal.Size = new System.Drawing.Size(91, 21);
+=======
+            this.bt_normal.Location = new System.Drawing.Point(407, 608);
+            this.bt_normal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_normal.Name = "bt_normal";
+            this.bt_normal.Size = new System.Drawing.Size(78, 19);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.bt_normal.TabIndex = 19;
             this.bt_normal.Text = "NORMAL";
             this.bt_normal.UseVisualStyleBackColor = true;
@@ -314,10 +479,17 @@
             // 
             // bt_relieve
             // 
+<<<<<<< HEAD
             this.bt_relieve.Location = new System.Drawing.Point(752, 654);
             this.bt_relieve.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_relieve.Name = "bt_relieve";
             this.bt_relieve.Size = new System.Drawing.Size(91, 21);
+=======
+            this.bt_relieve.Location = new System.Drawing.Point(644, 608);
+            this.bt_relieve.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_relieve.Name = "bt_relieve";
+            this.bt_relieve.Size = new System.Drawing.Size(78, 19);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.bt_relieve.TabIndex = 19;
             this.bt_relieve.Text = "RELIEVE";
             this.bt_relieve.UseVisualStyleBackColor = true;
@@ -329,6 +501,7 @@
             // 
             // button1
             // 
+<<<<<<< HEAD
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
@@ -336,6 +509,12 @@
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(168, 60);
+=======
+            this.button1.Location = new System.Drawing.Point(92, 359);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(144, 56);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.button1.TabIndex = 20;
             this.button1.Text = "BUSCAR SUCURSAL";
             this.button1.UseVisualStyleBackColor = false;
@@ -343,10 +522,17 @@
             // 
             // bt_eliminar
             // 
+<<<<<<< HEAD
             this.bt_eliminar.Location = new System.Drawing.Point(108, 559);
             this.bt_eliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_eliminar.Name = "bt_eliminar";
             this.bt_eliminar.Size = new System.Drawing.Size(168, 64);
+=======
+            this.bt_eliminar.Location = new System.Drawing.Point(92, 519);
+            this.bt_eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_eliminar.Name = "bt_eliminar";
+            this.bt_eliminar.Size = new System.Drawing.Size(144, 60);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.bt_eliminar.TabIndex = 21;
             this.bt_eliminar.Text = "ELIMINAR";
             this.bt_eliminar.UseVisualStyleBackColor = true;
@@ -354,6 +540,7 @@
             // 
             // bt_actualizar
             // 
+<<<<<<< HEAD
             this.bt_actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.bt_actualizar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_actualizar.ForeColor = System.Drawing.Color.White;
@@ -361,6 +548,12 @@
             this.bt_actualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_actualizar.Name = "bt_actualizar";
             this.bt_actualizar.Size = new System.Drawing.Size(168, 68);
+=======
+            this.bt_actualizar.Location = new System.Drawing.Point(92, 437);
+            this.bt_actualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_actualizar.Name = "bt_actualizar";
+            this.bt_actualizar.Size = new System.Drawing.Size(144, 63);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.bt_actualizar.TabIndex = 22;
             this.bt_actualizar.Text = "ACTUALIZAR";
             this.bt_actualizar.UseVisualStyleBackColor = false;
@@ -368,10 +561,16 @@
             // 
             // ADMINISTRAR_SUCURSAL
             // 
+<<<<<<< HEAD
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(867, 464);
+=======
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1022, 602);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.Controls.Add(this.bt_actualizar);
             this.Controls.Add(this.bt_eliminar);
             this.Controls.Add(this.button1);
@@ -398,9 +597,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+<<<<<<< HEAD
             this.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.Name = "ADMINISTRAR_SUCURSAL";
             this.Text = "ADMINISTRAR SUCURSALES";
             this.Load += new System.EventHandler(this.ADMINISTRAR_SUCURSAL_Load);

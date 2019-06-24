@@ -115,12 +115,15 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="ForMermas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ForMermas.Designer.cs">
       <DependentUpon>ForMermas.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
     <Compile Include="FPedidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +167,12 @@
     </Compile>
     <Compile Include="MapaMermas.Designer.cs">
       <DependentUpon>MapaMermas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuSucursales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuSucursales.Designer.cs">
+      <DependentUpon>MenuSucursales.cs</DependentUpon>
     </Compile>
     <Compile Include="MENU_ASIGNACION.cs">
       <SubType>Form</SubType>
@@ -274,9 +283,12 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="ForMermas.resx">
       <DependentUpon>ForMermas.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
     <EmbeddedResource Include="FPedidos.resx">
       <DependentUpon>FPedidos.cs</DependentUpon>
     </EmbeddedResource>
@@ -297,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MapaMermas.resx">
       <DependentUpon>MapaMermas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuSucursales.resx">
+      <DependentUpon>MenuSucursales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MENU_ASIGNACION.resx">
       <DependentUpon>MENU_ASIGNACION.cs</DependentUpon>

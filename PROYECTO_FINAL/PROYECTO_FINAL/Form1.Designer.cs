@@ -51,7 +51,11 @@
             // 
             // tb_usuario
             // 
+<<<<<<< HEAD
             this.tb_usuario.Location = new System.Drawing.Point(306, 134);
+=======
+            this.tb_usuario.Location = new System.Drawing.Point(249, 134);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.tb_usuario.Margin = new System.Windows.Forms.Padding(2);
             this.tb_usuario.Name = "tb_usuario";
             this.tb_usuario.Size = new System.Drawing.Size(161, 20);
@@ -59,12 +63,17 @@
             // 
             // tb_pass
             // 
+<<<<<<< HEAD
             this.tb_pass.Location = new System.Drawing.Point(306, 185);
+=======
+            this.tb_pass.Location = new System.Drawing.Point(249, 183);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.tb_pass.Margin = new System.Windows.Forms.Padding(2);
             this.tb_pass.Name = "tb_pass";
             this.tb_pass.PasswordChar = '*';
             this.tb_pass.Size = new System.Drawing.Size(161, 20);
             this.tb_pass.TabIndex = 1;
+            this.tb_pass.TextChanged += new System.EventHandler(this.tb_pass_TextChanged);
             // 
             // label3
             // 
@@ -80,10 +89,14 @@
             // 
             // bt_verificar
             // 
+<<<<<<< HEAD
             this.bt_verificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.bt_verificar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_verificar.ForeColor = System.Drawing.Color.White;
             this.bt_verificar.Location = new System.Drawing.Point(307, 245);
+=======
+            this.bt_verificar.Location = new System.Drawing.Point(186, 242);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.bt_verificar.Margin = new System.Windows.Forms.Padding(2);
             this.bt_verificar.Name = "bt_verificar";
             this.bt_verificar.Size = new System.Drawing.Size(160, 53);
@@ -116,6 +129,10 @@
             this.Controls.Add(this.tb_pass);
             this.Controls.Add(this.tb_usuario);
             this.Controls.Add(this.label2);
+<<<<<<< HEAD
+=======
+            this.Controls.Add(this.label1);
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ControlDeMerma";
             this.Text = "INICIO";

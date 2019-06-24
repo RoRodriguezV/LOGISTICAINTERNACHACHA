@@ -73,7 +73,11 @@ namespace PROYECTO_FINAL
 
         }
 
+<<<<<<< HEAD
         private void label1_Click(object sender, EventArgs e)
+=======
+        private void tb_pass_TextChanged(object sender, EventArgs e)
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
         {
 
         }

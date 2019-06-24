@@ -22,12 +22,21 @@ namespace PROYECTO_FINAL
             dgvPedido.Columns.Add("cantidad", "CANTIDAD");
             dgvPedido.Columns.Add("fecha", "FECHA");
             dgvPedido.Columns.Add("estado", "ESTADO");
+<<<<<<< HEAD
             cbOrigen.Text = ControlDeMerma.CodSucursal;
 
             Limpiar();
             Combobox();
         }
 
+=======
+           
+
+            Limpiar();
+            Combobox();
+
+        }
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
         void Combobox()
         {
             String query = String.Format("SELECT CodSucursal FROM sucursal", cbOrigen.Text);
@@ -64,7 +73,11 @@ namespace PROYECTO_FINAL
             cbProducto.Items.Clear();
             tbCantidad.Clear();
             dtFecha.ResetText();
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
         }
         private void FPedidos_Load(object sender, EventArgs e)
         {
@@ -79,7 +92,11 @@ namespace PROYECTO_FINAL
             else
             {
 
+<<<<<<< HEAD
 
+=======
+               
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
                 dtFecha.Format = DateTimePickerFormat.Custom;
                 dtFecha.CustomFormat = "yyyy/MM/dd";
 
@@ -91,7 +108,11 @@ namespace PROYECTO_FINAL
                 tbCantidad.Text = "";
                 dtFecha.Text = "";
                 dtFecha.Text = "";
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> 42c48060bf0079a443aed002b532fcc1287ebc7b
             }
         }
         public int fila { get; set; }
