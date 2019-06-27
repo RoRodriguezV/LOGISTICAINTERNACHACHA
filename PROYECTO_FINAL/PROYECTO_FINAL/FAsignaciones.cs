@@ -25,22 +25,16 @@ namespace PROYECTO_FINAL
             dgvAsignaciones.Columns.Add("producto", "PRODUCTO");
             dgvAsignaciones.Columns.Add("cantidad", "CANTIDAD");
             dgvAsignaciones.Columns.Add("fecha", "FECHA");
+            cbxOrigen.Text = ControlDeMerma.CodSucursal;
+            txtCantidad.KeyPress += txtCantidad_KeyPress;
+
+
 
             Limpiar();
             Combobox();
 
         }
 
-       /* public FAsignaciones(String text)
-        {
-
-            InitializeComponent();
-            cbxOrigen.Text = "Origen:" + text;
-            cbxDestino.Text = "Destino:" + text;
-            cbxProducto.Text = "Producto:" + text;
-            txtCantidad.Text = "Cantidad" + text;
-
-        }*/
 
         void Combobox()
         {
@@ -92,7 +86,7 @@ namespace PROYECTO_FINAL
         {
             try
             {
-                MySqlCommand comando = new MySqlCommand(String.Format("SELECT NombreProducto, CantidadDetalle  FROM detallestock WHERE CodSucursal = 1"), BDcomun.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(String.Format("SELECT NombreProducto, CantidadDetalle FROM detallestock WHERE CodSucursal = 1"), BDcomun.ObtenerConexion());
                 MySqlDataAdapter ds = new MySqlDataAdapter(comando);
                 DataTable dr = new DataTable();
                 ds.Fill(dr);
@@ -106,30 +100,14 @@ namespace PROYECTO_FINAL
         }
 
 
-         public void intento()
-         {
-             String query = String.Format("SELECT CantidadDetalle FROM detallestock WHERE CodSucursal = '{0}' and CodProducto = '{1}'", cbxOrigen.Text, cbxProducto.Text);
-             MySqlCommand comando = new MySqlCommand(query, BDcomun.ObtenerConexion());
-             MySqlDataReader reader = comando.ExecuteReader();
-                 while (reader.Read())
-                     cant1= reader.GetInt32("CantidadDetalle");
-         }
-
-      /*  public static int Actualizar(producto pProducto)
+        public void intento()
         {
-            int retorno = 0;
-            MySqlConnection conexion = BDcomun.ObtenerConexion();
-
-            MySqlCommand comando = new MySqlCommand(string.Format("Update producto set NombreProducto='{0}', TipoProducto='{1}', Cantidad ='{2}' where CodProducto={3}",
-                pProducto.NombreProducto, pProducto.TipoProducto, pProducto.Cantidad, pProducto.CodProducto), conexion);
-
-            retorno = comando.ExecuteNonQuery();
-            conexion.Close();
-
-            return retorno;
-
-        }*/
-
+            String query = String.Format("SELECT CantidadDetalle FROM detallestock WHERE CodSucursal = '{0}' and CodProducto = '{1}'", cbxOrigen.Text, cbxProducto.Text);
+            MySqlCommand comando = new MySqlCommand(query, BDcomun.ObtenerConexion());
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+                cant1 = reader.GetInt32("CantidadDetalle");
+        }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -221,5 +199,34 @@ namespace PROYECTO_FINAL
             else
                 MessageBox.Show("debe de seleccionar una fila");
         }
+
+        private void dgvStockActual_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar)) //Para obligar a que sólo se introduzcan números 
+            {
+                e.Handled = false;
+            }
+            else
+                 if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso 
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                //el resto de teclas pulsadas se desactivan 
+                e.Handled = true;
+            }
+        }
+
     }
 }
+

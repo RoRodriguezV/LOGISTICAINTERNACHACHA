@@ -22,7 +22,7 @@ namespace PROYECTO_FINAL
             dgvPedido.Columns.Add("cantidad", "CANTIDAD");
             dgvPedido.Columns.Add("fecha", "FECHA");
             dgvPedido.Columns.Add("estado", "ESTADO");
-
+            cbOrigen.Text = ControlDeMerma.CodSucursal;
 
             Limpiar();
             Combobox();

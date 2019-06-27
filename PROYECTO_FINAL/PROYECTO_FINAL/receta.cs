@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_FINAL
 {
-    class receta
+    public class receta
     {
         public string CodInsumo { get; set; }
         public string CodProducto { get; set; }

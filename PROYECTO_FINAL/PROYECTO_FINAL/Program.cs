@@ -16,7 +16,7 @@ namespace PROYECTO_FINAL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MENU_CENTRAL());
+            Application.Run(new ControlDeMerma());
         }
     }
 }

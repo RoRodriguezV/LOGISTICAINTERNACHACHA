@@ -39,66 +39,69 @@
             // cbxReceta
             // 
             this.cbxReceta.FormattingEnabled = true;
-            this.cbxReceta.Location = new System.Drawing.Point(95, 106);
-            this.cbxReceta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxReceta.Location = new System.Drawing.Point(110, 87);
             this.cbxReceta.Name = "cbxReceta";
-            this.cbxReceta.Size = new System.Drawing.Size(160, 24);
+            this.cbxReceta.Size = new System.Drawing.Size(121, 21);
             this.cbxReceta.TabIndex = 0;
             this.cbxReceta.SelectedIndexChanged += new System.EventHandler(this.cbxReceta_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 110);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(29, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 17);
+            this.label1.Size = new System.Drawing.Size(78, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "RECETA:";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(120, 174);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(71, 248);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
+            this.button1.Size = new System.Drawing.Size(102, 50);
             this.button1.TabIndex = 2;
             this.button1.Text = "BUSCAR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvBuscarReceta
             // 
             this.dgvBuscarReceta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBuscarReceta.Location = new System.Drawing.Point(315, 17);
-            this.dgvBuscarReceta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvBuscarReceta.Location = new System.Drawing.Point(249, 16);
             this.dgvBuscarReceta.Name = "dgvBuscarReceta";
-            this.dgvBuscarReceta.Size = new System.Drawing.Size(448, 276);
+            this.dgvBuscarReceta.Size = new System.Drawing.Size(336, 224);
             this.dgvBuscarReceta.TabIndex = 3;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(648, 301);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(486, 267);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 23);
+            this.button2.Size = new System.Drawing.Size(97, 31);
             this.button2.TabIndex = 4;
             this.button2.Text = "VOLVER";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FBuscarReceta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(770, 346);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(595, 310);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dgvBuscarReceta);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxReceta);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "FBuscarReceta";
-            this.Text = "FBuscarReceta";
+            this.Text = "BUSCAR RECETA";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarReceta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

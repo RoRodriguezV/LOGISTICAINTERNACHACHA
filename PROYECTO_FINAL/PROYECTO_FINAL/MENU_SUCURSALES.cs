@@ -31,9 +31,16 @@ namespace PROYECTO_FINAL
 
         private void bt_volver_Click(object sender, EventArgs e)
         {
-            MENU_CENTRAL mcentral = new MENU_CENTRAL();
-            mcentral.Show();
-            this.Hide();
+            //ControlDeMerma mcentral = new ControlDeMerma();
+            //mcentral.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FAsignaciones asig = new FAsignaciones();
+            asig.Show();
+            //this.Hide();
         }
     }
 }

@@ -37,5 +37,10 @@ namespace PROYECTO_FINAL
             fbuscar.Show();
             this.Hide();
         }
+
+        private void MENU_RECETA_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

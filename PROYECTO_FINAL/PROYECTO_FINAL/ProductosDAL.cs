@@ -53,25 +53,24 @@ namespace PROYECTO_FINAL
 
         public static producto ObtenerProducto(int pCodProducto)
         {
-            producto pProducto = new producto();
-            MySqlConnection conexion = BDcomun.ObtenerConexion();
+                producto pProducto = new producto();
+                MySqlConnection conexion = BDcomun.ObtenerConexion();
 
-            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT CodProducto, NombreProducto, TipoProducto, Cantidad FROM producto where CodProducto ='{0}'", pCodProducto), conexion);
-            MySqlDataReader _reader = _comando.ExecuteReader();
-           while (_reader.Read())
-            {
-                pProducto.CodProducto = _reader.GetString(0);
-                pProducto.NombreProducto = _reader.GetString(1);
-                pProducto.TipoProducto = _reader.GetString(2);
-                pProducto.Cantidad = _reader.GetString(3);
-            }
+                MySqlCommand _comando = new MySqlCommand(String.Format("SELECT CodProducto, NombreProducto, TipoProducto, Cantidad FROM producto where CodProducto ='{0}'", pCodProducto), conexion);
+                MySqlDataReader _reader = _comando.ExecuteReader();
+                while (_reader.Read())
+                {
+                    pProducto.CodProducto = _reader.GetString(0);
+                    pProducto.NombreProducto = _reader.GetString(1);
+                    pProducto.TipoProducto = _reader.GetString(2);
+                    pProducto.Cantidad = _reader.GetString(3);
+                }
 
-            conexion.Close();
-            return pProducto;
-
+                conexion.Close();
+                return pProducto;
         }
 
-         
+
 
         public static int Actualizar(producto pProducto)
         {

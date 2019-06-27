@@ -15,6 +15,12 @@ namespace PROYECTO_FINAL
         public FPRODUCTOS()
         {
             InitializeComponent();
+            txtCodProducto.Enabled = false;
+            txtNombreProducto.Enabled = false;
+            txtTipoProducto.Enabled = false;
+            txtCantidad.Enabled = false;
+            txtCantidad.KeyPress += txtCantidad_KeyPress;
+            txtCodProducto.KeyPress += txtCodProducto_KeyPress;
         }
 
         public producto productoActual { get; set; }
@@ -187,5 +193,47 @@ namespace PROYECTO_FINAL
         {
             this.Close();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar)) //Para obligar a que sólo se introduzcan números 
+            {
+                e.Handled = false;
+            }
+            else
+                 if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso 
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                //el resto de teclas pulsadas se desactivan 
+                e.Handled = true;
+            }
+        }
+
+        private void txtCodProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar)) //Para obligar a que sólo se introduzcan números 
+            {
+                e.Handled = false;
+            }
+            else
+                 if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso 
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                //el resto de teclas pulsadas se desactivan 
+                e.Handled = true;
+            }
+        }
+
     }
 }

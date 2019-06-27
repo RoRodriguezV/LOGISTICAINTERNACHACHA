@@ -23,6 +23,91 @@ namespace PROYECTO_FINAL
             return retorno;
 
         }
+        public static sucursal ObtenerLat(string coordenadas)
+        {
+            sucursal psuc = new sucursal();
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT Latitud, Longitud FROM sucursal where CodSucursal = {0} ", coordenadas), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                psuc.Latitud = _reader.GetDouble(0);
+                psuc.Longitud = _reader.GetDouble(1);
+
+
+            }
+
+            conexion.Close();
+            return psuc;
+
+        }
+        public static int ActualizarReceta(receta prec)
+        {
+
+            int retorno = 0;
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format("Update receta set  CodInsumo='{0}', CodProducto='{1}', CantidadReceta='{2}' where CodProducto={3}",
+                prec.CodInsumo, prec.CodProducto, prec.CantidadReceta, prec.CodProducto), conexion);
+
+            retorno = comando.ExecuteNonQuery();
+            conexion.Close();
+
+            return retorno;
+
+        }
+        public static receta ObtenerReceta(string preceta)
+        {
+            receta prec = new receta();
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT * FROM receta where CodReceta = {0} ", preceta), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+
+                prec.CodInsumo = _reader.GetString(0);
+                prec.CodProducto = _reader.GetString(1);
+                prec.CodInsumo = _reader.GetString(2);
+
+
+            }
+
+            conexion.Close();
+            return prec;
+
+        }
+        public static int EliminarReceta(string preceta)
+
+        {
+
+            int retorno = 0;
+
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format(" DELETE  FROM receta where CodProducto = {0} ", preceta), conexion);
+
+            retorno = comando.ExecuteNonQuery();
+
+            conexion.Close();
+
+            return retorno;
+
+        }
+        public static int AgregarReceta(receta preceta)
+        {
+
+            int retorno = 0;
+            MySqlConnection conexion = BDcomun.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format("Insert into receta (CodInsumo, CodProducto, CantidadReceta) values ('{0}','{1}','{2}')",
+              preceta.CodInsumo, preceta.CodProducto, preceta.CantidadReceta), BDcomun.ObtenerConexion());
+            retorno = comando.ExecuteNonQuery();
+            conexion.Close();
+            return retorno;
+
+        }
         public static int AgregarAsignacion(asig_rol pasig)
         {
 
@@ -54,7 +139,7 @@ namespace PROYECTO_FINAL
             roles proles = new roles();
             MySqlConnection conexion = BDcomun.ObtenerConexion();
 
-            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT CodRol FROM asig_rol where CodPersona = {0} ", codpersona), conexion);
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT CodRol FROM asig_rol where CodigoPersona = {0} ", codpersona), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
@@ -392,8 +477,8 @@ namespace PROYECTO_FINAL
         {
             List<Mermas> listMermas = new List<Mermas>();
             MySqlCommand _comando = new MySqlCommand(
-             "SELECT CodSucursal,CodProducto,CantidadMerma,FechaInicio,FechaFin FROM merma", BDcomun.ObtenerConexion());
-            MySqlDataReader reader = _comando.ExecuteReader();
+             "SELECT CodSucursal,merma.CodProducto,CantidadMerma,FechaInicio,FechaFin,CantidadMerma*PrecioInsumo AS TotalPrecio FROM merma INNER JOIN producto ON merma.CodProducto=producto.CodProducto  INNER JOIN receta ON  producto.CodProducto = receta.CodProducto INNER JOIN insumo ON receta.CodInsumo = insumo.CodInsumo", BDcomun.ObtenerConexion());
+            MySqlDataReader reader = _comando.ExecuteReader();  
             while (reader.Read())
             {
                 Mermas mermas = new Mermas();
@@ -402,6 +487,7 @@ namespace PROYECTO_FINAL
                 mermas.CantidadMerma1 = reader.GetInt16(2);
                 mermas.FechaInicio1 = reader.GetDateTime(3);
                 mermas.FechaFin1 = reader.GetDateTime(4);
+                mermas.TotalPrecio1 = reader.GetInt16(5);
 
                 listMermas.Add(mermas);
             }

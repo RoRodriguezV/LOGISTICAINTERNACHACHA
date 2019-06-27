@@ -82,5 +82,9 @@ namespace PROYECTO_FINAL
 
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

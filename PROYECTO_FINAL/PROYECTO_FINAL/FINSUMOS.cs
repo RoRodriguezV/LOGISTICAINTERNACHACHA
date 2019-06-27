@@ -15,6 +15,8 @@ namespace PROYECTO_FINAL
         public FINSUMOS()
         {
             InitializeComponent();
+            txtCantidad.KeyPress += txtCantidad_KeyPress;
+            txtCodInsumo.KeyPress += txtCodInsumo_KeyPress;
         }
 
         public insumo insumoActual { get; set; }
@@ -135,6 +137,42 @@ namespace PROYECTO_FINAL
 
                 MessageBox.Show("Se cancelo la eliminacion", "Eliminacion Cancelada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar)) //Para obligar a que sólo se introduzcan números 
+            {
+                e.Handled = false;
+            }
+            else
+                 if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso 
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                //el resto de teclas pulsadas se desactivan 
+                e.Handled = true;
+            }
+        }
+
+        private void txtCodInsumo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar)) //Para obligar a que sólo se introduzcan números 
+            {
+                e.Handled = false;
+            }
+            else
+                 if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso 
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                //el resto de teclas pulsadas se desactivan 
+                e.Handled = true;
+            }
         }
 
         private void btnCancelar_Click_1(object sender, EventArgs e)
