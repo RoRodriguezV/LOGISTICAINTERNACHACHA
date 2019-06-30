@@ -11,6 +11,10 @@ namespace PRUEBA.Models
         public string CodProducto { get; set; }
         public int CantidadDetalle { get; set; }
         public string NombreProducto { get; set; }
+        public detallestock()
+        {
+
+        }
         public detallestock(string CodSucursal, string CodProducto, int CantidadDetalle, string NombreProducto)
         {
 
