@@ -66,5 +66,10 @@ namespace PROYECTO_FINAL
         {
 
         }
+
+        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
     }
 }

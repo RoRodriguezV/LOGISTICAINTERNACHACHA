@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MENU_PRODUCTOS));
             this.bt_registrar = new System.Windows.Forms.Button();
             this.bt_volver = new System.Windows.Forms.Button();
             this.bt_buscar = new System.Windows.Forms.Button();
@@ -35,37 +36,50 @@
             // 
             // bt_registrar
             // 
-            this.bt_registrar.Location = new System.Drawing.Point(146, 45);
+            this.bt_registrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bt_registrar.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_registrar.ForeColor = System.Drawing.Color.White;
+            this.bt_registrar.Location = new System.Drawing.Point(181, 304);
             this.bt_registrar.Name = "bt_registrar";
-            this.bt_registrar.Size = new System.Drawing.Size(231, 94);
+            this.bt_registrar.Size = new System.Drawing.Size(260, 102);
             this.bt_registrar.TabIndex = 0;
             this.bt_registrar.Text = "PRODUCTOS";
-            this.bt_registrar.UseVisualStyleBackColor = true;
+            this.bt_registrar.UseVisualStyleBackColor = false;
+            this.bt_registrar.Click += new System.EventHandler(this.bt_registrar_Click);
             // 
             // bt_volver
             // 
-            this.bt_volver.Location = new System.Drawing.Point(391, 333);
+            this.bt_volver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bt_volver.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_volver.ForeColor = System.Drawing.Color.White;
+            this.bt_volver.Location = new System.Drawing.Point(484, 463);
             this.bt_volver.Name = "bt_volver";
-            this.bt_volver.Size = new System.Drawing.Size(131, 23);
+            this.bt_volver.Size = new System.Drawing.Size(147, 42);
             this.bt_volver.TabIndex = 0;
             this.bt_volver.Text = "VOLVER";
-            this.bt_volver.UseVisualStyleBackColor = true;
+            this.bt_volver.UseVisualStyleBackColor = false;
             this.bt_volver.Click += new System.EventHandler(this.bt_volver_Click);
             // 
             // bt_buscar
             // 
-            this.bt_buscar.Location = new System.Drawing.Point(146, 176);
+            this.bt_buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bt_buscar.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_buscar.ForeColor = System.Drawing.Color.White;
+            this.bt_buscar.Location = new System.Drawing.Point(181, 162);
             this.bt_buscar.Name = "bt_buscar";
-            this.bt_buscar.Size = new System.Drawing.Size(231, 94);
+            this.bt_buscar.Size = new System.Drawing.Size(260, 98);
             this.bt_buscar.TabIndex = 0;
             this.bt_buscar.Text = "INSUMOS";
-            this.bt_buscar.UseVisualStyleBackColor = true;
+            this.bt_buscar.UseVisualStyleBackColor = false;
+            this.bt_buscar.Click += new System.EventHandler(this.bt_buscar_Click);
             // 
             // MENU_PRODUCTOS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 368);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(640, 503);
             this.Controls.Add(this.bt_volver);
             this.Controls.Add(this.bt_buscar);
             this.Controls.Add(this.bt_registrar);

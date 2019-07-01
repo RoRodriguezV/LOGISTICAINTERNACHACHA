@@ -56,5 +56,55 @@ namespace PROYECTO_FINAL
             param2.Value = dateTimePicker2.Value;
             dataGridView1.DataSource = BDconsultas.ListarMermasporFecha(param, param2);
         }
+
+        private void ControlDeMermas_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = BDconsultas.ListarMermas();
+            dateTimePicker2.Visible = false;
+            label3.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MENU_CENTRAL mcentral = new MENU_CENTRAL();
+            mcentral.Show();
+            this.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void solonumeros(KeyPressEventArgs e)
+        {
+            try
+            {
+                if (Char.IsNumber(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (Char.IsSeparator(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void ControlDeMermas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.solonumeros(e);
+        }
     }
 }

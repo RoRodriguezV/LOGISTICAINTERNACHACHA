@@ -148,7 +148,7 @@ namespace PROYECTO_FINAL
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo guardar la sucursal", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("No se pudo guardar la sucursal - El codigo ya existe", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
             }
@@ -286,6 +286,34 @@ namespace PROYECTO_FINAL
                 MessageBox.Show("Se cancelo la eliminacion", "Eliminacion Cancelada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
         }
-    }
 
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+                if (char.IsControl(e.KeyChar))
+
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+       
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo numeros mayores a 0", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+    }
 }

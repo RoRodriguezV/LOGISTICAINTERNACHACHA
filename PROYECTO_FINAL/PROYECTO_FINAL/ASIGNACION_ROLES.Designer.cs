@@ -46,45 +46,55 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(384, 59);
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(544, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(264, 17);
+            this.label1.Size = new System.Drawing.Size(307, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "INGRESE EL CÓDIGO DE LA PERSONA";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 59);
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(48, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(213, 17);
+            this.label2.Size = new System.Drawing.Size(249, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "INGRESE EL CÓDIGO DEL ROL";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(387, 79);
+            this.comboBox1.Location = new System.Drawing.Point(573, 87);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(261, 24);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(44, 79);
+            this.comboBox2.Location = new System.Drawing.Point(44, 87);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(261, 24);
             this.comboBox2.TabIndex = 3;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.comboBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox2_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(253, 9);
+            this.label3.Font = new System.Drawing.Font("Lucida Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(115, 11);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(556, 32);
+            this.label3.Size = new System.Drawing.Size(655, 39);
             this.label3.TabIndex = 4;
             this.label3.Text = "ASIGNACIÓN DE ROLES A PERSONAL";
             // 
@@ -92,76 +102,102 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(44, 135);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(604, 286);
+            this.dataGridView1.Size = new System.Drawing.Size(655, 286);
             this.dataGridView1.TabIndex = 5;
             // 
             // bt_registrar
             // 
-            this.bt_registrar.Location = new System.Drawing.Point(705, 135);
+            this.bt_registrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bt_registrar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_registrar.ForeColor = System.Drawing.Color.White;
+            this.bt_registrar.Location = new System.Drawing.Point(740, 135);
+            this.bt_registrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_registrar.Name = "bt_registrar";
-            this.bt_registrar.Size = new System.Drawing.Size(213, 66);
+            this.bt_registrar.Size = new System.Drawing.Size(213, 49);
             this.bt_registrar.TabIndex = 6;
             this.bt_registrar.Text = "REGISTRAR";
-            this.bt_registrar.UseVisualStyleBackColor = true;
+            this.bt_registrar.UseVisualStyleBackColor = false;
             this.bt_registrar.Click += new System.EventHandler(this.bt_registrar_Click);
             // 
             // bt_actualizar
             // 
-            this.bt_actualizar.Location = new System.Drawing.Point(705, 235);
+            this.bt_actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bt_actualizar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_actualizar.ForeColor = System.Drawing.Color.White;
+            this.bt_actualizar.Location = new System.Drawing.Point(740, 233);
+            this.bt_actualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_actualizar.Name = "bt_actualizar";
-            this.bt_actualizar.Size = new System.Drawing.Size(213, 69);
+            this.bt_actualizar.Size = new System.Drawing.Size(213, 52);
             this.bt_actualizar.TabIndex = 6;
             this.bt_actualizar.Text = "ACTUALIZAR";
-            this.bt_actualizar.UseVisualStyleBackColor = true;
+            this.bt_actualizar.UseVisualStyleBackColor = false;
             this.bt_actualizar.Click += new System.EventHandler(this.bt_actualizar_Click);
             // 
             // bt_eliminar
             // 
-            this.bt_eliminar.Location = new System.Drawing.Point(705, 346);
+            this.bt_eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bt_eliminar.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_eliminar.ForeColor = System.Drawing.Color.White;
+            this.bt_eliminar.Location = new System.Drawing.Point(740, 334);
+            this.bt_eliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_eliminar.Name = "bt_eliminar";
-            this.bt_eliminar.Size = new System.Drawing.Size(213, 75);
+            this.bt_eliminar.Size = new System.Drawing.Size(213, 55);
             this.bt_eliminar.TabIndex = 6;
             this.bt_eliminar.Text = "ELIMINAR";
-            this.bt_eliminar.UseVisualStyleBackColor = true;
+            this.bt_eliminar.UseVisualStyleBackColor = false;
             this.bt_eliminar.Click += new System.EventHandler(this.bt_eliminar_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(876, 437);
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button4.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(848, 481);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(120, 23);
+            this.button4.Size = new System.Drawing.Size(120, 33);
             this.button4.TabIndex = 7;
             this.button4.Text = "VOLVER";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // bt_selec
             // 
-            this.bt_selec.Location = new System.Drawing.Point(193, 428);
+            this.bt_selec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bt_selec.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_selec.ForeColor = System.Drawing.Color.White;
+            this.bt_selec.Location = new System.Drawing.Point(273, 444);
+            this.bt_selec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_selec.Name = "bt_selec";
-            this.bt_selec.Size = new System.Drawing.Size(246, 23);
+            this.bt_selec.Size = new System.Drawing.Size(221, 50);
             this.bt_selec.TabIndex = 8;
             this.bt_selec.Text = "SELECCIONAR";
-            this.bt_selec.UseVisualStyleBackColor = true;
+            this.bt_selec.UseVisualStyleBackColor = false;
             this.bt_selec.Click += new System.EventHandler(this.bt_selec_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(44, 398);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(44, 393);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 23);
+            this.button1.Size = new System.Drawing.Size(129, 28);
             this.button1.TabIndex = 9;
             this.button1.Text = "REFRESCAR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ASIG_ROL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 463);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(969, 513);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.bt_selec);
             this.Controls.Add(this.button4);
@@ -174,6 +210,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ASIG_ROL";
             this.Text = "ASIGNAR_ROL";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

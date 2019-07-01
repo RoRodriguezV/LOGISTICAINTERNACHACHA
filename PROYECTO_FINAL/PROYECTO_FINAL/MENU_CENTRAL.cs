@@ -19,9 +19,9 @@ namespace PROYECTO_FINAL
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ControlDeMerma inicio = new ControlDeMerma();
-            inicio.Show();
-            this.Hide();
+            //ControlDeMerma inicio = new ControlDeMerma();
+            //inicio.Show();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -62,7 +62,21 @@ namespace PROYECTO_FINAL
 
         private void button7_Click(object sender, EventArgs e)
         {
-            
+            MENU_RECETA menureceta = new MENU_RECETA();
+            menureceta.Show();
+            this.Hide();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            MENU_SUCURSALES menusucursales = new MENU_SUCURSALES();
+            menusucursales.Show();
+            this.Hide();
+        }
+
+        private void MENU_CENTRAL_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

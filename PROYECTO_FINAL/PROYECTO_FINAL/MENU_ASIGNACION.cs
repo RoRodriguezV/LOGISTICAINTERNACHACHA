@@ -23,5 +23,17 @@ namespace PROYECTO_FINAL
             mcentral.Show();
             this.Hide();
         }
+
+        private void bt_asignar_Click(object sender, EventArgs e)
+        {
+            FAsignaciones asignaciones = new FAsignaciones();
+            asignaciones.Show();
+        }
+
+        private void bt_reporte_Click(object sender, EventArgs e)
+        {
+            FReportesEnvios reportesenvios = new FReportesEnvios();
+            reportesenvios.Show();
+        }
     }
 }

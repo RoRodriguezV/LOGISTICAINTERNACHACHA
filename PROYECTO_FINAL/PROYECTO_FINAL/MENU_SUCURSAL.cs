@@ -26,9 +26,9 @@ namespace PROYECTO_FINAL
 
         private void bt_buscar_Click(object sender, EventArgs e)
         {
-            MENU_BORRARSUCURSAL buscarsuc = new MENU_BORRARSUCURSAL();
-            buscarsuc.Show();
-            this.Hide();
+           // MENU_BORRARSUCURSAL buscarsuc = new MENU_BORRARSUCURSAL();
+          //  buscarsuc.Show();
+            //this.Hide();
         }
 
         private void bt_volver_Click(object sender, EventArgs e)

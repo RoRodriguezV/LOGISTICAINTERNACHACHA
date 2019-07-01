@@ -34,7 +34,6 @@ namespace PROYECTO_FINAL
             FechaInicio1 = FechaInicio;
             FechaFin1 = FechaFin;
             TotalPrecio1 = TotalPrecio;
-                ;
         }
 
         //Getters y Setters de todas las variables

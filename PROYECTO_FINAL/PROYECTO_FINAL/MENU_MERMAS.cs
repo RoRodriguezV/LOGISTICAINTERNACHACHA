@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace PROYECTO_FINAL
 {
     public partial class MENU_MERMAS : Form
@@ -26,9 +27,21 @@ namespace PROYECTO_FINAL
 
         private void bt_cantidades_Click(object sender, EventArgs e)
         {
-            ControlDeMerma ctrlmerma = new ControlDeMerma();
+            ControlDeMermas ctrlmerma = new ControlDeMermas();
             ctrlmerma.Show();
             this.Hide();
+        }
+
+        private void bt_mapa_Click(object sender, EventArgs e)
+        {
+            MapaMermas mp = new MapaMermas();
+            mp.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ForMermas productos = new ForMermas();
+            productos.ShowDialog();
         }
     }
 }

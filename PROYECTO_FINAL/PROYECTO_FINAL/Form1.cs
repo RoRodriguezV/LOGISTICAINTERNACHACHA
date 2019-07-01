@@ -19,6 +19,7 @@ namespace PROYECTO_FINAL
         }
 
         public roles RolSelecionado { get; set; }
+        public static string CodSucursal;
         private void bt_verificar_Click(object sender, EventArgs e)
         {
             try
@@ -37,6 +38,7 @@ namespace PROYECTO_FINAL
                         string rolselec = RolSelecionado.CodRoles;
                         if(rolselec == "01")
                         {
+                            CodSucursal = "1" ;
                             MessageBox.Show("BIENVENIDO DE NUEVO ", "ADMINISTRADOR DE CENTRAL", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             MENU_CENTRAL menu_central = new MENU_CENTRAL();
                             menu_central.Show();
@@ -44,8 +46,11 @@ namespace PROYECTO_FINAL
                         }
                         else
                         {
-                            MessageBox.Show("BIENVENIDO DE NUEVO ", "ADMINISTRADOR DE SUCURSAL", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                            CodSucursal = RolSelecionado.CodRoles;
+                            MessageBox.Show("BIENVENIDO DE NUEVO ADMINISTRADOR", "ADMINISTRADOR DE SUCURSAL N°" + CodSucursal, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MENU_SUCURSALES menu_sucursal = new MENU_SUCURSALES();
+                            menu_sucursal.Show();
+                            this.Hide();
                         }
 
                     }
@@ -58,10 +63,21 @@ namespace PROYECTO_FINAL
 
                 }
             }
-            catch
+            catch//(Exception eex)
             {
-                MessageBox.Show("VUELVA A INTENTARLO", "ERROR CON LA BASE DE DATOS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               MessageBox.Show("VUELVA A INTENTARLO", "ERROR CON LA BASE DE DATOS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               // MessageBox.Show(eex.ToString());
             }
+        }
+
+        private void ControlDeMerma_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

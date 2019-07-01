@@ -6,23 +6,25 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_FINAL
 {
-    class producto
+    public class producto
     {
+        public string CodSucursal { get; set; }
         public string CodProducto { get; set; }
         public string NombreProducto { get; set; }
         public string TipoProducto { get; set; }
-        public int Cantidad { get; set; }
+        public string Cantidad { get; set; }
 
         public producto()
         {
 
         }
-        public producto (string CodProducto, string NombreProducto, string TipoProducto, int Cantidad)
+        public producto (string pCodSucursal, string pCodProducto, string pNombreProducto, string pTipoProducto, string pCantidad)
         {
-            this.CodProducto = CodProducto;
-            this.NombreProducto = NombreProducto;
-            this.TipoProducto = TipoProducto;
-            this.Cantidad = Cantidad;
+            this.CodSucursal = pCodSucursal;
+            this.CodProducto = pCodProducto;
+            this.NombreProducto = pNombreProducto;
+            this.TipoProducto = pTipoProducto;
+            this.Cantidad = pCantidad;
         }
 
     }
